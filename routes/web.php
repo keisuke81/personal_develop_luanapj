@@ -21,7 +21,7 @@ use App\Http\Controllers\CompanionController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 

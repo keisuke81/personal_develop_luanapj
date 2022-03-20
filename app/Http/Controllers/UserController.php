@@ -14,6 +14,6 @@ class UserController extends Controller
     {
         $user_id = Auth::id();
 
-        return view('mypage')->with(['user_id' => $user_id]);
+        return view('user.mypage')->with(['user_id' => $user_id]);
     }
 }
