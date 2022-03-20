@@ -25,4 +25,34 @@ class CompanionController extends Controller
             'user_id' => $user_id
         ]);
     }
+
+    //年齢で絞る//
+    public function searchCast_age(Request $request)
+    {
+        $min = $request->required_age_min;
+        $max = $request->required_age_max;
+
+        $items = Companion::wherebetween('age', [$min, $max])->get();
+
+        $user_id = Auth::id();
+
+        return view('offer.search_cast_age')->with([
+            'items' => $items,
+            'min' => $min,
+            'max' => $max,
+            'user_id' => $user_id
+        ]);
+    }
+
+    //キャストのプロフィール
+    public function getCastProfile(Companion $id)
+    {
+        $item = Companion::find($id)->last();
+        $user_id = Auth::id();
+
+        return view('offer.cast_profile')->with([
+            'item' => $item,
+            'user_id' => $user_id
+        ]);
+    }
 }

@@ -70,3 +70,14 @@ Route::get(
     '/search_cast',
     [CompanionController::class, 'searchCast']
 )->name('searchCast');
+
+//キャストから探す＿年齢で絞る//
+Route::get(
+    '/search_cast_age',
+    [CompanionController::class, 'searchCast_age']
+);
+//キャストの個人プロフィール
+Route::get(
+    'cast_profile/{id}',
+    [CompanionController::class, 'getCastProfile']
+)->name('getCastProfile');
