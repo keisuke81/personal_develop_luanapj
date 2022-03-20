@@ -8,7 +8,7 @@
   <div class="wrapper">
     <h1 class="h1">応募内容内容確認</h1>
     <!--フォーム開始-->
-    <form action="/invite_done" method="post">
+    <form action="/invite_done/{{$companion_id}}" method="post">
       @csrf
       <table class="table offer_table">
         <table class="table">
