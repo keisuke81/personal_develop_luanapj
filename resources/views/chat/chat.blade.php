@@ -1,5 +1,9 @@
+<head>
 @component('components.header')
 @endcomponent
+  <script src=“https://js.pusher.com/3.2/pusher.min.js“></script>
+  <script src=“https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js”></script>
+</head>
 
 <body onload="init()" onunload="init2()">
 
@@ -37,11 +41,13 @@
     <form　action=" /chat/send" method="post">
       @csrf
       <textarea name="message" id="text" style="width:100%"></textarea>
-      <input type="hidden" name="send" value="{{$param['send']}}">
-      <input type="hidden" name="recieve" value="{{$param['recieve']}}">
-      <input type="hidden" name="login" value="{{\Illuminate\Support\Facades\Auth::id()}}">
       <button type="button" id="btn_send">送信</button>
     </form>
+
+    <input type="hidden" name="send" value="{{$param['send']}}">
+    <input type="hidden" name="recieve" value="{{$param['recieve']}}">
+    <input type="hidden" name="login" value="{{\Illuminate\Support\Facades\Auth::id()}}">
+
 
   </div>
 
