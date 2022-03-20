@@ -19,7 +19,7 @@
       <tr>
         <th>お名前</th>
         <td>
-          {{$registration->name}}
+          {{$profile->name}}
         </td>
       </tr>
 
