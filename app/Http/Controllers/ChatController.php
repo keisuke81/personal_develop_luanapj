@@ -33,7 +33,6 @@ class ChatController extends Controller
             $query->where('send', $recieve);
             $query->where('recieve', $loginId);
         });
-        dd($query);
 
         $messages = $query->get();
 
@@ -58,6 +57,7 @@ class ChatController extends Controller
             'recieve' => $request->recieve,
             'message' => $request->message
         ];
+        dd($param);
         Chat::insert($param);
 
         return true;
