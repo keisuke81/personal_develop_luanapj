@@ -42,3 +42,9 @@ Route::get(
     '/mypage/{user_id}',
     [UserController::class, 'getMypage']
 )->name('getMypage');
+
+//（マイページ）登録情報ページの表示//
+Route::get(
+    '/mypage/profile/{user_id}',
+    [UserController::class, 'getProfile']
+);
