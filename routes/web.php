@@ -96,12 +96,12 @@ Route::get(
 
 //インバイト確認ページの表示//
 Route::post(
-    '/invite_confirm',
+    '/invite_confirm/{id}',
     [OfferController::class, 'InviteConfirm']
 );
 
 //インバイト完了
 Route::post(
-    '/invite_done',
+    '/invite_done/{id}',
     [OfferController::class, 'InviteSuccess']
 )->name('InviteSuccess');

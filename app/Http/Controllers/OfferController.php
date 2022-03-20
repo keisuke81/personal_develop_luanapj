@@ -33,11 +33,11 @@ class OfferController extends Controller
     }
 
     //確認ページに進む//
-    public function InviteConfirm(ClientRequest $request)
+    public function InviteConfirm(ClientRequest $request, $id)
     {
         $user = Auth::user();
         $user_id = Auth::id();
-
+        $companion_id = $id;
 
         $inputs = $request->all();
         //エリア名の表示//
@@ -53,6 +53,7 @@ class OfferController extends Controller
 
         return view('offer.invite_confirm', [
             'user_id' => $user_id,
+            'companion_id' => $companion_id,
             'inputs' => $inputs,
             'area_name' => $area_name,
             'mens_level_name' => $mens_level_name,
@@ -61,10 +62,11 @@ class OfferController extends Controller
         ]);
     }
 
-    public function InviteSuccess(ClientRequest $request)
+    public function InviteSuccess(ClientRequest $request, $id)
     {
         $user = Auth::user();
         $user_id = Auth::id();
+        $companion_id = $id;
 
         if ($request->get('back')) {
             return redirect()->back()->withInput();
@@ -72,6 +74,7 @@ class OfferController extends Controller
 
         $param = [
             'user_id' => $user_id,
+            'companion_id' => $companion_id,
             'area_id' => $request->area_id,
             'golf_course' => $request->golf_course,
             'date' => $request->date,
