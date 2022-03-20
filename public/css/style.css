@@ -1,0 +1,399 @@
+.error{
+  color:red;
+  font-size: 0.5em;
+}
+
+.hidden{
+  display:none;
+}
+
+.h1{
+  display: block;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin:1%
+}
+
+ul{
+  list-style: none;
+}
+
+ .wrapper {
+    margin-top: 2%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+   .wrapper_block {
+    margin-top: 2%;
+    display: block;
+    justify-content: center;
+  }
+
+  .card{
+    position: relative;
+    margin:1% 1%;
+    width:auto;
+    height:250px;
+    box-shadow:0 0 5px #fff, 0 0 5px #ccc, 0 0 1px #aaa;
+    -webkit-box-shadow:0 0 5px #fff, 0 0 5px #ccc, 0 0 1px #aaa;
+    -moz-box-shadow:0 0 5px #fff, 0 0 5px #ccc, 0 0 1px #aaa;
+
+  }
+
+  .content-img{
+    width: 100%;
+    height:75%;
+  }
+
+  img{
+    width:100%;
+  }
+
+  .card_link::after{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:1;
+  pointer-events:auto;
+  content:"";
+  background-color:rgba(0,0,0,0)
+}
+
+.follow-btn{
+  display       : inline-block;
+  border-radius : 5%;          /* 角丸       */
+  font-size     : 9pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 8px 8px;   /* 余白       */
+  background    : #000066;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 2px 2px #666666;  /* 影の設定 */
+  border        : 2px solid #000066;    /* 枠の指定 */
+}
+
+a.btn{
+	display: block;
+	width: 250px;
+  height:40px;
+	padding: 0.8em;
+	text-align: center;
+  line-height: 40px;
+	text-decoration: none;
+	color: #000;
+	border: 2px solid #000;
+	border-radius: 3px;
+	transition: .4s;
+  margin:10px 5px;
+  cursor: pointer;
+}
+
+a.btn:hover {
+	background: #000;
+	color: #fff;
+}
+
+a.black{
+  background-color: black;
+  color:white;
+}
+
+a.btn_small,
+a.nav-link{
+	display: inline-block;
+	width: 120px;
+  height:18px;
+	padding: 0.8em;
+	text-align: center;
+  line-height: 16px;
+  font-size: 0.5em;
+	text-decoration: none;
+	color: #000;
+	border: 2px solid #000;
+	border-radius: 3px;
+	transition: .4s;
+  margin:5px 3px;
+  cursor: pointer;
+
+}
+
+a.btn_small:hover,
+a.nav-link:hover 
+{
+	background: #000;
+	color: #fff;
+}
+
+a.btn_small_center{
+	display: block;
+	width: 100px;
+  height:16px;
+	padding: 0.8em;
+	text-align: center;
+  line-height: 16px;
+  font-size: 0.5em;
+	text-decoration: none;
+	color: #000;
+	border: 2px solid #000;
+	border-radius: 3px;
+	transition: .4s;
+  margin:5px auto;
+  cursor: pointer;
+}
+
+a.btn_small_center:hover {
+	background: #000;
+	color: #fff;
+}
+
+.type_a{
+  text-align: center;
+  position: relative;
+}
+.type_a_child{
+  display: inline-block;
+  text-align: center;
+  margin:auto;
+  position:relative;
+}
+
+button{
+  display: inline-block;
+	width: 100px;
+  height:30px;
+	text-decoration: none;
+	color: #fff;
+  background-color: #000;
+	border: 2px solid #000;
+	border-radius: 3px;
+	transition: .4s;
+  margin:10px 5px;
+  cursor: pointer;
+}
+.name_font{
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 2% 1%;
+}
+.age_font,
+.score_font{
+  font-weight: 300;
+  margin-left: 1%;
+}
+
+.card_detail{
+  position: relative;
+  display: inline-block;
+  margin:auto;
+  width:350px;
+  height:400px;
+  box-shadow:0 0 5px #fff, 0 0 5px #ccc, 0 0 1px #aaa;
+  -webkit-box-shadow:0 0 5px #fff, 0 0 5px #ccc, 0 0 1px #aaa;
+  -moz-box-shadow:0 0 5px #fff, 0 0 5px #ccc, 0 0 1px #aaa;
+
+  }
+
+  .follows,
+  .chat{
+    margin:auto;
+  }
+.container{
+  width:600px;
+  margin: auto;
+}  
+
+.balloon01 {
+width: 100%;
+margin: 1% 0;
+overflow: hidden;
+text-align: right;
+}
+/* アイコンの場所 */
+.balloon01 .icon01 {
+margin-right: -90px;
+width: 80px; 
+}
+/* アイコン画像の作成 */
+.balloon01 .icon01 img{
+width: 100%;
+height: auto;
+border-radius: 50%;
+border: solid 2px #000; 
+}
+.balloon01 .chat01 {
+width: 100%;
+}
+/* 吹き出しの入力部分の作成 */
+.send {
+position: relative;
+text-align: right;
+color: white;
+display: inline-block; 
+margin: 15px 20px 20px;
+padding: 10px 20px;
+border-radius: 12px; 
+background: #f88afc; 
+border:solid 2px transparent;
+}
+/* 三角部分の作成 */
+.send::after {
+content: "";
+display: inline-block;
+position: absolute;
+top: 15px; 
+right: -15px;
+border: 15px solid transparent;
+border-top-color: #f88afc; 
+}
+.send p {
+margin: 0;
+padding: 0;
+}
+
+.balloon02 {
+width: 100%;
+margin: 1.5em 0;
+overflow: hidden;
+text-align: right;
+}
+/* アイコンの場所 */
+.balloon02 .icon02 {
+float: right;
+margin-left: -90px;
+width: 80px; 
+}
+/* アイコン画像の作成 */
+.balloon02 .icon02 img{
+width: 100%;
+height: auto;
+border-radius: 50%;
+border: solid 2px #000; 
+}
+.balloon02 .chat02 {
+width: 100%;
+}
+/* 吹き出しの入力部分の作成 */
+.recieve {
+color: white;
+text-align: left;
+display: inline-block; 
+position: relative; 
+margin: 15px 20px 20px;
+padding: 10px 20px;
+border-radius: 12px; 
+background: #f88afc; 
+border:solid 2px transparent;
+}
+/* 三角部分の作成 */
+.recieve::after {
+content: "";
+display: inline-block;
+position: absolute;
+top: 15px; 
+left: -15px;
+border: 15px solid transparent;
+border-top-color: #f88afc; 
+}
+.recieve p {
+margin: 0;
+padding: 0;
+}
+
+.table{
+  width: 800px;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+table tr{
+  border-bottom: solid 2px white;
+}
+
+table tr:last-child{
+  border-bottom: none;
+}
+
+table th{
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: #f88afc;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+table td{
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+}
+
+button.bigger{
+  display: block;
+	width: 150px;
+  height:50px;
+	text-decoration: none;
+	color: #f88afc;
+  background-color: #fff;
+	border: 2px solid #f88afc;
+	border-radius: 3px;
+	transition: .4s;
+  margin:10px auto;
+}
+
+button.bigger:hover{
+  background-color: #f88afc;
+  color: #fff;
+}
+
+/*新規登録・ログイン画面*/
+.navbar-nav{
+  display: flex;
+  align-items: center;
+}
+
+.card_register{
+  background:#fff;
+  border-radius:6px;
+  padding:20px;
+  padding-top:30px;
+  width:400px;
+  margin:50px auto;
+  box-shadow:5px 5px 0px rgba(0,0,0,.1);
+  justify-content: center;
+  position: relative;
+  display: block;
+  
+}
+
+.card_register_child{
+  font-size: 1.2em;
+  align-items: center;
+  text-align: center;
+}
+.card_register input{
+  width:80%;
+  background:#f5f5f5;
+  border:0;
+  padding:20px;
+  border-radius:6px;
+  margin-bottom:10px;
+  border:1px solid #eee;
+}
+
+.card-header{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
