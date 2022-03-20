@@ -60,4 +60,32 @@ class OfferController extends Controller
 
         ]);
     }
+
+    public function InviteSuccess(ClientRequest $request)
+    {
+        $user = Auth::user();
+        $user_id = Auth::id();
+
+        if ($request->get('back')) {
+            return redirect()->back()->withInput();
+        }
+
+        $param = [
+            'user_id' => $user_id,
+            'area_id' => $request->area_id,
+            'golf_course' => $request->golf_course,
+            'date' => $request->date,
+            'start_at' => $request->start_at,
+            'num_of_players_men' => $request->num_of_players_men,
+            'num_of_players_women' => $request->num_of_players_women,
+            'mens_level_id' => $request->mens_level_id,
+            'required_level_id' => $request->required_level_id,
+            'required_age_min' => $request->required_age_min,
+            'required_age_max' => $request->required_age_max,
+        ];
+
+        Offer::create($param);
+
+        return view('invite_done');
+    }
 }

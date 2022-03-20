@@ -94,8 +94,14 @@ Route::get(
     [OfferController::class, 'getInvitePage']
 )->name('getInvitePage');
 
-//オファー確認ページの表示//
+//インバイト確認ページの表示//
 Route::post(
     '/invite_confirm',
     [OfferController::class, 'InviteConfirm']
 );
+
+//インバイト完了
+Route::post(
+    '/invite_done',
+    [OfferController::class, 'InviteSuccess']
+)->name('InviteSuccess');
