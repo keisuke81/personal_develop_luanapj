@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +24,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //LINEログイン機能
-Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name('linelogin');
+Route::get('/login/line', 'Auth\LoginController@redirectToProvider')->name('linelogin');
 
-Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('/login/line/callback', 'Auth\LoginController@handleProviderCallback');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 //LINEログイン機能　終わり

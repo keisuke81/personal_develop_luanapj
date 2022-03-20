@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth; //追記
 use Laravel\Socialite\Facades\Socialite; //追記
 use App\Models\User; //追記
+use Illuminate\Http\Request;//追記
 
 
 class LoginController extends Controller
@@ -45,7 +46,7 @@ class LoginController extends Controller
 
     public function redirectToProvider($provider)
     {
-        return Socialite::driver($provider)->redirect();
+        return Socialite::driver('line')->redirect();
     }
 
     /**
@@ -54,19 +55,18 @@ class LoginController extends Controller
      * @param string $provider
      * @return \Illuminate\Http\Response
      */
-    public function handleProviderCallback($provider)
+    public function handleProviderCallback(Request $request)
     {
-        $provided_user = Socialite::driver($provider)->user();
+        $provided_user = Socialite::driver('line')->user();
 
-        $user = User::where('provider', $provider)
-            ->where('line_id', $provided_user->id)
+        $user = User::where('line_id', $provided_user->id)
             ->first();
 
         if ($user === null) {
             // redirect confirm
             $user = User::create([
                 'name'               => $provided_user->name,
-                'provider'           => $provider,
+                'provider'           => 'line',
                 'line_id'   => $provided_user->id,
             ]);
         }
