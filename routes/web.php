@@ -102,6 +102,6 @@ Route::post(
 
 //インバイト完了
 Route::post(
-    '/invite_done/{id}',
+    '/invite_done',
     [OfferController::class, 'InviteSuccess']
 )->name('InviteSuccess');

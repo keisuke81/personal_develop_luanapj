@@ -5,7 +5,7 @@
   @component('components.menu',['user_id' => $user_id])
   @endcomponent
   <div class="wrapper_block">
-    <form action="/invite_confirm" method="post">
+    <form action="/invite_confirm/{{$companion_id}}" method="post">
       @csrf
       <table class="table">
         <!--ユーザーID-->
