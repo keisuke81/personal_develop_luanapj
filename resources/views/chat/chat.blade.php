@@ -35,7 +35,7 @@
       @endforeach
     </div>
 
-    <form　action=" /chat/send" method="post">
+    <form　action="/chat/send" method="post">
       @csrf
       <textarea name="message" id="text" style="width:100%"></textarea>
 

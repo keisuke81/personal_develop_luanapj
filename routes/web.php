@@ -119,7 +119,6 @@ Route::get('/chat/{recieve}', [
 ])->name('chat');
 
 //チャットの送信
-Route::post(
-    '/chat/send',
+Route::post('/chat/send',
     [ChatController::class, 'store']
 )->name('chatSend');
