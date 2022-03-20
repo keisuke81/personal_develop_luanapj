@@ -81,3 +81,9 @@ Route::get(
     'cast_profile/{id}',
     [CompanionController::class, 'getCastProfile']
 )->name('getCastProfile');
+
+//キャストのフォロー//
+Route::get('/follow/{id}', [CompanionController::class, 'getFollow'])->name('getFollow');
+
+//フォロー解除//
+Route::get('/noffollow/{id}', [CompanionController::class, 'noFollow'])->name('noFollow');

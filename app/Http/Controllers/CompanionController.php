@@ -55,4 +55,29 @@ class CompanionController extends Controller
             'user_id' => $user_id
         ]);
     }
+
+    //お気に入り登録//
+    public function getFollow($id)
+    {
+        $user_id = Auth::id();
+        $param = [
+            'member_id' => $user_id,
+            'companion_id' => $id,
+        ];
+
+        Follow::create($param);
+
+        return redirect()->action('CompanionController@getDetail', ['id' => $id]);
+    }
+
+    //お気に入り解除//
+    public function noFollow($id)
+    {
+        $user_id = Auth::id();
+        $follow = Follow::where('companion_id', $id)->where('member_id', $user_id)->first();
+        dd($follow);
+        $follow->delete();
+
+        return redirect()->back();
+    }
 }
