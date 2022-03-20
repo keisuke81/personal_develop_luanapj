@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ChatController;
+use App\Http\Controllers\OfferController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CompanionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +35,10 @@ Route::get('/login/line/callback',[LoginController::class,'handleProviderCallbac
 
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 //LINEログイン機能　終わり
+
+
+//マイページの表示
+Route::get(
+    '/mypage/{user_id}',
+    [UserController::class, 'getMypage']
+)->name('getMypage');
