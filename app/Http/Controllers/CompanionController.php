@@ -13,7 +13,7 @@ use phpDocumentor\Reflection\DocBlock\Tags\Author;
 class CompanionController extends Controller
 {
     //「キャストから誘う」のキャスト一覧表示//
-    public function search_cast()
+    public function searchCast()
     {
         $items = Companion::get();
         $birthday = Companion::select('birthday');
