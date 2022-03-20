@@ -23,6 +23,7 @@ class FollowController extends Controller
         // チャットユーザ選択画面を表示
         return view('offer.following')->with([
             'users' => $users,
+            'user_id' => $user_id
         ]);
     }
 }
