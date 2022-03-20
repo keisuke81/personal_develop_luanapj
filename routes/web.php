@@ -100,8 +100,14 @@ Route::post(
     [OfferController::class, 'InviteConfirm']
 );
 
-//インバイト完了
+//お誘い完了
 Route::post(
     '/invite_done/{id}',
     [OfferController::class, 'InviteSuccess']
 )->name('InviteSuccess');
+
+//フォロー一覧表示
+Route::get(
+    '/follow_cast',
+    [FollowController::class, 'getFollowing']
+)->name('getFollowing');
