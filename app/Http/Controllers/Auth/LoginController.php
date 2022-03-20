@@ -72,8 +72,9 @@ class LoginController extends Controller
         }
 
         Auth::login($user);
+        $user_id = Auth::id();
 
-        return redirect()->route('getMypage');
+        return redirect()->route('getMypage')->with(['user_id' => $user_id]);
     }
 
     /**
