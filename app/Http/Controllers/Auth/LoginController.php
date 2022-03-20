@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 use Illuminate\Support\Facades\Auth; //追記
 use Laravel\Socialite\Facades\Socialite; //追記
-use App\User; //追記
+use App\Models\User; //追記
 
 
 class LoginController extends Controller
