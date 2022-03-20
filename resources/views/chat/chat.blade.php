@@ -42,7 +42,7 @@
       <input type="hidden" name="send" value="{{$param['send']}}">
       <input type="hidden" name="recieve" value="{{$param['recieve']}}">
       <input type="hidden" name="login" value="{{\Illuminate\Support\Facades\Auth::id()}}">
-      <button type="button" id="btn_send">送信</button>
+      <button>送信</button>
     </form>
 
 
