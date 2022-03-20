@@ -23,6 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //LINEログイン機能
 Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name('linelogin');
+
 Route::get('/login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 //LINEログイン機能　終わり
