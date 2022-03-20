@@ -174,6 +174,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        
+        //LINEログイン機能のため追加
+        SocialiteProviders\Manager\ServiceProvider::class,
 
     ],
 
