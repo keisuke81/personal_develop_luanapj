@@ -33,6 +33,7 @@ class ChatController extends Controller
             $query->where('send', $recieve);
             $query->where('recieve', $loginId);
         });
+        dd($query);
 
         $messages = $query->get();
 
