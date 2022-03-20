@@ -59,8 +59,7 @@ class ChatController extends Controller
         
         Chat::insert($param);
 
-        // イベント発火
-        event(new ChatMessageRecieved($request->all()));
+
 
         return redirect()->back();
     }    
