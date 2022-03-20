@@ -112,3 +112,14 @@ Route::get(
     '/follow_cast',
     [FollowController::class, 'getFollowing']
 )->name('getFollowing');
+
+//チャットの受け取りと送信//
+Route::get('/chat/{recieve}', [
+    ChatController::class, 'getChatPage'
+])->name('chat_page');
+
+//チャットの送信
+Route::post(
+    '/chat/send',
+    [ChatController::class, 'store']
+)->name('chatSend');
