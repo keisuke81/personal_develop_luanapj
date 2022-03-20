@@ -60,3 +60,13 @@ Route::post(
     '/profile_update',
     [UserController::class, 'profile_update']
 );
+
+//探す
+Route::get('/search',
+[OfferController::class,'search_top'])->name('search_top');
+
+//キャストから探す//
+Route::get(
+    '/search_cast',
+    [CompanionController::class, 'searchCast']
+)->name('searchCast');
