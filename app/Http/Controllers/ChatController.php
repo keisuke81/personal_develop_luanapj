@@ -19,6 +19,7 @@ class ChatController extends Controller
     {
         // チャットの画面
         $loginId = Auth::id();
+        $user_id = Auth::id();
 
         $param = [
             'send' => $loginId,
@@ -37,7 +38,8 @@ class ChatController extends Controller
 
         return view('chat.chatroom')->with([
             'param' => $param,
-            'messages' => $messages
+            'messages' => $messages,
+            'user_id' => $user_id
         ]);
     }
 
