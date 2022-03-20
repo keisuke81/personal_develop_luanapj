@@ -87,3 +87,15 @@ Route::get('/follow/{id}', [CompanionController::class, 'getFollow'])->name('get
 
 //フォロー解除//
 Route::get('/noffollow/{id}', [CompanionController::class, 'noFollow'])->name('noFollow');
+
+//コンパニオンをお誘いする
+Route::get(
+    'invite_page/{id}',
+    [OfferController::class, 'getInvitePage']
+)->name('getInvitePage');
+
+//オファー確認ページの表示//
+Route::post(
+    '/invite_confirm',
+    [OfferController::class, 'InviteConfirm']
+);
