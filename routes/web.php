@@ -7,6 +7,7 @@ use App\Http\Controllers\ChatController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CompanionController;
+use App\Http\Controllers\FollowController;
 
 /*
 |--------------------------------------------------------------------------
