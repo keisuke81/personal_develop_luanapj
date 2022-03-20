@@ -10,7 +10,7 @@
   <form action="/profile_update" method="post">
     @csrf
     <table class="table">
-      <tr>
+      <tr class="hidden">
         <th>id</th>
         <td>
           <input type="hidden" name="id" value="{{$profile->id}}">
