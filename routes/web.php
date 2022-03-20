@@ -24,8 +24,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //LINEログイン機能
-Route::get('/login/line', 'Auth\LoginController@redirectToProvider')->name('linelogin');
+Route::get('/login/line', 
+[LoginController::class, 'redirectToProvider'])->name('linelogin');
 
-Route::get('/login/line/callback', 'Auth\LoginController@handleProviderCallback');
-Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('/login/line/callback',[LoginController::class,'handleProviderCallback']);
+
+Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 //LINEログイン機能　終わり
