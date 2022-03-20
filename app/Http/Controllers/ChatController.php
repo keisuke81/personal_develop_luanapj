@@ -56,13 +56,8 @@ class ChatController extends Controller
             'recieve' => $request->recieve,
             'message' => $request->message
         ];
-        dd($param);
         
-    try{
         Chat::insert($param);
-    }catch(\Exception $e){
-        return false;
-    }
 
         // イベント発火
         event(new ChatMessageRecieved($request->all()));
