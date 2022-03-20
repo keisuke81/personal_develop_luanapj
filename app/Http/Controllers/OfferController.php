@@ -89,6 +89,8 @@ class OfferController extends Controller
 
         Offer::create($param);
 
-        return view('invite_done');
+        return view('offer.invite_done')->with([
+            'user_id' => $user_id
+        ]);
     }
 }
