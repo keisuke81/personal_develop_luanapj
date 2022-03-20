@@ -119,10 +119,5 @@
       // 実行したい処理
       $('textarea[name="message"]').val("");
     };
-
-    function init2() {
-      // 実行したい処理
-      $('textarea[name="message"]').val("");
-    };
   </script>
 </body>
