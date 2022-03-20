@@ -48,16 +48,21 @@ class ChatController extends Controller
      */
     public function store(Request $request)
     {
-        // イベント発火
-        event(new ChatMessageRecieved($request->all()));
-
         // リクエストパラメータ取得
         $param = [
             'send' => $request->send,
             'recieve' => $request->recieve,
             'message' => $request->message
         ];
+        
+    try{
         Chat::insert($param);
+    }catch(\Exception $e){
+        return false;
+    }
+
+        // イベント発火
+        event(new ChatMessageRecieved($request->all()));
 
         return true;
     }
