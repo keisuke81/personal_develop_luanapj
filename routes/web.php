@@ -116,7 +116,7 @@ Route::get(
 //チャットの受け取りと送信//
 Route::get('/chat/{recieve}', [
     ChatController::class, 'getChatPage'
-])->name('chat_page');
+])->name('chat');
 
 //チャットの送信
 Route::post(

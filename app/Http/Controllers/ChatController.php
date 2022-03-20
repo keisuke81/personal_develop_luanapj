@@ -36,7 +36,7 @@ class ChatController extends Controller
 
         $messages = $query->get();
 
-        return view('chat.chatroom')->with([
+        return view('chat.chat')->with([
             'param' => $param,
             'messages' => $messages,
             'user_id' => $user_id
