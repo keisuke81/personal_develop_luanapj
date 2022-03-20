@@ -64,6 +64,6 @@ class ChatController extends Controller
         // イベント発火
         event(new ChatMessageRecieved($request->all()));
 
-        return true;
+        return redirect()->back();
     }
 }
