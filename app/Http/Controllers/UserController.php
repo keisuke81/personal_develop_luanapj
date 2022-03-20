@@ -28,4 +28,16 @@ class UserController extends Controller
             'user_id' => $user_id
         ]);
     }
+
+    //登録情報更新ページの表示//
+    public function profile_edit($user_id)
+    {
+        $user_id = Auth::id();
+        $profile = User::where('id', $user_id)->first();
+
+        return view('user.profile_edit')->with([
+            'profile' => $profile,
+            'user_id' => $user_id
+        ]);
+    }
 }

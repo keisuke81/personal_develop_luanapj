@@ -48,3 +48,9 @@ Route::get(
     '/mypage/profile/{user_id}',
     [UserController::class, 'getProfile']
 );
+
+//登録情報更新ページの表示//
+Route::get(
+    '/mypage/profile/edit/{user_id}',
+    [UserController::class, 'profile_edit']
+)->name(('profile_edit'));
