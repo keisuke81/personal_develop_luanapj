@@ -96,23 +96,7 @@
       }
     });
 
-    // メッセージ送信
-    $("#btn_send").on('click', function() {
-      $.ajax({
-        type: 'POST',
-        url: '/chat/send',
-        data: {
-          message: $('textarea[name="message"]').val(),
-          send: $('input[name="send"]').val(),
-          recieve: $('input[name="recieve"]').val(),
-        }
 
-      }).done(function(result) {
-        $('textarea[name="message"]').val('');
-      }).fail(function(result) {
-
-      });
-    });
 
     //テキストエリアを空白にする//
     function init() {
