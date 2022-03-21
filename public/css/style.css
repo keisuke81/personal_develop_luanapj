@@ -402,3 +402,7 @@ button.bigger:hover{
   font-weight: 500;
 }
 
+.fixed_bottom{
+  position:fixed;
+  top:400px;
+}

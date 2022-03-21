@@ -35,15 +35,17 @@
       @endforeach
     </div>
 
-    <form action="/chat/send" method="post">
-      @csrf
-      <textarea name="message" id="text" style="width:100%"></textarea>
+    <div class="fixed_bottom">
+      <form action="/chat/send" method="post">
+        @csrf
+        <textarea name="message" id="text" style="width:100%"></textarea>
 
-      <input type="hidden" name="send" value="{{$param['send']}}">
-      <input type="hidden" name="recieve" value="{{$param['recieve']}}">
-      <input type="hidden" name="login" value="{{\Illuminate\Support\Facades\Auth::id()}}">
-      <button id="btn_send">送信</button>
-    </form>
+        <input type="hidden" name="send" value="{{$param['send']}}">
+        <input type="hidden" name="recieve" value="{{$param['recieve']}}">
+        <input type="hidden" name="login" value="{{\Illuminate\Support\Facades\Auth::id()}}">
+        <button id="btn_send">送信</button>
+      </form>
+    </div>
 
 
   </div>
