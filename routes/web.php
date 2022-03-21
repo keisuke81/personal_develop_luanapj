@@ -29,7 +29,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //LINEログイン機能
-Route::get('/login/line', 
+Route::get('/login/line',
 [LoginController::class, 'redirectToProvider'])->name('linelogin');
 
 Route::get('/login/line/callback',[LoginController::class,'handleProviderCallback']);
