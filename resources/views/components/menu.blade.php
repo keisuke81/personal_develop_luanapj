@@ -6,7 +6,6 @@
     <h1>LUANA MATCHING</h1>
     <nav class="gnav">
       <ul class="menu">
-        <li><a href="/home/{{$user_id}}">ホーム</a></li>
         <li><a href="/search">探す</a></li>
         <li><a href="/follow_cast">フォロー</a></li>
         <li><a href="/mypage/{{$user_id}}">マイページ</a></li>
