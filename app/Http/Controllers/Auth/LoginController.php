@@ -9,7 +9,6 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth; //追記
 use Laravel\Socialite\Facades\Socialite; //追記
 use App\Models\User; //追記
-use App\Models\Companion;
 use Illuminate\Http\Request;//追記
 
 
@@ -58,9 +57,6 @@ class LoginController extends Controller
      */
     public function handleProviderCallback(Request $request)
     {
-        $gender = $request->gender;
-        
-        if($gender=1){
         $provided_user = Socialite::driver('line')->user();
 
         $user = User::where('line_id', $provided_user->id)
@@ -79,27 +75,6 @@ class LoginController extends Controller
         $user_id = Auth::id();
 
         return redirect()->route('getMypage',['user_id' => $user_id]);
-        
-        }else{
-                $provided_user = Socialite::driver('line')->user();
-
-                $user = Companion::where('line_id', $provided_user->id)
-                ->first();
-
-                if ($user === null) {
-                    // redirect confirm
-                    $user = Companion::create([
-                        'name'               => $provided_user->name,
-                        'provider'           => 'line',
-                        'line_id'   => $provided_user->id,
-                    ]);
-                }
-
-                Auth::login($user);
-                $companion_id = Auth::id();
-
-                return redirect()->route('getMypage', ['user_id' => $user_id]);
-        }
     }
 
     /**
