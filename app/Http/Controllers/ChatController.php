@@ -48,19 +48,16 @@ class ChatController extends Controller
      */
     public function store(Request $request)
     {
-        $user_id = Auth::id();
 
         // リクエストパラメータ取得
-        $param = [
+        $insertParam = [
             'send' => $request->send,
             'recieve' => $request->recieve,
             'message' => $request->message
         ];
         
-        Chat::insert($param);
-
-
+        Chat::insert($insertParam);
 
         return redirect()->back();
-    }    
+    }
 }
