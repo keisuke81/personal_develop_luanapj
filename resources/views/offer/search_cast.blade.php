@@ -7,7 +7,7 @@
   <div class="type_a">
     <div class="type_a_child">
       <p>年齢で検索</p>
-      <form action="/offer_cast_age">
+      <form action="/search_cast_age">
         @csrf
         <input type="number" id="required_age_min" name="required_age_min" value="{{old('required_age_min') ?? '20'}}">歳〜 <input type="number" id="required_age_max" name="required_age_max" value="{{old('required_age_max') ?? '30'}}">歳
 
