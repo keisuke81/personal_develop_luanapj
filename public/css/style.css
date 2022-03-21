@@ -403,6 +403,8 @@ button.bigger:hover{
 }
 
 .fixed_bottom{
+  display: block;
   position:fixed;
-  top:400px;
+  top:80%;
+  width:100%;
 }
