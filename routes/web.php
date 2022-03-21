@@ -28,9 +28,15 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//LINEログイン機能
-Route::get('/login/line',
-[LoginController::class, 'redirectToProvider'])->name('linelogin');
+//LINEログイン機能_男性
+Route::get('/login/line/?gender=1',
+[LoginController::class, 'redirectToProvider'])->name('linelogin.man');
+
+//LINEログイン機能_女性
+Route::get(
+    '/login/line/?gender=2',
+    [LoginController::class, 'redirectToProvider']
+)->name('linelogin.woman');
 
 Route::get('/login/line/callback',[LoginController::class,'handleProviderCallback']);
 
