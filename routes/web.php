@@ -34,7 +34,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/login/line',
 [LoginController::class, 'redirectToProvider'])->name('linelogin');
 
-Route::get('/login/line/callback',[LoginController::class,'handleProviderCallback']);
+Route::get('/login/line/callback',[LoginController::class,'handleProviderCallback'])->name('callback');
 
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 //LINEログイン機能　男　終わり
@@ -45,7 +45,7 @@ Route::get(
     [CompanionLoginController::class, 'cast_redirectToProvider']
 )->name('companion.linelogin');
 
-Route::get('/login/line/callback', [CompanionLoginController::class, 'handleProviderCallback']);
+Route::get('/login/line/callback', [CompanionLoginController::class, 'handleProviderCallback'])->name('companion.callback');
 
 
 
