@@ -82,6 +82,6 @@ class CompanionController extends Controller
 
     //キャストマイページ
     public function CastGetMypage(){
-        return view('cast_mypage');
+        return view('cast.cast_mypage');
     }
 }
