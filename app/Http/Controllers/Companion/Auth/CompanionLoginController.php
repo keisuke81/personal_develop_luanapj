@@ -61,7 +61,6 @@ class CompanionLoginController extends Controller
         $nonce_uri = "&nonce=";
 
         $uri = $uri . $response_type . $client_id . $redirect_uri . $state_uri . $scope . $prompt . $nonce_uri;
-        dd($uri);
 
         return redirect($uri);
     }
