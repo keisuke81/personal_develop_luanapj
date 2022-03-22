@@ -59,7 +59,6 @@ class CompanionLoginController extends Controller
     public function handleProviderCallback(Request $request)
     {
         $provided_user = Socialite::driver('line')->user();
-        dd($provided_user);
 
         $user = Companion::where('line_id', $provided_user->id)
             ->first();
