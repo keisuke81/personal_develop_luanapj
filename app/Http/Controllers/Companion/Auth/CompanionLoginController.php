@@ -133,7 +133,7 @@ class CompanionLoginController extends Controller
         if ($user) {
             Auth::login($user);
             $user_id = Auth::id();
-            return redirect('getMypage',[$user_id]);
+            return redirect('getMypage',['user_id' => $user_id]);
 
             // なければ登録してからログイン
         } else {
