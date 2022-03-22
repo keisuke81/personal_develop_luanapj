@@ -46,7 +46,7 @@ class LoginController extends Controller
 
     public function redirectToProvider()
     {
-        return Socialite::driver('line')->redirect()->route('callback');
+        return Socialite::driver('line')->redirect();
     }
 
     /**
@@ -58,6 +58,7 @@ class LoginController extends Controller
     public function handleProviderCallback(Request $request)
     {
         $provided_user = Socialite::driver('line')->user();
+        dd($provided_user);
 
         $user = User::where('line_id', $provided_user->id)
             ->first();
