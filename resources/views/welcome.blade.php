@@ -7,6 +7,8 @@
 
         <a href="{{route('linelogin')}}">男性の方用（LINEログイン）</a>
 
+        <a href="{{route('companion.linelogin')}}">女性の方（LINEログイン）</a>
+
     </div>
 
 </body>

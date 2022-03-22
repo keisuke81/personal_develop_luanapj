@@ -28,14 +28,22 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//LINEログイン機能
+//LINEログイン機能 男
 Route::get('/login/line',
 [LoginController::class, 'redirectToProvider'])->name('linelogin');
 
 Route::get('/login/line/callback',[LoginController::class,'handleProviderCallback']);
 
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
-//LINEログイン機能　終わり
+//LINEログイン機能　男　終わり
+
+//女性　ログイン機能
+Route::get(
+    '/login/line/cast',
+    [CompanionLoginController::class, 'redirectToProvider']
+)->name('companion.linelogin');
+
+Route::get('/login/line/callback', [CompanionLoginController::class, 'handleProviderCallback']);
 
 
 //マイページの表示
@@ -43,6 +51,7 @@ Route::get(
     '/mypage/{user_id}',
     [UserController::class, 'getMypage']
 )->name('getMypage');
+
 
 //プロフィールの表示//
 Route::get(
@@ -122,3 +131,6 @@ Route::get('/chat/{recieve}', [
 Route::post('/chat/send',
     [ChatController::class, 'store']
 )->name('chatSend');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
