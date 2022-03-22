@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
 
-use App\Http\Controllers\Auth\CompanionLoginController;//追加
+use App\Http\Controllers\Companion\Auth\CompanionLoginController;//追加
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\UserController;
