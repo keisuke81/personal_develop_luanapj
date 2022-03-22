@@ -53,8 +53,8 @@ class CompanionLoginController extends Controller
 
         $uri = "https://access.line.me/oauth2/v2.1/authorize?";
         $response_type = "response_type=code";
-        $client_id = "&client_id=" . config('services.line.client_id_cast');
-        $redirect_uri = "&redirect_uri=" . config('services.line.redirect_cast');
+        $client_id = "&client_id=" . config('services.line2.client_id');
+        $redirect_uri = "&redirect_uri=" . config('services.line2.redirect');
         $state_uri = "&state=" . $state;
         $scope = "&scope=openid%20profile";
         $prompt = "&prompt=consent";
@@ -73,9 +73,9 @@ class CompanionLoginController extends Controller
         $post_data = array(
             'grant_type'    => 'authorization_code',
             'code'          => $req['code'],
-            'redirect_uri'  => config('services.line.redirect_cast'),
-            'client_id'     =>  config('services.line.client_id_cast'),
-            'client_secret' => config('services.line.client_secret_cast'),
+            'redirect_uri'  => config('services.line2.redirect'),
+            'client_id'     =>  config('services.line2.client_id'),
+            'client_secret' => config('services.line2.client_secret'),
         );
         $url = 'https://api.line.me/oauth2/v2.1/token';
 
