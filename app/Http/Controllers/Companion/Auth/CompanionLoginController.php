@@ -144,7 +144,7 @@ class CompanionLoginController extends Controller
             $user->save();
             Auth::login($user);
             $user_id = Auth::id();
-            return redirect('getMypage',[$user_id]);
+            return redirect('getMypage',['user_id' => $user_id]);
         }
     }
 
