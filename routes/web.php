@@ -45,7 +45,7 @@ Route::get(
     [CompanionLoginController::class, 'cast_redirectToProvider']
 )->name('companion.linelogin');
 
-Route::get('/login/line/callback', [CompanionLoginController::class, 'handleProviderCallback'])->name('companion.callback');
+Route::get('/login/line/cast/callback', [CompanionLoginController::class, 'handleProviderCallback'])->name('companion.callback');
 
 
 //マイページの表示
