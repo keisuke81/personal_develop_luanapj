@@ -45,7 +45,7 @@ class CompanionLoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function redirectToProvider()
+    public function cast_redirectToProvider()
     {
         return Socialite::driver('line_cast')->redirect(route('companion.callback'));
     }
