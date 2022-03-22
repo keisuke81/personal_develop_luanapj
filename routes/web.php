@@ -47,10 +47,6 @@ Route::get(
 
 Route::get('/login/line/callback', [CompanionLoginController::class, 'handleProviderCallback'])->name('companion.callback');
 
-Route::get('/login/line/callback', [LoginController::class, 'handleProviderCallback'])->name('callback');
-
-
-
 
 //マイページの表示
 Route::get(
