@@ -16,10 +16,10 @@ class CreateCompanionsTable extends Migration
         Schema::create('companions', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->autoIncrement()->startingValue(100000);
             $table->string('name');
-            $table->string('gender');
-            $table->string('email')->unique();
+            $table->string('gender')->nullable();
+            $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->string('nickname')->nullable();
             $table->date('birthday')->nullable();
             $table->string('age')->nullable();

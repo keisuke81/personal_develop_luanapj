@@ -47,7 +47,7 @@ class CompanionLoginController extends Controller
 
     public function cast_redirectToProvider()
     {
-        return Socialite::driver('line')->redirect()->route('companion.callback');
+        return Socialite::driver('line')->redirect('companion.callback');
     }
 
     /**
