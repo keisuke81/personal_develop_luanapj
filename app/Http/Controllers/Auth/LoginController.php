@@ -46,7 +46,7 @@ class LoginController extends Controller
 
     public function redirectToProvider()
     {
-        return Socialite::driver('line')->redirect(route('callbacking'));
+        return Socialite::driver('line')->redirect(route('callback'));
     }
 
     /**
