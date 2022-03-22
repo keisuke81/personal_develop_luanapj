@@ -13,7 +13,7 @@ use App\Models\Companion; //追記
 use Illuminate\Http\Request;//追記
 
 
-class LoginController extends Controller
+class CompanionLoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
