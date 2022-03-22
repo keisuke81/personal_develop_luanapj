@@ -42,8 +42,10 @@ Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 //女性　ログイン機能
 Route::get(
     '/login/line/cast',
-    [CompanionLoginController::class, 'redirectToProvider']
+    [CompanionLoginController::class, 'cast_redirectToProvider']
 )->name('companion.linelogin');
+
+Route::get('/login/line/callback', [LoginController::class, 'handleProviderCallback']);
 
 
 
