@@ -54,6 +54,10 @@ Route::get(
     [UserController::class, 'getMypage']
 )->name('getMypage');
 
+//キャストのマイページ
+Route::get('/cast_mypage',
+[CompanionController::class,'CastGetMypage'])->name('CastGetMypage');
+
 
 //プロフィールの表示//
 Route::get(

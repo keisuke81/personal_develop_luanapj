@@ -79,4 +79,9 @@ class CompanionController extends Controller
 
         return redirect()->back();
     }
+
+    //キャストマイページ
+    public function CastGetMypage(){
+        return view('cast_mypage');
+    }
 }

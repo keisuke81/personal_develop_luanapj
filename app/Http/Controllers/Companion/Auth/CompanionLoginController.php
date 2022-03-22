@@ -133,7 +133,7 @@ class CompanionLoginController extends Controller
         if ($user) {
             Auth::login($user);
             $user_id = Auth::id();
-            return redirect('/home');
+            return redirect('/cast_mypage');
 
             // なければ登録してからログイン
         } else {
@@ -144,7 +144,7 @@ class CompanionLoginController extends Controller
             $user->save();
             Auth::login($user);
             $user_id = Auth::id();
-            return redirect('/home');
+            return redirect('/cast_mypage');
         }
     }
 
