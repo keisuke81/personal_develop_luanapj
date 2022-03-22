@@ -27,6 +27,8 @@ class CreateCompanionsTable extends Migration
             $table->string('score')->nullable();
             $table->text('self_produce')->nullable();
             $table->text('message')->nullable();
+            $table->string('provider')->nullable();
+            $table->string('line_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -23,7 +23,9 @@ class Companion extends Model
         'img_url',
         'score',
         'self_produce',
-        'message'
+        'message',
+        'provider',
+        'line_id'
     ];
 
 
