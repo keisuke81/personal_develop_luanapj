@@ -17,9 +17,6 @@
       <p>プレイ人数{{$invite->num_of_players}}</p>
       <p>男性レベル{{$invite->mens_level_name}}</p>
       <p>ゴルフ場：{{$invite->golf_course}}</p>
-      <div>
-        <p class="age_font">{{$item->age}}歳</p>
-      </div>
     </div>
     @endforeach
   </div>
