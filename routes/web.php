@@ -164,3 +164,7 @@ Route::post(
     '/cast_profile_update',
     [CompanionController::class, 'CastProfileUpdate']
 )->name('CastProfileUpdate');
+
+//誘い一覧を見る
+Route::get('/invited',
+[OfferController::class,'CastGetInvited'])->name('CastGetInvied');
