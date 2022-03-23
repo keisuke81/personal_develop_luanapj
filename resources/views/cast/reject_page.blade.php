@@ -18,8 +18,7 @@
       <p>男性レベル{{$invite->mens_level_name}}</p>
       <p>ゴルフ場：{{$invite->golf_course}}</p>
 
-      <a href="/invited/{{$invite->id}}/accept" class="btn">お誘いを受ける</a>
-      <a href="/invited/{{$invite->id}}/reject" class="btn">ごめんなさい・・</a>
+      <a href="/invited/{{$invite->id}}/reject/done" class="btn">お誘いをお断り</a>
     </div>
     @endforeach
   </div>

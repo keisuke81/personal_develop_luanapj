@@ -7,7 +7,6 @@
 
   <div class="wrapper">
 
-    @foreach($invites as $invite)
     <div class="card">
 
       <img class="content-img" src={{$invite->image}} />
@@ -18,9 +17,7 @@
       <p>男性レベル{{$invite->mens_level_name}}</p>
       <p>ゴルフ場：{{$invite->golf_course}}</p>
 
-      <a href="/invited/{{$invite->id}}/accept" class="btn">お誘いを受ける</a>
-      <a href="/invited/{{$invite->id}}/reject" class="btn">ごめんなさい・・</a>
+      <a href="/invited/{{$invite->id}}/accept/done" class="btn">予約を確定する</a>
     </div>
-    @endforeach
   </div>
 </body>

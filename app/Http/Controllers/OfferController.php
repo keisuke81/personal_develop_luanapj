@@ -122,4 +122,47 @@ class OfferController extends Controller
             'invites' => $invites
         ]);
     }
+
+    //誘いを受けるページ
+    public function GetAcceptPage($offer_id){
+        $invite = Offer::where('id', $offer_id)->first();
+        $user = User::where('id', $invite->user_id)->first();
+        $invite->user_name = $user->nickname;
+        $invite->image = $user->img_url;
+
+        $area = Area::where('id', $invite->area_id)->first();
+        $invite->area_name = $area->name;
+
+        $mens_level = Level::where('id', $invite->mens_level_id)->first();
+        $invite->mens_level_name = $mens_level->name;
+
+        $required_level = Level::where('id', $invite->required_level_id)->first();
+        $invite->required_level_name = $required_level->name;
+
+        return view('cast.accept_page')->with([
+            'invite' => $invite
+        ]);
+    }    
+
+    //誘いを断るページ    
+    public function GetRejectPage($offer_id)
+    {
+        $invite = Offer::where('id', $offer_id)->first();
+        $user = User::where('id', $invite->user_id)->first();
+        $invite->user_name = $user->nickname;
+        $invite->image = $user->img_url;
+
+        $area = Area::where('id', $invite->area_id)->first();
+        $invite->area_name = $area->name;
+
+        $mens_level = Level::where('id', $invite->mens_level_id)->first();
+        $invite->mens_level_name = $mens_level->name;
+
+        $required_level = Level::where('id', $invite->required_level_id)->first();
+        $invite->required_level_name = $required_level->name;
+
+        return view('cast.reject_page')->with([
+            'invite' => $invite
+        ]);
+    }
 }
