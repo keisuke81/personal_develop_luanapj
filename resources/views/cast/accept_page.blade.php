@@ -8,6 +8,7 @@
   <div class="wrapper">
 
   <form action="invited/{{$invite->id}}/accept/done" method="post">
+    @csrf
     <div class="card">
 
       <img class="content-img" src={{$invite->image}} />
