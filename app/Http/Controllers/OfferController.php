@@ -93,4 +93,33 @@ class OfferController extends Controller
             'user_id' => $user_id
         ]);
     }
+
+    //////////////////////////////////////////
+    //キャスト：誘い一覧を見る
+    //フォローしているキャスト一覧の表示//
+    public function CastGetInvited()
+    {
+        $companion_id = Auth::id();
+        $invites = Offer::where('companion_id', $companion_id)->get();
+        foreach ($invites as $invite) {
+
+            $user = User::where('id', $invite->user_id)->first();
+            $invite->user_name = $user->nickname;
+            $invite->image = $user->img_url;
+
+            $area = Area::where('id',$invite->area_id)->first();
+            $invite->area_name = $area->name;
+
+            $mens_level = Level::where('id',$invite->mens_level_id)->first();
+            $invite->mens_level_name = $mens_level->name;
+
+            $required_level = Level::where('id',$invite->required_level_id)->first();
+            $invite->required_level_name = $required_level->name;
+        }
+
+        // チャットユーザ選択画面を表示
+        return view('cast.invited')->with([
+            'invites' => $invites
+        ]);
+    }
 }
