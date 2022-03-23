@@ -19,7 +19,7 @@ class ReserveController extends Controller
             'golf_course' => $request->golf_course
         ];
 
-        Reserve::insert($param);
+        Reserve::create($param);
 
         return redirect()->route('CastGetInvited');
     }

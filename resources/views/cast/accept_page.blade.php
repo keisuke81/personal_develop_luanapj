@@ -17,13 +17,13 @@
       <input type="hidden" name="companion_id" value="{{$invite->companion_id}}">
       <input type="hidden" name="date" value="{{$invite->date}}">
       <input type="hidden" name="start_at" value="{{$invite->start_at}}">
-      <input type="hidden" name="num_of_players" value="{{$invite->num_of_players}}">
-      <input type="hidden" name="mens_level_id" value="{{$invite->menslevel_id}}">
+      <input type="hidden" name="num_of_players" value="{{$invite->num_of_players_men}}">
+      <input type="hidden" name="mens_level_id" value="{{$invite->mens_level_id}}">
       <input type="hidden" name="golf_course" value="{{$invite->golf_course}}">
       <p>{{$invite->nickname}}</p>
       <p>{{$invite->date}}</p>
       <p>スタート時間：{{$invite->start_at}}</p>
-      <p>プレイ人数{{$invite->num_of_players}}</p>
+      <p>プレイ人数{{$invite->num_of_players_men}}</p>
       <p>男性レベル{{$invite->mens_level_name}}</p>
       <p>ゴルフ場：{{$invite->golf_course}}</p>
 
