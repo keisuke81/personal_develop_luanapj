@@ -82,6 +82,9 @@ class CompanionController extends Controller
 
     //キャストマイページ
     public function CastGetMypage(){
-        return view('cast.cast_mypage');
+        $companion_id = Auth::id();
+        return view('cast.cast_mypage')->with([
+            'companion_id' => $companion_id
+        ]);
     }
 }
