@@ -7,7 +7,7 @@
 
   <div class="wrapper">
 
-  <form action="route{{'AcceptDone'}}" method="post">
+  <form action="/done" method="post">
     @csrf
     <div class="card">
 
