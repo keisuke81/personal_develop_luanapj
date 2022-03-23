@@ -67,7 +67,7 @@
       </table>
 
       <div>
-        <a class="btn" href="/mypage/profile/edit/{{$companion_id}}">プロフィールを更新</a>
+        <a class="btn" href="/cast_mypage/profile/edit/{{$companion_id}}">プロフィールを更新</a>
       </div>
     </div>
   </div>
