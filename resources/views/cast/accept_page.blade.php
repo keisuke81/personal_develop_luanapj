@@ -7,7 +7,7 @@
 
   <div class="wrapper">
 
-  <form action="invited/{{$invite->id}}/accept/done" method="post">
+  <form action="route{{'AcceptDone'}}" method="post">
     @csrf
     <div class="card">
 
