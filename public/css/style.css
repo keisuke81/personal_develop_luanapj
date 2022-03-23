@@ -41,7 +41,7 @@ ul{
     position: relative;
     margin:1% 1%;
     width:auto;
-    height:auto;
+    height:400px;
     box-shadow:0 0 5px #fff, 0 0 5px #ccc, 0 0 1px #aaa;
     -webkit-box-shadow:0 0 5px #fff, 0 0 5px #ccc, 0 0 1px #aaa;
     -moz-box-shadow:0 0 5px #fff, 0 0 5px #ccc, 0 0 1px #aaa;

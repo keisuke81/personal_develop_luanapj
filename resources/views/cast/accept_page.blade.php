@@ -7,6 +7,7 @@
 
   <div class="wrapper">
 
+  <form action=""
     <div class="card">
 
       <img class="content-img" src={{$invite->image}} />
