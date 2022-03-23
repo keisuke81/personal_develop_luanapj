@@ -10,6 +10,7 @@ use App\Http\Controllers\OfferController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CompanionController;
 use App\Http\Controllers\FollowController;
+use App\Http\Controllers\ReserveController;
 
 /*
 |--------------------------------------------------------------------------
@@ -176,3 +177,7 @@ Route::get('invited/{offer_id}/accept',
 //お誘いを断るページ
 Route::get('invited/{offer_id}/reject',
 [OfferController::class,'GetRejectPage'])->name('GetRejectPage');
+
+//お誘いを受ける（確定させる）
+Route::post('invited/{offer_id}/accept/done',
+[ReserveController::class, 'AcceptDone'])->name('AcceptDone');

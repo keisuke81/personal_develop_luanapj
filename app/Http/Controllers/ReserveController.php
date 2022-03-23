@@ -2,22 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reserve;
 use Illuminate\Http\Request;
 
 class ReserveController extends Controller
 {
-    protected $fillable = [
-        'user_id',
-        'companion_id',
-        'area_id',
-        'golf_course',
-        'date',
-        'start_at',
-        'num_of_players_men',
-        'num_of_players_women',
-        'mens_level_id',
-        'required_level_id',
-        'required_age_min',
-        'required_age_max',
-    ];
+    public function AcceptDone(Request $request){
+
+        $param =[
+            'user_id' => $request->user_id,
+            'companion_id' => $request->companion_id,
+            'date' => $request->date,
+            'start_at' => $request->start_at,
+            'num_of_players' => $request->num_of_players,
+            'mens_level_id' => $request->mens_level_id,
+            'golf_course' => $request->golf_course
+        ];
+
+        Reserve::insert($param);
+
+        return redirect()->route('CastGetInvited');
+    }
 }
