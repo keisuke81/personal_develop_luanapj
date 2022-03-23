@@ -87,4 +87,50 @@ class CompanionController extends Controller
             'companion_id' => $companion_id
         ]);
     }
+
+    //キャストのプロフィール表示
+    public function CastGetProfile($companion_id)
+    {
+        $companion_id = Auth::id();
+        $profile = Companion::where('id', $companion_id)->first();
+
+        return view('cast.cast_profile')->with([
+            'profile' => $profile,
+            'companion_id' => $companion_id
+        ]);
+    }
+
+    //登録情報更新ページの表示
+    public function CastProfileEdit($companion_id)
+    {
+        $companion_id = Auth::id();
+        $profile = Companion::where('id', $companion_id)->first();
+
+        return view('cast.cast_profile_edit')->with([
+            'profile' => $profile,
+            'companion_id' => $companion_id
+        ]);
+    }
+
+    //プロフィール更新時のDB更新//
+    public function CastProfileUpdate(Request $request)
+    {
+        $companion_id = $request->id;
+
+        $param = [
+            'id' => $request->id,
+            'nickname' => $request->nickname,
+            'email' => $request->email,
+            'img_url' => $request->img_url,
+            'score' => $request->score,
+            'self_produce' => $request->self_produce,
+            'message' => $request->message,
+        ];
+
+
+        Companion::where('id', $companion_id)->update($param);
+
+        return redirect()->route('CastGetProfile', ['companion_id' => $companion_id]);
+    }
+
 }

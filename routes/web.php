@@ -39,24 +39,12 @@ Route::get('/login/line/callback',[LoginController::class,'handleProviderCallbac
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 //LINEログイン機能　男　終わり
 
-//女性　ログイン機能
-Route::get(
-    '/login/line/cast',
-    [CompanionLoginController::class, 'cast_redirectToProvider']
-)->name('companion.linelogin');
-
-Route::get('/login/line/cast/callback', [CompanionLoginController::class, 'cast_handleProviderCallback'])->name('companion.callback');
-
 
 //マイページの表示
 Route::get(
     '/mypage/{user_id}',
     [UserController::class, 'getMypage']
 )->name('getMypage');
-
-//キャストのマイページ
-Route::get('/cast_mypage',
-[CompanionController::class,'CastGetMypage'])->name('CastGetMypage');
 
 
 //プロフィールの表示//
@@ -140,3 +128,39 @@ Route::post('/chat/send',
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/////////////////////////////////////////
+//キャスト側のRoute
+
+//女性　ログイン機能
+Route::get(
+    '/login/line/cast',
+    [CompanionLoginController::class, 'cast_redirectToProvider']
+)->name('companion.linelogin');
+
+//コールバック
+Route::get('/login/line/cast/callback', [CompanionLoginController::class, 'cast_handleProviderCallback'])->name('companion.callback');
+
+//キャストのマイページ取得
+Route::get(
+    '/cast_mypage',
+    [CompanionController::class, 'CastGetMypage']
+)->name('CastGetMypage');
+
+//キャスト：プロフィールの表示
+Route::get(
+    '/cast_mypage/profile/{companion_id}',
+    [CompanionController::class, 'CastGetProfile']
+)->name('CastGetProfile');
+
+//キャスト：プロフィール更新ページの表示
+Route::get(
+    '/cast_mypage/profile/edit/{companion_id}',
+    [CompanionController::class, 'CastProfileEdit']
+)->name(('CastProfileEdit'));
+
+//キャスト：プロフィール更新の実行
+Route::post(
+    '/cast_profile_update',
+    [CompanionController::class, 'CastProfileUpdate']
+)->name('CastProfileUpdate');
