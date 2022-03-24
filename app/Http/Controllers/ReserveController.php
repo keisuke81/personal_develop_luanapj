@@ -13,10 +13,13 @@ use App\Models\User;
 class ReserveController extends Controller
 {
     public function AcceptDone(Request $request){
+        $offer_id = $request->offer_id;
 
-        $offer_id = $request['offer_id'];
+        $param=[
+            'offer_id'=>$offer_id
+        ];
 
-        Reserve::insert($offer_id);
+        Reserve::insert($param);
 
         $companion_id = Auth::id();
         $invites = Offer::where('companion_id', $companion_id)->get();
