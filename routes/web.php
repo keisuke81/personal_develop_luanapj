@@ -181,3 +181,6 @@ Route::get('invited/{offer_id}/reject',
 //お誘いを受ける（確定させる）
 Route::post('invited/{offer_id}/accept/done',
 [ReserveController::class, 'AcceptDone'])->name('AcceptDone');
+
+//お誘いを断る（確定させる）
+Route::post('/invited/{offer_id}/reject/done',[OfferController::class,'PostReject'])->name('PostReject');

@@ -135,4 +135,24 @@ class OfferController extends Controller
             'invite' => $invite
         ]);
     }
+
+    //お誘いを断る（確定させる）
+    public function PostReject($offer_id){
+
+        Offer::where('id',$offer_id)->delete();
+
+        $companion_id = Auth::id();
+        $invites = Offer::where('companion_id', $companion_id)->get();
+        foreach ($invites as $invite) {
+
+            $user = User::where('id', $invite->user_id)->first();
+            $invite->user_name = $user->nickname;
+            $invite->image = $user->img_url;
+
+            $area = Area::where('id', $invite->area_id)->first();
+            $invite->area_name = $area->name;
+        }
+
+        return redirect()->route('CastGetInvited',['invites'=>$invites]);
+    }
 }
