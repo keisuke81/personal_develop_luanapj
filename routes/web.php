@@ -168,7 +168,7 @@ Route::post(
 
 //誘い一覧を見る
 Route::get('/invited',
-[OfferController::class,'CastGetInvited'])->name('CastGetInvied');
+[OfferController::class,'CastGetInvited'])->name('CastGetInvited');
 
 //お誘いを受けるページ
 Route::get('invited/{offer_id}/accept',
