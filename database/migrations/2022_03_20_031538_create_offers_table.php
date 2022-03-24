@@ -29,7 +29,6 @@ class CreateOffersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('companion_id')->references('id')->on('companions')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('area_id')->references('id')->on('areas')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('required_level_id')->references('id')->on('levels')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
