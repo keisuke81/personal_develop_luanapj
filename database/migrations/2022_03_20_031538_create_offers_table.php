@@ -23,7 +23,6 @@ class CreateOffersTable extends Migration
             $table->time('start_at')->nullable();
             $table->string('num_of_players_men');
             $table->string('num_of_players_women');
-            $table->unsignedBigInteger('required_level_id');
             $table->timestamps();
 
 
