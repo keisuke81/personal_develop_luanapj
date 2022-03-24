@@ -179,7 +179,7 @@ Route::get('invited/{offer_id}/reject',
 [OfferController::class,'GetRejectPage'])->name('GetRejectPage');
 
 //お誘いを受ける（確定させる）
-Route::post('invited/{offer_id}/accept/done',
+Route::post('/invited/{offer_id}/accept/done',
 [ReserveController::class, 'AcceptDone'])->name('AcceptDone');
 
 //お誘いを断る（確定させる）
