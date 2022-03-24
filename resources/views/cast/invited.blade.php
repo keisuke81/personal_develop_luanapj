@@ -15,7 +15,6 @@
       <p>{{$invite->date}}</p>
       <p>スタート時間：{{$invite->start_at}}</p>
       <p>プレイ人数{{$invite->num_of_players}}</p>
-      <p>男性レベル{{$invite->mens_level_name}}</p>
       <p>ゴルフ場：{{$invite->golf_course}}</p>
 
       <a href="/invited/{{$invite->id}}/accept" class="btn">お誘いを受ける</a>

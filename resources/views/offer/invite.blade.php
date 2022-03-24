@@ -131,32 +131,8 @@
         </tr>
         @endif
 
-        <!--求めるレベル-->
-        <tr>
-          <th>求めるレベル</th>
-          <td>
-            <select name="required_level_id" id="required_level_id">
-              <option value="1" @if(old('required_level_id')=='1' ) selected @endif>初級（120以上）</option>
-              <option value="2" @if(old('required_level_id')=='2' ) selected @endif>中級（100~119）</option>
-              <option value="3" @if(old('required_level_id')=='3' ) selected @endif>上級（99以下）</option>
-              <option value="4" @if(old('required_level_id')=='4' ) selected @endif>超上級（80以下）</option>
-              <option value="5" @if(old('required_level_id')=='5' ) selected @endif>特に指定なし</option>
-            </select>
-          </td>
-        </tr>
-        @if($errors->has('required_level_id'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※入力必須です。</p>
-          </td>
-        </tr>
-        @endif
-
         <!--オファーするユーザー名-->
         <input type="hidden" name="user_id" id="user_id" value={{$user_id}}>
-        <!--オファーするユーザーの年齢-->
-        <input type="hidden" name="age" id="age" value=>
       </table>
 
       <!--申し込みフォーム-->

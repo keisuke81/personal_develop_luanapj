@@ -44,20 +44,12 @@ class OfferController extends Controller
         $area = Area::where('id', $request->area_id)->first();
         $area_name = $area->name;
 
-        //レベル名の表示//
-        $mens_level = Level::where('id', $request->mens_level_id)->first();
-        $mens_level_name = $mens_level->name;
-
-        $required_level = Level::where('id', $request->required_level_id)->first();
-        $required_level_name = $required_level->name;
 
         return view('offer.invite_confirm', [
             'user_id' => $user_id,
             'companion_id' => $companion_id,
             'inputs' => $inputs,
             'area_name' => $area_name,
-            'mens_level_name' => $mens_level_name,
-            'required_level_name' => $required_level_name
 
         ]);
     }
@@ -81,10 +73,6 @@ class OfferController extends Controller
             'start_at' => $request->start_at,
             'num_of_players_men' => $request->num_of_players_men,
             'num_of_players_women' => $request->num_of_players_women,
-            'mens_level_id' => $request->mens_level_id,
-            'required_level_id' => $request->required_level_id,
-            'required_age_min' => $request->required_age_min,
-            'required_age_max' => $request->required_age_max,
         ];
 
         Offer::create($param);
@@ -132,9 +120,6 @@ class OfferController extends Controller
 
         $area = Area::where('id', $invite->area_id)->first();
         $invite->area_name = $area->name;
-
-        $mens_level = Level::where('id', $invite->mens_level_id)->first();
-        $invite->mens_level_name = $mens_level->name;
 
         $required_level = Level::where('id', $invite->required_level_id)->first();
         $invite->required_level_name = $required_level->name;
