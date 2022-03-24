@@ -16,7 +16,7 @@ class ReserveController extends Controller
 
         $offer_id = $request['offer_id'];
 
-        Reserve::create($offer_id);
+        Reserve::insert($offer_id);
 
         $companion_id = Auth::id();
         $invites = Offer::where('companion_id', $companion_id)->get();
