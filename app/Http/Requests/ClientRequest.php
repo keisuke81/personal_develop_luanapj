@@ -23,16 +23,6 @@ class ClientRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'area_id' => 'required',
-            'date' => 'required',
-            'start_at' => 'required',
-            'num_of_players_men' => 'required',
-            'num_of_players_women' => 'required',
-            'mens_level_id' => 'required',
-            'required_level_id' => 'required',
-            'required_age_min' => 'required |numeric | min:20',
-            'required_age_max' => 'required | gte:required_age_min',
-        ];
+     //
     }
 }

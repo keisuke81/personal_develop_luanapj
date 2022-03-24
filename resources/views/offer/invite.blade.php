@@ -30,15 +30,6 @@
           </td>
         </tr>
 
-        @if($errors->has('date'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※入力必須です。</p>
-          </td>
-        </tr>
-        @endif
-
         <!--時間-->
         <tr>
           <th>スタート時間</th>
@@ -46,15 +37,6 @@
             <input type="time" name="start_at" id="start_at" min="6:30" max="15:00" value="{{old('start_at') ?? "08:00"}}">
           </td>
         </tr>
-
-        @if($errors->has('start_at'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※入力必須です。</p>
-          </td>
-        </tr>
-        @endif
         <!--エリア-->
         <tr>
           <th>ゴルフ場エリア</th>
@@ -72,14 +54,6 @@
             </select>
           </td>
         </tr>
-        @if($errors->has('area_id'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※入力必須です。</p>
-          </td>
-        </tr>
-        @endif
 
         <!--ゴルフ場名-->
         <tr>
@@ -88,14 +62,6 @@
             <input type="text" id="golf_course" name="golf_course" placeholder="例）ABCカントリークラブ" value="{{old('golf_course')}}">
           </td>
         </tr>
-        @if($errors->has('golf_course'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※入力必須です。未定の場合は「未定」と記載ください。</p>
-          </td>
-          @endif
-
 
           <!--男性人数-->
         <tr>
@@ -105,15 +71,6 @@
           </td>
         </tr>
 
-        @if($errors->has('num_of_players_men'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※入力必須です。</p>
-          </td>
-        </tr>
-        @endif
-
         <!--女性の人数-->
         <tr>
           <th>女性の人数</th>
@@ -121,18 +78,6 @@
             <input type="number" id="num_of_players_women" name="num_of_players_women" value="{{old('num_of_players_women') ?? '2'}}">名
           </td>
         </tr>
-
-        @if($errors->has('num_of_players_women'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※入力必須です。</p>
-          </td>
-        </tr>
-        @endif
-
-        <!--オファーするユーザー名-->
-        <input type="hidden" name="user_id" id="user_id" value={{$user_id}}>
       </table>
 
       <!--申し込みフォーム-->

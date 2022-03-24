@@ -33,9 +33,8 @@ class OfferController extends Controller
     }
 
     //確認ページに進む//
-    public function InviteConfirm(ClientRequest $request, $id)
+    public function InviteConfirm(Request $request, $id)
     {
-        $user = Auth::user();
         $user_id = Auth::id();
         $companion_id = $id;
 
@@ -54,7 +53,7 @@ class OfferController extends Controller
         ]);
     }
 
-    public function InviteSuccess(ClientRequest $request, $id)
+    public function InviteSuccess(Request $request, $id)
     {
         $user = Auth::user();
         $user_id = Auth::id();
