@@ -17,9 +17,5 @@ class Offer extends Model
         'start_at',
         'num_of_players_men',
         'num_of_players_women',
-        'mens_level_id',
-        'required_level_id',
-        'required_age_min',
-        'required_age_max',
     ];
 }
