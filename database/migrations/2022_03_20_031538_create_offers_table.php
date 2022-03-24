@@ -23,17 +23,13 @@ class CreateOffersTable extends Migration
             $table->time('start_at')->nullable();
             $table->string('num_of_players_men');
             $table->string('num_of_players_women');
-            $table->unsignedBigInteger('mens_level_id');
             $table->unsignedBigInteger('required_level_id');
-            $table->string('required_age_min')->nullable();
-            $table->string('required_age_max')->nullable();
             $table->timestamps();
 
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('companion_id')->references('id')->on('companions')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('area_id')->references('id')->on('areas')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('mens_level_id')->references('id')->on('levels')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('required_level_id')->references('id')->on('levels')->onUpdate('cascade')->onDelete('cascade');
         });
     }
