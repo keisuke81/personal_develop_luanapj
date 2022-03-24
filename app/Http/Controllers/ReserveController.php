@@ -10,13 +10,7 @@ class ReserveController extends Controller
     public function AcceptDone(Request $request){
 
         $param =[
-            'user_id' => $request->user_id,
-            'companion_id' => $request->companion_id,
-            'date' => $request->date,
-            'start_at' => $request->start_at,
-            'num_of_players' => $request->num_of_players,
-            'mens_level_id' => $request->mens_level_id,
-            'golf_course' => $request->golf_course
+            'offer_id' => $request->offer_id
         ];
 
         Reserve::create($param);
