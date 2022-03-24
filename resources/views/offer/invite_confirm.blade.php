@@ -79,39 +79,6 @@
             </td>
           </tr>
 
-          <!--男性のレベル-->
-          <tr>
-            <th>男性のレベル</th>
-            <td>
-              <input type="hidden" name="mens_level_id" value="{{$inputs['mens_level_id']}}">
-              {{$mens_level_name}}
-            </td>
-          </tr>
-
-          <!--求めるレベル-->
-          <tr>
-            <th>求めるレベル</th>
-            <td>
-              <input type="hidden" name="required_level_id" value="{{$inputs['required_level_id']}}">
-              {{$required_level_name}}
-            </td>
-          </tr>
-
-          <!--求める年齢-->
-          <tr>
-            <th>求める年齢</th>
-            <td>
-              <input type="hidden" name="required_age_min" value="{{$inputs['required_age_min']}}">
-              {{$inputs['required_age_min']}}歳〜 <input type="hidden" name="required_age_max" value="{{$inputs['required_age_max']}}">{{$inputs['required_age_max']}}歳
-            </td>
-          </tr>
-
-          <!--オファーするユーザー名-->
-          <input type="hidden" name="user_id" id="user_id" value={{$user_id}}>
-          <!--オファーするユーザーの年齢-->
-          <input type="hidden" name="age" id="age" value=>
-        </table>
-
         <!--申し込みフォーム-->
         <button name="back" value="true" class="bigger">内容を修正する</button>
         <button name="offer" value="ture" class="bigger">送信する</button>
