@@ -131,29 +131,6 @@
         </tr>
         @endif
 
-        <!--男性のレベル-->
-        <tr>
-          <th>男性のレベル</th>
-          <td>
-            <select name="mens_level_id" id="mens_level_id">
-              <option value="1" @if(old('mens_level_id')=='1' ) selected @endif>初級（120以上）</option>
-              <option value="2" @if(old('mens_level_id')=='2' ) selected @endif>中級（100~119）</option>
-              <option value="3" @if(old('mens_level_id')=='3' ) selected @endif>上級（99以下）</option>
-              <option value="4" @if(old('mens_level_id')=='4' ) selected @endif>超上級（80以下）</option>
-              <option value="5" @if(old('mens_level_id')=='5' ) selected @endif>特に指定なし</option>
-            </select>
-          </td>
-        </tr>
-
-        @if($errors->has('mens_level_id'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※入力必須です。</p>
-          </td>
-        </tr>
-        @endif
-
         <!--求めるレベル-->
         <tr>
           <th>求めるレベル</th>
@@ -176,31 +153,6 @@
         </tr>
         @endif
 
-        <!--求める年齢-->
-        <tr>
-          <th>求める年齢</th>
-          <td>
-            <input type="number" id="required_age_min" name="required_age_min" value="{{old('required_age_min') ?? '20'}}">歳〜 <input type="number" id="required_age_max" name="required_age_max" value="{{old('required_age_max') ?? '30'}}">歳
-          </td>
-        </tr>
-
-        @if($errors->has('required_age_min'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※20歳以上で入力してください。</p>
-          </td>
-        </tr>
-        @endif
-
-        @if($errors->has('required_age_max'))
-        <tr>
-          <th></th>
-          <td>
-            <p class="error">※上限年齢が下限年齢を下回っています。</p>
-          </td>
-        </tr>
-        @endif
         <!--オファーするユーザー名-->
         <input type="hidden" name="user_id" id="user_id" value={{$user_id}}>
         <!--オファーするユーザーの年齢-->
