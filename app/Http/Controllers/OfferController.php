@@ -96,12 +96,6 @@ class OfferController extends Controller
 
             $area = Area::where('id',$invite->area_id)->first();
             $invite->area_name = $area->name;
-
-            $mens_level = Level::where('id',$invite->mens_level_id)->first();
-            $invite->mens_level_name = $mens_level->name;
-
-            $required_level = Level::where('id',$invite->required_level_id)->first();
-            $invite->required_level_name = $required_level->name;
         }
 
         // チャットユーザ選択画面を表示
