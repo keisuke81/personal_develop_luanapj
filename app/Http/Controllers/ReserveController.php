@@ -12,6 +12,7 @@ class ReserveController extends Controller
         $param =[
             'offer_id' => $request->offer_id
         ];
+        dd($param);
 
         Reserve::create($param);
 
