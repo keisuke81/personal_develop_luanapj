@@ -6,7 +6,7 @@
   @endcomponent
   <a class="btn_small" href="/cast_mypage/{{$companion_id}}">マイページに戻る</a>
 
-  <form action="/cast_profile_update" method="post">
+  <form action="/cast_profile_update" method="post" enctype="multipart/form-data">
     @csrf
     <table class="table">
       <tr class="hidden">
@@ -16,7 +16,7 @@
         </td>
       </tr>
       <tr>
-        <th>お名前</th>
+        <th>お名前（※相手に表示されません）</th>
         <td>
           {{$profile->name}}
         </td>
@@ -40,14 +40,14 @@
       <tr>
         <th>誕生日</th>
         <td>
-          {{$profile->birthday}}
+          <input type="date" name="birthday" id="" value="{{$profile->birthday}}">
         </td>
       </tr>
 
       <tr>
         <th>本人画像</th>
         <td>
-          <input type="text" name="img_url" value="{{$profile->img_url}}">
+          <input type="file" name="img_url" value="{{$profile->img_url}}">
         </td>
       </tr>
 

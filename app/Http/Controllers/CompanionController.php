@@ -122,6 +122,7 @@ class CompanionController extends Controller
             'nickname' => $request->nickname,
             'email' => $request->email,
             'img_url' => $request->img_url,
+            'birthday' =>$request->birthday,
             'score' => $request->score,
             'self_produce' => $request->self_produce,
             'message' => $request->message,
