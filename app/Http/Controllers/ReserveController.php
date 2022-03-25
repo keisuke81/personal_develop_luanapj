@@ -62,7 +62,8 @@ class ReserveController extends Controller
         }
 
         return view('cast.cast_reserve')->with([
-            'reserves' => $reserves
+            'reserves' => $reserves,
+            'item' => $item
         ]);
         
     }
