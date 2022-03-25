@@ -27,7 +27,7 @@ class ReserveController extends Controller
 
 
         $companion_id = Auth::id();
-        $invites = Offer::where('companion_id', $companion_id)->get();
+        $invites = Offer::where('companion_id', $companion_id)->where('reserved',null)->get();
         foreach ($invites as $invite) {
 
             $user = User::where('id', $invite->user_id)->first();
