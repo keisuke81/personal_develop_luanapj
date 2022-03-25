@@ -69,6 +69,6 @@ class UserController extends Controller
         $user = User::where('id',$user_id);
         $user->update(['img_url' => $img]);
 
-        return view('user.mypage')->with(['user_id' => $user_id]);
+        return redirect()->route('getProfile', ['user_id' => $user_id]);
     }
 }
