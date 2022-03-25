@@ -10,7 +10,7 @@
     @foreach($reserves as $reserve)
     <div class="card">
 
-      <img class="content-img" src={{$invite->image}} />
+      <img class="content-img" src={{$reserve->image}} />
       <p>{{$reserve->nickname}}</p>
       <p>{{$reserve->date}}</p>
       <p>スタート時間：{{$reserve->start_at}}</p>
