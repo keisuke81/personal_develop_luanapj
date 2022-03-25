@@ -40,7 +40,7 @@
         <tr>
           <th>本人画像</th>
           <td>
-            {{$profile->img_url}}
+            <img src="{{$profile->img_url}}" alt="">
           </td>
         </tr>
 
