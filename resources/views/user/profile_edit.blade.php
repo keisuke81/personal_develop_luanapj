@@ -41,14 +41,14 @@
       <tr>
         <th>誕生日</th>
         <td>
-          {{$profile->birthday}}
+          <input type="date" name="" id="" vasue="{{$profile->birthday}}">
         </td>
       </tr>
 
       <tr>
         <th>本人画像</th>
         <td>
-          <input type="text" name="img_url" value="{{$profile->img_url}}">
+          <input type="file" name="img_url" value="{{$profile->img_url}}">
         </td>
       </tr>
 
