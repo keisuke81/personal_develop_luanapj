@@ -14,9 +14,13 @@ class ReserveController extends Controller
 {
     public function AcceptDone(Request $request){
         $offer_id = $request->offer_id;
+        $companion_id = Auth::id();
 
         $param=[
-            'offer_id'=>$offer_id
+            'offer_id'=>$offer_id,
+            'user_id' => $request->user_id,
+            'companion_id' => $companion_id
+
         ];
 
         Reserve::insert($param);
@@ -44,23 +48,22 @@ class ReserveController extends Controller
     //キャスト：今後のラウンド予定を確認する
     public function GetCastReserve(){
         $companion_id = Auth::id();
-        $reserves = Reserve::get();
-        
+        $reserves = Reserve::where('companion_id',$companion_id)->get();
+
         foreach($reserves as $reserve){
-           $item = Offer::where('id', $reserve->offer_id)->first();
-            $invites = Offer::where('companion_id', $companion_id)->where('reserved', null)->get();
-            foreach ($invites as $invite) {
+            $item = Offer::where('id',$reserve->offer_id)->first();
 
-                $user = User::where('id', $invite->user_id)->first();
-                $invite->user_name = $user->nickname;
-                $invite->image = $user->img_url;
+            $user = User::where('id', $item->user_id)->first();
+            $item->user_name = $user->nickname;
+            $item->image = $user->img_url;
 
-                $area = Area::where('id', $invite->area_id)->first();
-                $invite->area_name = $area->name;
-            }
-
-
+            $area = Area::where('id', $item->area_id)->first();
+            $item->area_name = $area->name;
         }
+
+        return view('cast.cast_reserve')->with([
+            'reserves' => $reserves
+        ]);
         
     }
 }

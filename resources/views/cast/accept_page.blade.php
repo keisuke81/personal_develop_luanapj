@@ -14,6 +14,7 @@
       <img class="content-img" src={{$invite->image}} />
 
       <input type="hidden" name="offer_id" value="{{$offer_id}}">
+      <input type="hidden" name="user_id" value="{{$invite->user_id}}">
      
       <p>{{$invite->nickname}}</p>
       <p>{{$invite->date}}</p>
