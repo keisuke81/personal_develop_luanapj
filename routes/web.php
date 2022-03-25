@@ -184,3 +184,7 @@ Route::post('/invited/{offer_id}/accept/done',
 
 //お誘いを断る（確定させる）
 Route::post('/invited/{offer_id}/reject/done',[OfferController::class,'PostReject'])->name('PostReject');
+
+//今後のラウンド予定を確認する
+Route::get('/cast_mypage/reserve_round',
+[ReserveController::class,'GetCastReserve'])->name('GetCastReserve');

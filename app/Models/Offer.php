@@ -17,5 +17,6 @@ class Offer extends Model
         'start_at',
         'num_of_players_men',
         'num_of_players_women',
+        'reserved',
     ];
 }

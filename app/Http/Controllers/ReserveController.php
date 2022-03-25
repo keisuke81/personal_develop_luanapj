@@ -21,8 +21,6 @@ class ReserveController extends Controller
 
         Reserve::insert($param);
 
-        Offer::where('id',$offer_id)->delete();
-
         $companion_id = Auth::id();
         $invites = Offer::where('companion_id', $companion_id)->get();
         foreach ($invites as $invite) {
@@ -36,5 +34,12 @@ class ReserveController extends Controller
         }
 
         return redirect()->route('CastGetInvited');
+    }
+
+    //キャスト：今後のラウンド予定を確認する
+    public function GetCastReserve(){
+        $companion_id = Auth::id();
+        $reserves = Reserve::get();
+        
     }
 }
