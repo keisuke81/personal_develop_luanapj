@@ -64,7 +64,7 @@ class UserController extends Controller
 
     public function store(Request $request){
         
-        $img = $request->img_url->store();
+        $img = $request->img_url;
         dd($img);
 
         $user_id = Auth::id();
