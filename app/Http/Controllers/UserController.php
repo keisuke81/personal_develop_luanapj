@@ -67,7 +67,7 @@ class UserController extends Controller
 
         $user_id = Auth::id();
         $user = User::where('id',$user_id);
-        $user->create(['img_url' => $img]);
+        $user->update(['img_url' => $img]);
 
         return view('user.mypage')->with(['user_id' => $user_id]);
     }
