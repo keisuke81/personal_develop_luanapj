@@ -21,6 +21,11 @@ class ReserveController extends Controller
 
         Reserve::insert($param);
 
+        $item = Offer::where('id', $offer_id)->first();
+        $item ->reserved =1;
+        $item->save();
+
+
         $companion_id = Auth::id();
         $invites = Offer::where('companion_id', $companion_id)->get();
         foreach ($invites as $invite) {
