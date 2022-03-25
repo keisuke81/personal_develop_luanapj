@@ -45,15 +45,12 @@ class UserController extends Controller
     public function profile_update(Request $request)
     {
         $user_id = $request->id;
-        $img = $request->img_url;
-        dd($img);
 
         $param = [
             'id' => $request->id,
             'nickname' => $request->nickname,
             'email' => $request->email,
             'birthday' => $request->birthday,
-            'img_url' => $img,
             'score' => $request->score,
             'self_produce' => $request->self_produce,
             'message' => $request->message,
@@ -63,5 +60,16 @@ class UserController extends Controller
 
 
         return redirect()->route('getProfile',['user_id' => $user_id]);
+    }
+
+    public function store(Request $request){
+        $img = $request->img_url->store('profile/public');
+        $user =new User;
+
+        $user->create(['img_url'=>$img]);
+
+        $user_id = Auth::id();
+
+        return view('user.mypage')->with(['user_id' => $user_id]);
     }
 }

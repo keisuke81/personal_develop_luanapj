@@ -66,6 +66,10 @@ Route::post(
     [UserController::class, 'profile_update']
 );
 
+//プロフィール画像の更新の実行
+Route::post('/image_upload',
+[UserController::class,'store']);
+
 //探す
 Route::get('/search',
 [OfferController::class,'search_top'])->name('search_top');

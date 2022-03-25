@@ -7,6 +7,14 @@
   <a class="btn_small" href="/mypage/{{$user_id}}">マイページに戻る</a>
   <div class="hidden">{{$user_id}}</div>
 
+  <form action="/image_upload" class="profile_image" enctype="multipart/form-data" method="post">
+  @csrf
+    <div class="img">
+      <input type="file" name="img_url" id="" value="{{$profile->img_url}}">
+    </div>
+    <button class="btn">画像更新する</button>
+  </form>
+
   <form action="/profile_update" method="post">
     @csrf
     <table class="table">
@@ -42,13 +50,6 @@
         <th>誕生日</th>
         <td>
           <input type="date" name="" id="" vasue="{{$profile->birthday}}">
-        </td>
-      </tr>
-
-      <tr>
-        <th>本人画像</th>
-        <td>
-          <input type="file" name="img_url" value="{{$profile->img_url}}">
         </td>
       </tr>
 
