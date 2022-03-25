@@ -45,7 +45,7 @@ class UserController extends Controller
     public function profile_update(Request $request)
     {
         $user_id = $request->id;
-        $img = $request->img_url->store('profile');
+        $img = $request->img_url;
         dd($img);
 
         $param = [
