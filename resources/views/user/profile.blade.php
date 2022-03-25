@@ -7,6 +7,9 @@
   <div class="type_a">
     <div class="type_a_child">
       <h1 class="h1">プロフィール</h1>
+      <div class="img">
+        
+      </div>
       <table class="table">
         <div class="hidden">{{$user_id}}</div>
         <tr>
@@ -35,13 +38,6 @@
           <th>誕生日</th>
           <td>
             {{$profile->birthday}}
-          </td>
-        </tr>
-
-        <tr>
-          <th>本人画像</th>
-          <td>
-            {{$profile->img_url}}
           </td>
         </tr>
 

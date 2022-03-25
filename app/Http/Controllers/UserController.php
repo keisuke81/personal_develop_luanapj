@@ -64,11 +64,10 @@ class UserController extends Controller
 
     public function store(Request $request){
         $img = $request->img_url->store('profile/public');
-        $user =new User;
-
-        $user->create(['img_url'=>$img]);
 
         $user_id = Auth::id();
+        $user = User::where('id',$user_id);
+        $user->create(['img_url' => $img]);
 
         return view('user.mypage')->with(['user_id' => $user_id]);
     }
