@@ -63,7 +63,7 @@ class UserController extends Controller
     }
 
     public function store(Request $request){
-        $img = $request->img_url->store('profile/public');
+        $img = $request->img_url->store('');
 
         $user_id = Auth::id();
         $user = User::where('id',$user_id);
