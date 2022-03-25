@@ -45,21 +45,21 @@ class UserController extends Controller
     public function profile_update(Request $request)
     {
         $user_id = $request->id;
+        $img = $request->img_url->store();
 
         $param = [
             'id' => $request->id,
             'nickname' => $request->nickname,
             'email' => $request->email,
-            'img_url' => $request->img_url,
             'birthday' => $request->birthday,
+            'img_url' => $img,
             'score' => $request->score,
             'self_produce' => $request->self_produce,
             'message' => $request->message,
         ];
-        dd($param);
-
 
         User::where('id', $user_id)->update($param);
+
 
         return redirect()->route('getProfile',['user_id' => $user_id]);
     }
