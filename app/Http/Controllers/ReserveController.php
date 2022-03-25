@@ -52,7 +52,6 @@ class ReserveController extends Controller
 
         foreach($reserves as $reserve){
             $item = Offer::where('id',$reserve->offer_id)->first();
-            dd($item);
 
             $user = User::where('id', $item->user_id)->first();
             $item->user_name = $user->nickname;
