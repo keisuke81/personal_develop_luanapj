@@ -46,6 +46,7 @@ class UserController extends Controller
     {
         $user_id = $request->id;
         $img = $request->img_url->store('profile');
+        dd($img);
 
         $param = [
             'id' => $request->id,
