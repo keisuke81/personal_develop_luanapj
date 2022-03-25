@@ -56,6 +56,7 @@ class UserController extends Controller
             'self_produce' => $request->self_produce,
             'message' => $request->message,
         ];
+        dd($param);
 
 
         User::where('id', $user_id)->update($param);
