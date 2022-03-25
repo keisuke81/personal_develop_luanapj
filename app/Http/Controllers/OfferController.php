@@ -132,7 +132,8 @@ class OfferController extends Controller
         $invite->area_name = $area->name;
 
         return view('cast.reject_page')->with([
-            'invite' => $invite
+            'invite' => $invite,
+            'offer_id' => $offer_id
         ]);
     }
 
