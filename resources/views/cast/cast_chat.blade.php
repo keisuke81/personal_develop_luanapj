@@ -36,7 +36,7 @@
     </div>
 
     <div class="fixed_bottom">
-      <form action="/chat/send" method="post">
+      <form action="/cast_chat/send" method="post">
         @csrf
         <textarea name="message" id="text" style="width:100%"></textarea>
 
