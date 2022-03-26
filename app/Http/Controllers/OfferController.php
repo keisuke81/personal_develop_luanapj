@@ -55,7 +55,7 @@ class OfferController extends Controller
         $companion_id = $id;
 
         if ($request->get('back')) {
-            return redirect()->route('getInvitePage')->withInput();
+            return redirect()->route('getInvitePage',['id' => $id])->withInput();
         }else{
 
             $param = [
