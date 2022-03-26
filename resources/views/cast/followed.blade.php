@@ -6,9 +6,9 @@
   @endcomponent
   <div class="wrapper">
     <table class="table">
-      @if($follows = null)
+      @if($follows === null)
       <p>まだフォロワーがいません。自分からふぉろーしてみよう！</p>
-      @endif
+      @else
       <thead>
         <tr>
           <th>#</th>
@@ -21,10 +21,11 @@
         <tr>
           <th>{{$loop->iteration}}</th>
           <td>{{$follow->nickname}}</td>
-          <td><a href="/cast_chat/{{$follow->user_id}}"><button type="button" class="btn btn-primary">Chat</button></a></td>
+          <td><a href="/cast_chat/{{$follow->member_id}}"><button type="button" class="btn btn-primary">Chat</button></a></td>
         </tr>
         @endforeach
       </tbody>
     </table>
+    @endif
   </div>
 </body>

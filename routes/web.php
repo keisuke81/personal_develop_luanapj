@@ -207,3 +207,15 @@ Route::get(
     '/cast_chat',
     [ChatController::class, 'getChats']
 )->name('getChats');
+
+//チャットの受け取りと送信//
+Route::get('/chat/{recieve}', [
+    ChatController::class, 'getChatPage'
+])->name('chat');
+
+//チャットの送信
+Route::post(
+    '/chat/send',
+    [ChatController::class, 'store']
+)->name('chatSend');
+Auth::routes();
