@@ -6,6 +6,9 @@
   @endcomponent
   <div class="wrapper">
     <table class="table">
+      @if($follows = null)
+      <p>まだフォロワーがいません。自分からふぉろーしてみよう！</p>
+      @endif
       <thead>
         <tr>
           <th>#</th>
