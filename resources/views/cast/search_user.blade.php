@@ -21,7 +21,7 @@
 
       <img class="content-img" src={{$item->img_url}} />
 
-      <a href="/user_profile/{{$item->id}}" class="card_link">
+      <a href="/search_user/{{$item->id}}" class="card_link">
         <p class="name_font">{{$item->nickname}}</p>
       </a>
       <div>
