@@ -7,7 +7,6 @@
   <div>
     <a class="btn_small" href="/search_user">戻る</a>
   </div>
-  <div class="hidden">会員番号：{{$user_id}}</div>
   <div class="type_a">
     <div class="type_a_child">
       <div class="card_detail">
