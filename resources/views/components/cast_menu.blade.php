@@ -6,8 +6,8 @@
     <h1>LUANA MATCHING</h1>
     <nav class="gnav">
       <ul class="menu">
-        <li><a href="/invited">お誘い</a></li>
-        <li><a href="/follow_men">フォロー</a></li>
+        <li><a href="/invited">誘われているラウンド</a></li>
+        <li><a href="/search_men">男性を探す</a></li>
         <li><a href="/cast_chat">チャット</a></li>
         <li><a href="/cast_mypage">マイページ</a></li>
       </ul>

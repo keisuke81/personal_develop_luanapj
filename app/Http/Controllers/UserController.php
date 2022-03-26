@@ -75,4 +75,18 @@ class UserController extends Controller
 
         return redirect()->route('getProfile', ['user_id' => $user_id]);
     }
+
+    /////////////////////////////
+    //キャスト
+    //「男性を誘う」のキャスト一覧表示//
+    public function SearchUser()
+    {
+        $items = User::get();
+        
+        $companion_id = Auth::id();
+
+        return view('cast.search_user')->with([
+            'items' => $items
+        ]);
+    }
 }

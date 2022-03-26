@@ -218,3 +218,7 @@ Route::post(
     '/cast_chat/send',
     [ChatController::class, 'store']
 )->name('chatSend');
+
+//男性ユーザー一覧表示
+Route::get('/search_men',
+[UserController::class,'SearchUser'])->name('SearchUser');
