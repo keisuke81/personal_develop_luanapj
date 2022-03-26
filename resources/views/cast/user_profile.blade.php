@@ -24,10 +24,10 @@
       </div>
 
       <div class="follows">
-        @if($item->is_followed_by_auth_user())
-        <a href="{{ route('noFollow', ['id' => $item->id]) }}" class="btn black">フォロー解除</a>
+        @if($item->is_appealed_by_auth_user())
+        <a href="{{ route('CastnoFollow', ['id' => $item->id]) }}" class="btn black">フォロー解除</a>
         @else
-        <a href="{{ route('getFollow', ['id' => $item->id]) }}" class="btn white">フォローする</a>
+        <a href="{{ route('CastgetFollow', ['id' => $item->id]) }}" class="btn white">フォローする</a>
         @endif
       </div>
 

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -52,4 +53,26 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function appeals()
+    {
+        return $this->hasMany(Follow::class, 'user_id');
+    }
+
+    //フォローボタンの切り替え//
+    public function is_appealed_by_auth_user()
+    {
+        $companion_id = Auth::id();
+
+        $followers = array();
+        foreach ($this->follows as $follow) {
+            array_push($followers, $follow->member_id);
+        }
+
+        if (in_array($companion_id, $followers)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

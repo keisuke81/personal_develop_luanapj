@@ -226,3 +226,9 @@ Route::get('/search_user',
 //男性ユーザー詳細ページ
 Route::get('/search_user/{user_id}',
 [UserController::class,'GetUser'])->name('GetUser');
+
+//ユーザーのフォロー//
+Route::get('/cast_follow/{id}', [UserController::class, 'CastgetFollow'])->name('CastgetFollow');
+
+//ユーザーのフォロー解除//
+Route::get('/cast_noffollow/{id}', [UserController::class, 'CastnoFollow'])->name('CastnoFollow');
