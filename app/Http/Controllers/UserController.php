@@ -65,9 +65,9 @@ class UserController extends Controller
     public function store(Request $request){
         
         $originalImg = $request->img_url;
-        dd($originalImg);
 
         $filePath = $originalImg->store('public');
+        dd($filePath);
         $img = str_replace('public/','',$filePath);
 
 
