@@ -37,24 +37,7 @@
             <input type="time" name="start_at" id="start_at" min="6:30" max="15:00" value="{{old('start_at') ?? "08:00"}}">
           </td>
         </tr>
-        <!--エリア-->
-        <tr>
-          <th>ゴルフ場エリア</th>
-          <td>
-            <select name="area_id" id="area_id">
-              <option value="0" @if(old('area_id')=='0' ) selected @endif>未定</option>
-              <option value="1" selected @if(old('area_id')=='1' ) selected @endif>東京</option>
-              <option value="2" @if(old('area_id')=='2' ) selected @endif>神奈川</option>
-              <option value="3" @if(old('area_id')=='3' ) selected @endif>埼玉</option>
-              <option value="4" @if(old('area_id')=='4' ) selected @endif>千葉</option>
-              <option value="5" @if(old('area_id')=='5' ) selected @endif>群馬</option>
-              <option value="6" @if(old('area_id')=='6' ) selected @endif>栃木</option>
-              <option value="7" @if(old('area_id')=='7' ) selected @endif>茨城</option>
-              <option value="8" @if(old('area_id')=='8' ) selected @endif>静岡</option>
-            </select>
-          </td>
-        </tr>
-
+        
         <!--ゴルフ場名-->
         <tr>
           <th>ゴルフ場名</th>

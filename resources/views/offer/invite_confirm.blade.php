@@ -43,14 +43,6 @@
               {{$inputs['start_at']}}
             </td>
           </tr>
-          <!--エリア-->
-          <tr>
-            <th>ゴルフ場エリア</th>
-            <td>
-              <input type="hidden" name="area_id" value="{{$inputs['area_id']}}">
-              {{$area_name}}
-            </td>
-          </tr>
 
           <!--ゴルフ場名-->
           <tr>
