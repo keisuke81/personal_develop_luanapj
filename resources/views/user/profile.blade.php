@@ -8,7 +8,7 @@
     <div class="type_a_child">
       <h1 class="h1">プロフィール</h1>
       <div class="img">
-        <img src="{{asset('images/'.$profile->img_url)}}" alt="">
+        <img src="{{'public/storage/'.$profile->img_url)}}" alt="">
       </div>
       <table class="table">
         <div class="hidden">{{$user_id}}</div>

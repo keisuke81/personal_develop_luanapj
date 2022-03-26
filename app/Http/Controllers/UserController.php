@@ -68,8 +68,6 @@ class UserController extends Controller
 
         $filePath = $originalImg->store('public');
         $img = str_replace('public/','',$filePath);
-        dd($img);
-
 
         $user_id = Auth::id();
         $user = User::where('id',$user_id);
