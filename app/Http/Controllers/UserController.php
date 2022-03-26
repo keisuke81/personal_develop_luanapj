@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Follow;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ClientRequest;
 
@@ -98,5 +99,29 @@ class UserController extends Controller
         return view('cast.user_profile')->with([
             'item' => $item,
         ]);
+    }
+
+    //お気に入り登録//
+    public function CastgetFollow($id)
+    {
+        $companion_id = Auth::id();
+        $param = [
+            'companion_id' => $companion_id,
+            'member_id' => $id,
+        ];
+
+        Follow::create($param);
+
+        return redirect()->back();
+    }
+
+    //お気に入り解除//
+    public function CastnoFollow($id)
+    {
+        $companion_id = Auth::id();
+        $follow = Follow::where('member_id', $id)->where('companion_id', $companion_id)->first();
+        $follow->delete();
+
+        return redirect()->back();
     }
 }
