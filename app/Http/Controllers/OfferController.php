@@ -61,24 +61,25 @@ class OfferController extends Controller
 
         if ($request->get('back')) {
             return redirect()->back()->withInput();
-        }
+        }else{
 
-        $param = [
-            'user_id' => $user_id,
-            'companion_id' => $companion_id,
-            'area_id' => $request->area_id,
-            'golf_course' => $request->golf_course,
-            'date' => $request->date,
-            'start_at' => $request->start_at,
-            'num_of_players_men' => $request->num_of_players_men,
-            'num_of_players_women' => $request->num_of_players_women,
-        ];
+            $param = [
+                'user_id' => $user_id,
+                'companion_id' => $companion_id,
+                'area_id' => $request->area_id,
+                'golf_course' => $request->golf_course,
+                'date' => $request->date,
+                'start_at' => $request->start_at,
+                'num_of_players_men' => $request->num_of_players_men,
+                'num_of_players_women' => $request->num_of_players_women,
+            ];
 
-        Offer::create($param);
+            Offer::create($param);
 
-        return view('offer.invite_done')->with([
-            'user_id' => $user_id
-        ]);
+            return view('offer.invite_done')->with([
+                'user_id' => $user_id
+            ]);
+        }  
     }
 
     //////////////////////////////////////////
