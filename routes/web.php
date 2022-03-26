@@ -106,8 +106,7 @@ Route::get(
 //インバイト確認ページの表示//
 Route::post(
     '/invite_confirm/{id}',
-    [OfferController::class, 'InviteConfirm']
-);
+    [OfferController::class, 'InviteConfirm'])->name('InviteConfirm');
 
 //お誘い完了
 Route::post(
