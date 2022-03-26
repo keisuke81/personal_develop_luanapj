@@ -93,7 +93,7 @@ class UserController extends Controller
     //男性のプロフィール
     public function GetUser($user_id)
     {
-        $item = User::where('id', $user_id)->get();
+        $item = User::where('id', $user_id)->first();
         dd($item);
 
         return view('cast.user_profile')->with([
