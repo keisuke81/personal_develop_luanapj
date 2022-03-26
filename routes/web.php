@@ -209,13 +209,12 @@ Route::get(
 )->name('getChats');
 
 //チャットの受け取りと送信//
-Route::get('/chat/{recieve}', [
-    ChatController::class, 'getChatPage'
-])->name('chat');
+Route::get('/cast_chat/{recieve}', [
+    ChatController::class, 'getCastChat'
+])->name('getCastChat');
 
 //チャットの送信
 Route::post(
-    '/chat/send',
+    '/cast_chat/send',
     [ChatController::class, 'store']
 )->name('chatSend');
-Auth::routes();

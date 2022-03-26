@@ -82,7 +82,7 @@ class ChatController extends Controller
     //キャスト
 
     //チャットルームの表示
-    public function getCstChat($recieve)
+    public function getCastChat($recieve)
     {
         // チャットの画面
         $loginId = Auth::id();
