@@ -89,4 +89,14 @@ class UserController extends Controller
             'items' => $items
         ]);
     }
+
+    //男性のプロフィール
+    public function GetUser(User $user_id)
+    {
+        $item = User::where('id', $user_id)->get();
+
+        return view('cast.user_profile')->with([
+            'item' => $item,
+        ]);
+    }
 }

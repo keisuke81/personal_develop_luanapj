@@ -2,11 +2,12 @@
 @endcomponent
 
 <body>
-  @component('components.menu')
+  @component('components.cast_menu')
   @endcomponent
   <div>
-    <a class="btn_small" href="/search_cast">戻る</a>
+    <a class="btn_small" href="/search_user">戻る</a>
   </div>
+  <div class="hidden">会員番号：{{$user_id}}</div>
   <div class="type_a">
     <div class="type_a_child">
       <div class="card_detail">
@@ -31,7 +32,7 @@
         @endif
       </div>
 
-      <div class="chat">
+      <div class="hidden chat">
         <a class="btn" href="/invite_page/{{$item->id}}">お誘いする</a>
       </div>
     </div>

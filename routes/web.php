@@ -220,5 +220,9 @@ Route::post(
 )->name('chatSend');
 
 //男性ユーザー一覧表示
-Route::get('/search_men',
+Route::get('/search_user',
 [UserController::class,'SearchUser'])->name('SearchUser');
+
+//男性ユーザー詳細ページ
+Route::get('/search_user/{user_id}',
+[UserController::class,'GetUser'])->name('GetUser');
