@@ -17,7 +17,6 @@ class CreateOffersTable extends Migration
             $table->unsignedBigInteger('id')->autoIncrement();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('companion_id');
-            $table->unsignedBigInteger('area_id');
             $table->string('golf_course')->nullable();
             $table->date('date');
             $table->time('start_at')->nullable();
@@ -29,7 +28,6 @@ class CreateOffersTable extends Migration
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('companion_id')->references('id')->on('companions')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('area_id')->references('id')->on('areas')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

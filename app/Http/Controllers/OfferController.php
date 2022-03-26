@@ -39,16 +39,11 @@ class OfferController extends Controller
         $companion_id = $id;
 
         $inputs = $request->all();
-        //エリア名の表示//
-        $area = Area::where('id', $request->area_id)->first();
-        $area_name = $area->name;
-
 
         return view('offer.invite_confirm', [
             'user_id' => $user_id,
             'companion_id' => $companion_id,
             'inputs' => $inputs,
-            'area_name' => $area_name,
 
         ]);
     }
@@ -66,7 +61,6 @@ class OfferController extends Controller
             $param = [
                 'user_id' => $user_id,
                 'companion_id' => $companion_id,
-                'area_id' => $request->area_id,
                 'golf_course' => $request->golf_course,
                 'date' => $request->date,
                 'start_at' => $request->start_at,
