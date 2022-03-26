@@ -103,7 +103,7 @@ class ChatController extends Controller
 
         $messages = $query->get();
 
-        return view('chat.chat')->with([
+        return view('cast.cast_chat')->with([
             'param' => $param,
             'messages' => $messages,
             'companion_id' => $companion_id

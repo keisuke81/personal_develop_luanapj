@@ -5,10 +5,10 @@
   @component('components.cast_menu')
   @endcomponent
   <div class="wrapper">
+    @if($follows === null)
+    <p>まだフォロワーがいません。自分からふぉろーしてみよう！</p>
+    @else
     <table class="table">
-      @if($follows === null)
-      <p>まだフォロワーがいません。自分からふぉろーしてみよう！</p>
-      @else
       <thead>
         <tr>
           <th>#</th>
