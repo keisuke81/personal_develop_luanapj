@@ -73,7 +73,6 @@ class ReserveController extends Controller
     public function GetUserReserve()
     {
         $user_id = Auth::id();
-        dd($user_id);
         $reserves = Reserve::where('user_id', $user_id)->get();
 
         foreach ($reserves as $reserve) {

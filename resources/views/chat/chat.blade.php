@@ -4,7 +4,7 @@
 
 <body onload="init()" onunload="init2()">
 
-  @component('components.menu',['user_id' => $user_id])
+  @component('components.menu')
   @endcomponent
   <div class="container">
     <div class="row">
