@@ -64,7 +64,11 @@ class UserController extends Controller
 
     public function store(Request $request){
         
-        $img = $request->img_url->store('','public');
+        $originalImg = $request->img_url;
+
+        $filePath = $originalImg->store('public');
+        $img = str_replace('public/','',$filePath);
+
 
         $user_id = Auth::id();
         $user = User::where('id',$user_id);
