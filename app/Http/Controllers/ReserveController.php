@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Offer;
 use App\Models\Area;
+use App\Models\Companion;
 use App\Models\Level;
 use App\Models\User;
 
@@ -66,5 +67,28 @@ class ReserveController extends Controller
             'item' => $item
         ]);
         
+    }
+
+    //ユーザー：今後のラウンド予定を確認する
+    public function GetUserReserve()
+    {
+        $user_id = Auth::id();
+        $reserves = User::where('user_id', $user_id)->get();
+
+        foreach ($reserves as $reserve) {
+            $item = Offer::where('id', $reserve->offer_id)->first();
+
+            $companion = Companion::where('id', $item->companion_id)->first();
+            $item->companion_name = $companion->nickname;
+            $item->image = $companion->img_url;
+
+            $area = Area::where('id', $item->area_id)->first();
+            $item->area_name = $area->name;
+        }
+
+        return view('user.user_reserve')->with([
+            'reserves' => $reserves,
+            'item' => $item
+        ]);
     }
 }
