@@ -91,7 +91,7 @@ class UserController extends Controller
     }
 
     //男性のプロフィール
-    public function GetUser(User $user_id)
+    public function GetUser($user_id)
     {
         $item = User::where('id', $user_id)->get();
         dd($item);
