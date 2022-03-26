@@ -56,7 +56,7 @@ class User extends Authenticatable
 
     public function appeals()
     {
-        return $this->hasMany(Follow::class, 'user_id');
+        return $this->hasMany(Follow::class, 'member_id');
     }
 
     //フォローボタンの切り替え//
@@ -65,7 +65,7 @@ class User extends Authenticatable
         $companion_id = Auth::id();
 
         $followers = array();
-        foreach ($this->follows as $follow) {
+        foreach ($this->appeals as $follow) {
             array_push($followers, $follow->companion_id);
         }
 
