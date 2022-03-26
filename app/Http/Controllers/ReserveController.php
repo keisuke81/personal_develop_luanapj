@@ -87,7 +87,7 @@ class ReserveController extends Controller
             $item->area_name = $area->name;
         }
 
-        return view('user.user_reserve')->with([
+        return view('user_reserve')->with([
             'reserves' => $reserves,
             'item' => $item
         ]);
