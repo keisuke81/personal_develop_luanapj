@@ -88,9 +88,6 @@ class OfferController extends Controller
             $user = User::where('id', $invite->user_id)->first();
             $invite->user_name = $user->nickname;
             $invite->image = $user->img_url;
-
-            $area = Area::where('id',$invite->area_id)->first();
-            $invite->area_name = $area->name;
         }
 
         // チャットユーザ選択画面を表示
@@ -106,9 +103,6 @@ class OfferController extends Controller
         $invite->user_name = $user->nickname;
         $invite->image = $user->img_url;
 
-        $area = Area::where('id', $invite->area_id)->first();
-        $invite->area_name = $area->name;
-
         return view('cast.accept_page')->with([
             'invite' => $invite,
             'offer_id' => $offer_id
@@ -122,9 +116,6 @@ class OfferController extends Controller
         $user = User::where('id', $invite->user_id)->first();
         $invite->user_name = $user->nickname;
         $invite->image = $user->img_url;
-
-        $area = Area::where('id', $invite->area_id)->first();
-        $invite->area_name = $area->name;
 
         return view('cast.reject_page')->with([
             'invite' => $invite,
@@ -144,9 +135,6 @@ class OfferController extends Controller
             $user = User::where('id', $invite->user_id)->first();
             $invite->user_name = $user->nickname;
             $invite->image = $user->img_url;
-
-            $area = Area::where('id', $invite->area_id)->first();
-            $invite->area_name = $area->name;
         }
 
         return redirect()->route('CastGetInvited',['invites'=>$invites]);
