@@ -4,6 +4,7 @@
 <body>
   @component('components.cast_menu')
   @endcomponent
+  <!--
   <div class="type_a">
     <div class="type_a_child">
       <p>年齢で検索</p>
@@ -15,6 +16,7 @@
       </form>
     </div>
   </div>
+  !-->
   <div class="wrapper">
     @foreach($items as $item)
     <div class="card">
