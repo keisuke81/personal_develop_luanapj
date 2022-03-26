@@ -94,6 +94,7 @@ class UserController extends Controller
     public function GetUser($user_id)
     {
         $item = User::where('id', $user_id)->get();
+        dd($item);
 
         return view('cast.user_profile')->with([
             'item' => $item,
