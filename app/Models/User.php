@@ -66,7 +66,7 @@ class User extends Authenticatable
 
         $followers = array();
         foreach ($this->follows as $follow) {
-            array_push($followers, $follow->member_id);
+            array_push($followers, $follow->companion_id);
         }
 
         if (in_array($companion_id, $followers)) {
