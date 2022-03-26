@@ -38,9 +38,6 @@ class ReserveController extends Controller
             $user = User::where('id', $invite->user_id)->first();
             $invite->user_name = $user->nickname;
             $invite->image = $user->img_url;
-
-            $area = Area::where('id', $invite->area_id)->first();
-            $invite->area_name = $area->name;
         }
 
         return redirect()->route('CastGetInvited');
@@ -57,9 +54,6 @@ class ReserveController extends Controller
             $user = User::where('id', $item->user_id)->first();
             $item->user_name = $user->nickname;
             $item->image = $user->img_url;
-
-            $area = Area::where('id', $item->area_id)->first();
-            $item->area_name = $area->name;
         }
 
         return view('cast.cast_reserve')->with([
@@ -81,9 +75,6 @@ class ReserveController extends Controller
             $companion = Companion::where('id', $item->companion_id)->first();
             $item->companion_name = $companion->nickname;
             $item->image = $companion->img_url;
-
-            $area = Area::where('id', $item->area_id)->first();
-            $item->area_name = $area->name;
         }
 
         return view('user.user_reserve')->with([
