@@ -8,10 +8,9 @@
       <ul class="menu">
         <li><a href="/search_cast">探す</a></li>
         <li><a href="/follow_cast">フォロー</a></li>
-        <li><a href="/mypage/{{$user_id}}">マイページ</a></li>
+        <li><a href="/mypage">マイページ</a></li>
       </ul>
     </nav>
-    <div class="hidden">{{$user_id}}</div>
   </header>
 </body>
 

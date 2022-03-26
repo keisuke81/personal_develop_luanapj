@@ -2,7 +2,7 @@
 @endcomponent
 
 <body>
-  @component('components.menu',['user_id' => $user_id])
+  @component('components.menu')
   @endcomponent
   <div class="type_a">
     <div class="type_a_child">

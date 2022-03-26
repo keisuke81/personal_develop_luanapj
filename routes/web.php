@@ -43,7 +43,7 @@ Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 
 //マイページの表示
 Route::get(
-    '/mypage/{user_id}',
+    '/mypage',
     [UserController::class, 'getMypage']
 )->name('getMypage');
 

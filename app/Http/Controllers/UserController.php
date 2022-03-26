@@ -10,7 +10,7 @@ use App\Http\Requests\ClientRequest;
 class UserController extends Controller
 {
     //マイページの表示//
-    public function getMypage($user_id)
+    public function getMypage()
     {
         $user_id = Auth::id();
 
