@@ -10,7 +10,7 @@
         会員番号：{{$user_id}}
       </div>
       <div>
-        <a class="btn" href="/mypage/reserve_round">今後のラウンド予定</a>
+        <a class="btn" href="/mypage/user_reserve_round">今後のラウンド予定</a>
       </div>
 
       <div>

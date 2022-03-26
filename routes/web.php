@@ -135,7 +135,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //予約の確認
-Route::get('/mypage/reserve_round',
+Route::get('/mypage/user_reserve_round',
 [ReserveController::class,'GetUserReserve'])->name('GetUserReserve');
 
 /////////////////////////////////////////
