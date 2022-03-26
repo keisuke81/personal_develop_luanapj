@@ -8,7 +8,6 @@
       <ul class="menu">
         <li><a href="/search_cast">ラウンドに誘う</a></li>
         <li><a href="/follow_cast">フォロー</a></li>
-        <li><a href="/follower_cast">フォロワー</a></li>
         <li><a href="/mypage">マイページ</a></li>
       </ul>
     </nav>
