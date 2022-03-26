@@ -21,6 +21,8 @@ class ChatController extends Controller
         $follows = Follow::where('companion_id', $companion_id)->get();
         foreach ($follows as $follow) {
             $user = User::where('id', $follow->user_id)->first();
+            dd($user);
+
             $follow->nickname = $user->nickname;
         }
 
