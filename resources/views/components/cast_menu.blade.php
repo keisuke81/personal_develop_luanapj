@@ -8,6 +8,7 @@
       <ul class="menu">
         <li><a href="/invited">お誘い</a></li>
         <li><a href="/follow_men">フォロー</a></li>
+        <li><a href="/cast_chat">チャット</a></li>
         <li><a href="/cast_mypage">マイページ</a></li>
       </ul>
     </nav>

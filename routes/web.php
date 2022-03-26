@@ -201,3 +201,9 @@ Route::post('/invited/{offer_id}/reject/done',[OfferController::class,'PostRejec
 //今後のラウンド予定を確認する
 Route::get('/cast_mypage/reserve_round',
 [ReserveController::class,'GetCastReserve'])->name('GetCastReserve');
+
+//フォロワー一覧表示
+Route::get(
+    '/cast_chat',
+    [ChatController::class, 'getChats']
+)->name('getChats');

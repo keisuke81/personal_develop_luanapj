@@ -14,6 +14,23 @@ use Illuminate\Support\Facades\Mail;
 
 class ChatController extends Controller
 {
+    //チャットが来ている一覧の表示//
+    public function getChats()
+    {
+        $companion_id = Auth::id();
+        $follows = Follow::where('companion_id', $companion_id)->get();
+        foreach ($follows as $follow) {
+            $user = User::where('id', $follow->user_id)->first();
+            $follow->nickname = $user->nickname;
+        }
+
+        // チャットユーザ選択画面を表示
+        return view('cast.followed')->with([
+            'follows' => $follows,
+            'companion_id' => $companion_id
+        ]);
+    }
+
     //チャットルームの表示
     public function getChatPage($recieve)
     {
@@ -58,5 +75,37 @@ class ChatController extends Controller
         Chat::insert($insertParam);
 
         return redirect()->back();
+    }
+
+    //////////////////////////////////
+    //キャスト
+
+    //チャットルームの表示
+    public function getCstChat($recieve)
+    {
+        // チャットの画面
+        $loginId = Auth::id();
+        $companion_id = Auth::id();
+
+        $param = [
+            'send' => $loginId,
+            'recieve' => $recieve,
+        ];
+
+        // 送信 / 受信のメッセージを取得する
+        $query = Chat::where('send', $loginId)->where('recieve', $recieve);
+
+        $query->orWhere(function ($query) use ($loginId, $recieve) {
+            $query->where('send', $recieve);
+            $query->where('recieve', $loginId);
+        });
+
+        $messages = $query->get();
+
+        return view('chat.chat')->with([
+            'param' => $param,
+            'messages' => $messages,
+            'companion_id' => $companion_id
+        ]);
     }
 }
