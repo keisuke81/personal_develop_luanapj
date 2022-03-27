@@ -18,10 +18,7 @@
         <div>
           <p class="age_font">{{$item->age}}歳</p>
         </div>
-        <div>
-          <p class="score_font">ベストスコア：{{$item->score}}</p>
-        </div>
-      </div>
+ 
 
       <div class="follows">
         @if($item->is_followed_by_auth_user())
