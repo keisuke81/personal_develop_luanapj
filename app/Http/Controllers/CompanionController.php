@@ -60,6 +60,7 @@ class CompanionController extends Controller
     public function getFollow($id)
     {
         $user_id = Auth::id();
+        dd($user_id);
         $param = [
             'user_id' => $user_id,
             'companion_id' => $id,
