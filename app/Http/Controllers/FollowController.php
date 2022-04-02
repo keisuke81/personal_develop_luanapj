@@ -38,7 +38,6 @@ class FollowController extends Controller
             $user = User::where('id', $item->user_id)->first();
             $item->nickname = $user->nickname;
             $item->id = $user->id;
-            $item->is_appealed_by_auth_user = $user->is_appealed_by_auth_user;
         }
 
         // チャットユーザ選択画面を表示
