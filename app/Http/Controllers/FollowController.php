@@ -37,13 +37,14 @@ class FollowController extends Controller
         foreach ($items as $item) {
             $user = User::where('id', $item->user_id)->first();
             $item->nickname = $user->nickname;
+            $item->id = $user->id;
+            $item->is_appealed_by_auth_user = $user->is_appealed_by_auth_user;
         }
 
         // チャットユーザ選択画面を表示
         return view('cast.cast_followed')->with([
             'items' => $items,
             'companion_id' => $companion_id,
-            'user'=>$user
         ]);
     }
 }
