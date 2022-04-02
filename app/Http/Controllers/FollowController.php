@@ -14,7 +14,7 @@ class FollowController extends Controller
     public function getFollowing()
     {
         $user_id = Auth::id();
-        $users = Follow::where('member_id', $user_id)->get();
+        $users = Follow::where('user_id', $user_id)->get();
         foreach ($users as $user) {
             $companion = Companion::where('id', $user->companion_id)->first();
             $user->nickname = $companion->nickname;

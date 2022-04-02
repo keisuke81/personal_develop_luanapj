@@ -107,7 +107,7 @@ class UserController extends Controller
         $companion_id = Auth::id();
         $param = [
             'companion_id' => $companion_id,
-            'member_id' => $id,
+            'user_id' => $id,
         ];
 
         Follow::create($param);
@@ -119,7 +119,7 @@ class UserController extends Controller
     public function CastnoFollow($id)
     {
         $companion_id = Auth::id();
-        $follow = Follow::where('member_id', $id)->where('companion_id', $companion_id)->first();
+        $follow = Follow::where('user_id', $id)->where('companion_id', $companion_id)->first();
         $follow->delete();
 
         return redirect()->back();

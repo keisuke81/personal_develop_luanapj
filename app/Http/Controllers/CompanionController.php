@@ -61,7 +61,7 @@ class CompanionController extends Controller
     {
         $user_id = Auth::id();
         $param = [
-            'member_id' => $user_id,
+            'user_id' => $user_id,
             'companion_id' => $id,
         ];
 
@@ -74,7 +74,7 @@ class CompanionController extends Controller
     public function noFollow($id)
     {
         $user_id = Auth::id();
-        $follow = Follow::where('companion_id', $id)->where('member_id', $user_id)->first();
+        $follow = Follow::where('companion_id', $id)->where('user_id', $user_id)->first();
         $follow->delete();
 
         return redirect()->back();

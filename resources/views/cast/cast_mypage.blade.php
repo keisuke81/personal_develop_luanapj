@@ -18,7 +18,7 @@
       </div>
 
       <div>
-        <a class="btn" href="/cast_mypage/receipt">ラウンド履歴・領収書発行</a>
+        <a class="btn" href="/cast_mypage/receipt">ラウンド履歴</a>
       </div>
 
       <div>

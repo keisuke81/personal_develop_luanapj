@@ -42,7 +42,7 @@ class Companion extends Authenticatable
 
         $followers = array();
         foreach ($this->follows as $follow) {
-            array_push($followers, $follow->member_id);
+            array_push($followers, $follow->user_id);
         }
 
         if (in_array($user_id, $followers)) {
