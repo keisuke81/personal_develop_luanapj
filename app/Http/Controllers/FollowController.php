@@ -33,7 +33,8 @@ class FollowController extends Controller
     //Likeされているユーザー一覧表示
     public function CastGetFollowed(){
         $companion_id = Auth::id();
-        $items = Follow::where('companion_id', $companion_id)->get();
+        $items = Follow::where('companion_id', $companion_id)->get('user_id');
+        dd($items);
         foreach ($items as $item) {
             $user = User::where('id', $item->user_id)->first();
             $item->nickname = $user->nickname;
