@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Follow;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ClientRequest;
+use App\Models\FollowCast;
 
 class UserController extends Controller
 {
@@ -110,7 +111,7 @@ class UserController extends Controller
             'user_id' => $id,
         ];
 
-        Follow::create($param);
+        FollowCast::create($param);
 
         return redirect()->back();
     }
@@ -119,7 +120,7 @@ class UserController extends Controller
     public function CastnoFollow($id)
     {
         $companion_id = Auth::id();
-        $follow = Follow::where('user_id', $id)->where('companion_id', $companion_id)->first();
+        $follow = FollowCast::where('user_id', $id)->where('companion_id', $companion_id)->first();
         $follow->delete();
 
         return redirect()->back();
