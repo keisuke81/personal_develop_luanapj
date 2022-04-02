@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CastFollow extends Model
 {
     use HasFactory;
+    protected $table = 'castfollows';
 
     protected $fillable = [
         'user_id',
