@@ -56,7 +56,7 @@ class User extends Authenticatable
 
     public function appeals()
     {
-        return $this->hasMany(Follow::class, 'user_id');
+        return $this->hasMany(CastFollow::class, 'user_id');
     }
 
     //フォローボタンの切り替え//
