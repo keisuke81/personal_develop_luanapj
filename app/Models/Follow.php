@@ -11,7 +11,7 @@ class Follow extends Model
     use HasFactory;
 
     protected $fillable = [
-        'member_id',
+        'user_id',
         'companion_id'
     ];
 

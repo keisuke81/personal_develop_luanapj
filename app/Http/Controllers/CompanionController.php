@@ -60,7 +60,6 @@ class CompanionController extends Controller
     public function getFollow($id)
     {
         $user_id = Auth::id();
-        dd($user_id);
         $param = [
             'user_id' => $user_id,
             'companion_id' => $id,
@@ -75,7 +74,6 @@ class CompanionController extends Controller
     public function noFollow($id)
     {
         $user_id = Auth::id();
-        dd($user_id);
         $follow = Follow::where('companion_id', $id)->where('user_id', $user_id)->first();
         $follow->delete();
 
