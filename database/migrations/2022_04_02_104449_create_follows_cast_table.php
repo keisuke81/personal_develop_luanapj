@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFollowsCastTable extends Migration
+class CreateFollowCastsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateFollowsCastTable extends Migration
      */
     public function up()
     {
-        Schema::create('follows_cast', function (Blueprint $table) {
+        Schema::create('follow_casts', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->autoIncrement();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('companion_id');
@@ -31,6 +31,6 @@ class CreateFollowsCastTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('follows_cast');
+        Schema::dropIfExists('follow_casts');
     }
 }

@@ -8,6 +8,7 @@
       <ul class="menu">
         <li><a href="/invited">誘われているラウンド</a></li>
         <li><a href="/search_user">男性を探す</a></li>
+        <li><a href="/cast_followed">Likeされている</a></li>
         <li><a href="/cast_chat">チャット</a></li>
         <li><a href="/cast_mypage">マイページ</a></li>
       </ul>
