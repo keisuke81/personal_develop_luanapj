@@ -23,10 +23,10 @@
           <th>{{$loop->iteration}}</th>
           <td>{{$item->nickname}}</td>
           <div class="follows">
-            @if($item->$user->is_appealed_by_auth_user())
-            <a href="{{ route('CastnoFollow', ['id' => $item->$user->id]) }}" class="btn black">Like解除</a>
+            @if($user->is_appealed_by_auth_user())
+            <a href="{{ route('CastnoFollow', ['id' => $user->$user->id]) }}" class="btn black">Like解除</a>
             @else
-            <a href="{{ route('CastgetFollow', ['id' => $item->$user->id]) }}" class="btn white">Likeする</a>
+            <a href="{{ route('CastgetFollow', ['id' => $user->id]) }}" class="btn white">Likeする</a>
             @endif
           </div>
         </tr>
