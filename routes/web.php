@@ -232,3 +232,7 @@ Route::get('/cast_follow/{id}', [UserController::class, 'CastgetFollow'])->name(
 
 //ユーザーのフォロー解除//
 Route::get('/cast_noffollow/{id}', [UserController::class, 'CastnoFollow'])->name('CastnoFollow');
+
+//フォローされているページ表示
+Route::get('/cast_followed',
+[FollowController::class,'CastGetFollowed'])->name('CastGetFollowed');

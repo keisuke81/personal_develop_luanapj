@@ -26,4 +26,24 @@ class FollowController extends Controller
             'user_id' => $user_id
         ]);
     }
+
+    //////////////////////////////////
+    //キャスト
+
+    //Likeされているユーザー一覧表示
+    public function CastGetFollowed(){
+        $companion_id = Auth::id();
+        $items = Follow::where('companion_id', $companion_id)->get();
+        foreach ($items as $item) {
+            $user = User::where('id', $item->user_id)->first();
+            $item->nickname = $user->nickname;
+        }
+
+        // チャットユーザ選択画面を表示
+        return view('cast.cast_followed')->with([
+            'items' => $items,
+            'companion_id' => $companion_id,
+            'user'=>$user
+        ]);
+    }
 }

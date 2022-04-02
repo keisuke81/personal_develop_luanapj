@@ -56,7 +56,7 @@ class CompanionController extends Controller
         ]);
     }
 
-    //お気に入り登録//
+    //Like登録
     public function getFollow($id)
     {
         $user_id = Auth::id();
@@ -70,7 +70,7 @@ class CompanionController extends Controller
         return redirect()->back();
     }
 
-    //お気に入り解除//
+    //Like解除
     public function noFollow($id)
     {
         $user_id = Auth::id();
