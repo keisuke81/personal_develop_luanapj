@@ -6,7 +6,7 @@
   @endcomponent
 
   <div class="wrapper">
-    @if($items === null)
+    @if($users === null)
     <p>まだフォロワーがいません。自分からLikeしてみよう！</p>
     @else
     <table class="table">
