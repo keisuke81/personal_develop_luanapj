@@ -30,7 +30,7 @@
       </div>
 
       <div>
-        <a href="/logout_page" class="btn">ログアウト</a>
+        <a href="/logout" class="btn">ログアウト</a>
       </div>
     </div>
   </div>

@@ -95,7 +95,7 @@ Route::get(
 Route::get('/follow/{id}', [CompanionController::class, 'getFollow'])->name('getFollow');
 
 //フォロー解除//
-Route::get('/noffollow/{id}', [CompanionController::class, 'noFollow'])->name('noFollow');
+Route::get('/nofollow/{id}', [CompanionController::class, 'noFollow'])->name('noFollow');
 
 //コンパニオンをお誘いする
 Route::get(
