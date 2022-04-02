@@ -35,6 +35,7 @@ class FollowController extends Controller
         $companion_id = Auth::id();
         $items = Follow::where('companion_id', $companion_id)->get('user_id');
         $users = User::where('id',$items)->get();
+        dd($users);
 
 
         return view('cast.cast_followed')->with([

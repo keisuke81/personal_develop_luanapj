@@ -21,7 +21,7 @@
         @foreach($users as $user)
         <tr>
           <th>{{$loop->iteration}}</th>
-          <td>{{$user>nickname}}</td>
+          <td>{{$user->nickname}}</td>
           <div class="follows">
             @if($user->is_appealed_by_auth_user())
             <a href="{{ route('CastnoFollow', ['id' => $user->id]) }}" class="btn black">Like解除</a>
