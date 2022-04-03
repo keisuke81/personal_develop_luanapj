@@ -23,9 +23,11 @@
           <th>{{$loop->iteration}}</th>
           <td>{{$item->nickname ?? "未設定"}}</td>
 
-          <a href="/search_user/{{$item->id}}" class="card_link">
+          <td>
+          <a href="/search_user/{{$item->id}}" class="btn-small">
             プロフィールを見る
           </a>
+          </td>
         </tr>
         @endforeach
       </tbody>
