@@ -13,6 +13,6 @@ class Controller extends BaseController
 
     public function __construct()
     {
-        return redirect()->route('linelogin');
+        $this->middleware('auth');
     }
 }
