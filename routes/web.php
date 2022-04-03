@@ -143,6 +143,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/mypage/user_reserve_round',
 [ReserveController::class,'GetUserReserve'])->name('GetUserReserve');
 
+//フォローされているページ表示
+Route::get(
+    '/followed',
+    [CastFollowController::class, 'GetFollowed']
+)->name('GetFollowed');
+
 /////////////////////////////////////////
 //キャスト側のRoute
 

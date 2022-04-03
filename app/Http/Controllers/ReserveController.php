@@ -60,7 +60,6 @@ class ReserveController extends Controller
             'reserves' => $reserves,
             'item' => $item
         ]);
-        
     }
 
     //ユーザー：今後のラウンド予定を確認する

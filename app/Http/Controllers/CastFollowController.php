@@ -11,7 +11,23 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class CastFollowController extends Controller
-{
+{    //Likeされているキャスト一覧表示
+    public function GetFollowed()
+    {
+        $user_id = Auth::id();
+        $items = CastFollow::where('user_id', $user_id)->get();
+        foreach ($items as $item) {
+            $companion = Companion::where('id', $item->companion_id)->first();
+            $item->nickname = $companion->nickname;
+            $item->id = $companion->id;
+        }
+
+        return view('user.followed')->with([
+            'items' => $items,
+            'user_id' => $user_id,
+        ]);
+    }
+
     //チャット一覧の表示//
     public function CastgetChats()
     {
