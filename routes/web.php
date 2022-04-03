@@ -149,6 +149,12 @@ Route::get(
     [CastFollowController::class, 'GetFollowed']
 )->name('GetFollowed');
 
+//相互フォロー一覧表示
+Route::get(
+    '/cast_chat',
+    [FollowController::class, 'EachFollow']
+)->name('EachFollow');
+
 /////////////////////////////////////////
 //キャスト側のRoute
 
@@ -208,7 +214,7 @@ Route::post('/invited/{offer_id}/reject/done',[OfferController::class,'PostRejec
 Route::get('/cast_mypage/reserve_round',
 [ReserveController::class,'GetCastReserve'])->name('GetCastReserve');
 
-//フォロワー一覧表示
+//相互フォロー一覧表示
 Route::get(
     '/cast_chat',
     [CastFollowController::class, 'CastgetChats']

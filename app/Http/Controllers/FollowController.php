@@ -27,6 +27,28 @@ class FollowController extends Controller
         ]);
     }
 
+    //チャット一覧の表示//
+    public function EachFollow()
+    {
+        $user_id = Auth::id();
+        $followers = CastFollow::where('user_id', $user_id)->get('companion_id');
+
+        $follows = Follow::where('user_id', $user_id)->get('companion_id');
+
+        $each_follows = $followers->intersect($follows);
+
+        foreach ($each_follows as $each_follow) {
+            $companion = Companion::where('id', $each_follow->companion_id)->first();
+            $each_follow->nickname = $companion->nickname;
+        }
+
+        // チャットユーザ選択画面を表示
+        return view('offer.each_follow')->with([
+            'each_follows' => $each_follows
+        ]);
+    }
+}
+
     //////////////////////////////////
     //キャスト
 
