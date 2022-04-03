@@ -17,17 +17,21 @@ class CastFollowController extends Controller
     {
         $companion_id = Auth::id();
         $followers = Follow::where('companion_id', $companion_id)->get('user_id')->toArray();
-        dd($followers);
 
         $follows = CastFollow::where('companion_id',$companion_id)->get('user_id')->toArray();
+
+        $each_follows = array_intersect($followers, $follows);
+        foreach($each_follows as $each_follow){
+            $user = User::where('id',$each_follow->user_id);
+            $each_follow->nickname = $user->nickname;
+        }
 
 
 
 
         // チャットユーザ選択画面を表示
-        return view('cast.')->with([
-            'follows' => $follows,
-            'companion_id' => $companion_id
+        return view('cast.cast_each_follow')->with([
+            'each_follows' => $each_follows
         ]);
     }
 }
