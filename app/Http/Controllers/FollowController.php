@@ -42,6 +42,7 @@ class FollowController extends Controller
         return view('cast.cast_followed')->with([
             'items' => $items,
             'companion_id' => $companion_id,
+            'user' => $user
         ]);
     }
 }
