@@ -11,7 +11,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CompanionController;
 use App\Http\Controllers\FollowController;
 use App\Http\Controllers\ReserveController;
-
+use App\Http\Controllers\CastFollowController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
