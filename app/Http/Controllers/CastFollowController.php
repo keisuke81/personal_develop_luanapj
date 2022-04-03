@@ -16,10 +16,11 @@ class CastFollowController extends Controller
     public function CastgetChats()
     {
         $companion_id = Auth::id();
-        $followers = Follow::where('companion_id', $companion_id)->get('user_id');
+        $followers = Follow::where('companion_id', $companion_id)->get('user_id')->toArray();
 
-        $follows = CastFollow::where('companion_id',$companion_id)->get('user_id');
-        (array)$each_follows = array_intersect((array)$followers, (array)$follows);
+        $follows = CastFollow::where('companion_id',$companion_id)->get('user_id')->toArray();
+        
+        $each_follows = array_intersect((array)$followers, (array)$follows);
 
         foreach($each_follows as $each_follow){
             $user = User::where('id',$each_follow->user_id);
