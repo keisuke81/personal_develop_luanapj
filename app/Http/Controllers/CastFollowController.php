@@ -19,7 +19,7 @@ class CastFollowController extends Controller
         $followers = Follow::where('companion_id', $companion_id)->get('user_id');
 
         $follows = CastFollow::where('companion_id',$companion_id)->get('user_id');
-        $each_follows = array_intersect($followers, $follows);
+        $each_follows = array_intersect((array)$followers, (array)$follows);
 
         foreach($each_follows as $each_follow){
             $user = User::where('id',$each_follow->user_id);
