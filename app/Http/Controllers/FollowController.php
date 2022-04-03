@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Companion;
 use App\Models\Follow;
+use App\Models\CastFollow;
 use Illuminate\Support\Facades\Auth;
 
 class FollowController extends Controller
