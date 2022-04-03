@@ -17,6 +17,7 @@ class CastFollowController extends Controller
     {
         $companion_id = Auth::id();
         $followers = Follow::where('companion_id', $companion_id)->get('user_id')->toArray();
+        dd($followers);
 
         $follows = CastFollow::where('companion_id',$companion_id)->get('user_id')->toArray();
         
