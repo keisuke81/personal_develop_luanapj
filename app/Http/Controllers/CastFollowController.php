@@ -24,6 +24,7 @@ class CastFollowController extends Controller
 
         foreach($each_follows as $each_follow){
             $user = User::where('id',$each_follow->user_id);
+            dd($user);
             $each_follow->nickname = $user->nickname;
         }
 
