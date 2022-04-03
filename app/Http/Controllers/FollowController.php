@@ -35,15 +35,13 @@ class FollowController extends Controller
         $companion_id = Auth::id();
         $items = Follow::where('companion_id', $companion_id)->get('user_id');
         foreach($items as $item){
-            $users = [];
-            User::where('id', $item)->first()->$users;
+            $user = User::where('id', $item)->first();
+            $item->nickname = $user->nickname;
         }
-        dd($users);
 
         return view('cast.cast_followed')->with([
-
+            'items' => $items,
             'companion_id' => $companion_id,
-            'users' => $users,
         ]);
     }
 }
