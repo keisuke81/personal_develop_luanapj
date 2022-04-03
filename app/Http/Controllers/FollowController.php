@@ -34,9 +34,11 @@ class FollowController extends Controller
     public function CastGetFollowed(){
         $companion_id = Auth::id();
         $items = Follow::where('companion_id', $companion_id)->get('user_id');
-        $users = User::where('id',$items)->get();
+        foreach($items as $item){
+            $users = [];
+            User::where('id', $item)->first()->$users;
+        }
         dd($users);
-
 
         return view('cast.cast_followed')->with([
 
