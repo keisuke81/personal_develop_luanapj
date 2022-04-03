@@ -7,7 +7,7 @@
 
   <div class="wrapper">
     @if($each_follows === null)
-    <p>まだ茶と可能な相手がいません。自分からLikeしてみよう！</p>
+    <p>まだチャット可能な相手がいません。自分からLikeしてみよう！</p>
     @else
     <table class="table">
       <thead>
@@ -23,7 +23,7 @@
           <th>{{$loop->iteration}}</th>
           <td>{{$each_follow->nickname ?? "未設定"}}</td>
           <td>
-            <a href="/chat/{{$each_follow->user_id}}">チャットする</a>
+            <a href="/cast_chat/{{$each_follow->user_id}}">チャットする</a>
           </td>
         </tr>
         @endforeach
