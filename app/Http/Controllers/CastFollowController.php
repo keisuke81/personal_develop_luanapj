@@ -10,7 +10,7 @@ use App\Models\Companion;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class FollowCastController extends Controller
+class CastFollowController extends Controller
 {
     //チャット一覧の表示//
     public function CastgetChats()
