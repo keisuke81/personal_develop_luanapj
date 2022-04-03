@@ -17,10 +17,11 @@ class CastFollowController extends Controller
     {
         $companion_id = Auth::id();
         $followers = Follow::where('companion_id', $companion_id)->get('user_id');
+        dd($followers);
 
         $follows = CastFollow::where('companion_id',$companion_id)->get('user_id');
         
-        $each_follows = array_intersect($followers[], $follows[]);
+        $each_follows = array_intersect($followers, $follows);
 
         foreach($each_follows as $each_follow){
             $user = User::where('id',$each_follow->user_id);
