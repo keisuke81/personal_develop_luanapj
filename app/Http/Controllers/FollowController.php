@@ -47,7 +47,7 @@ class FollowController extends Controller
             'each_follows' => $each_follows
         ]);
     }
-}
+
 
     //////////////////////////////////
     //キャスト
