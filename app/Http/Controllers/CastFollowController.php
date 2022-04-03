@@ -27,9 +27,6 @@ class CastFollowController extends Controller
             $each_follow->nickname = $user->nickname;
         }
 
-
-
-
         // チャットユーザ選択画面を表示
         return view('cast.cast_each_follow')->with([
             'each_follows' => $each_follows
