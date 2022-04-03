@@ -21,7 +21,7 @@
         @foreach($items as $item)
         <tr>
           <th>{{$loop->iteration}}</th>
-          <td>{{$item->nickname}}</td>
+          <td>{{$item->nickname ?? '未設定'}}</td>
 
         </tr>
         @endforeach
