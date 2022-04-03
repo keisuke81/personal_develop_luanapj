@@ -37,6 +37,7 @@ class FollowController extends Controller
         foreach($items as $item){
             $user = User::where('id', $item->user_id)->first();
             $item->nickname = $user->nickname;
+            $item->id = $user->id;
         }
 
         return view('cast.cast_followed')->with([
