@@ -41,6 +41,7 @@ class FollowController extends Controller
         foreach ($each_follows as $each_follow) {
             $companion = Companion::where('id', $each_follow->companion_id)->first();
             $each_follow->nickname = $companion->nickname;
+            $each_follow->id = $companion->id;
         }
 
         // チャットユーザ選択画面を表示

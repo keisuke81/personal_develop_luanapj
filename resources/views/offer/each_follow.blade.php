@@ -14,11 +14,11 @@
         </tr>
       </thead>
       <tbody>
-        @foreach($users as $user)
+        @foreach($each_follows as $each_follow)
         <tr>
           <th>{{$loop->iteration}}</th>
-          <td>{{$user->nickname}}</td>
-          <td><a href="/chat/{{$user->companion_id}}"><button type="button" class="btn btn-primary">Chat</button></a></td>
+          <td>{{$each_follow->nickname}}</td>
+          <td><a href="/chat/{{$each_follow->companion_id}}"><button type="button" class="btn btn-primary">Chat</button></a></td>
         </tr>
         @endforeach
       </tbody>
