@@ -14,24 +14,6 @@ use Illuminate\Support\Facades\Mail;
 
 class ChatController extends Controller
 {
-    //チャットが来ている一覧の表示//
-    public function getChats()
-    {
-        $companion_id = Auth::id();
-        $follows = Follow::where('companion_id', $companion_id)->get();
-        foreach ($follows as $follow) {
-            $user = User::where('id', $follow->member_id)->first();
-
-            $follow->nickname = $user->nickname;
-        }
-
-        // チャットユーザ選択画面を表示
-        return view('cast.followed')->with([
-            'follows' => $follows,
-            'companion_id' => $companion_id
-        ]);
-    }
-
     //チャットルームの表示
     public function getChatPage($recieve)
     {

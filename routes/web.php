@@ -205,8 +205,8 @@ Route::get('/cast_mypage/reserve_round',
 //フォロワー一覧表示
 Route::get(
     '/cast_chat',
-    [ChatController::class, 'getChats']
-)->name('getChats');
+    [CastFollowController::class, 'CastgetChats']
+)->name('CastgetChats');
 
 //チャットの受け取りと送信//
 Route::get('/cast_chat/{recieve}', [

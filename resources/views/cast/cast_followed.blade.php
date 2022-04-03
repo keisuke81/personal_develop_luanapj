@@ -24,7 +24,7 @@
           <td>{{$item->nickname ?? "未設定"}}</td>
 
           <td>
-          <a href="/search_user/{{$item->id}}" class="btn-small">
+          <a href="/search_user/{{$item->id}}" class="btn_small">
             プロフィールを見る
           </a>
           </td>
