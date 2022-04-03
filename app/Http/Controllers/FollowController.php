@@ -36,6 +36,7 @@ class FollowController extends Controller
         $items = Follow::where('companion_id', $companion_id)->get('user_id');
         foreach($items as $item){
             $user = User::where('id', $item)->first();
+            dd($item);
             $item->nickname = $user->nickname;
         }
 
