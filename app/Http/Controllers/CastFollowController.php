@@ -23,8 +23,8 @@ class CastFollowController extends Controller
         $each_follows = $followers->intersect($follows);
 
         foreach($each_follows as $each_follow){
+            dd($each_follow);
             $user = User::where('id',$each_follow->user_id);
-            dd($user);
             $each_follow->nickname = $user->nickname;
         }
 
