@@ -151,7 +151,7 @@ Route::get(
 
 //相互フォロー一覧表示
 Route::get(
-    '/cast_chat',
+    '/each_follow',
     [FollowController::class, 'EachFollow']
 )->name('EachFollow');
 
