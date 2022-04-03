@@ -23,7 +23,7 @@
           <th>{{$loop->iteration}}</th>
           <td>{{$each_follow->nickname ?? "未設定"}}</td>
           <td>
-            <a href="{{route('getCastChat')}}">チャットする</a>
+            <a href="/chat/{{$each_follow->user_id}}">チャットする</a>
           </td>
         </tr>
         @endforeach
