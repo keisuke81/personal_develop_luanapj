@@ -41,10 +41,4 @@ return [
         'client_secret' => env('LINE_CLIENT_SECRET_cast'),
         'redirect' => env('LINE_REDIRECT_URI_cast'),
     ],
-
-    'stripe' => [
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
-    ]
 ];
