@@ -14,7 +14,7 @@
       </div>
 
       <div>
-        <a class="btn" href="/mypage/creditcard">クレジットカード情報</a>
+        <a class="btn" href="/payment">クレジットカード情報</a>
       </div>
 
       <div>

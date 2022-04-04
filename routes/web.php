@@ -12,6 +12,8 @@ use App\Http\Controllers\CompanionController;
 use App\Http\Controllers\FollowController;
 use App\Http\Controllers\ReserveController;
 use App\Http\Controllers\CastFollowController;
+use App\Http\Controllers\PaymentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -154,6 +156,22 @@ Route::get(
     '/each_follow',
     [FollowController::class, 'EachFollow']
 )->name('EachFollow');
+
+//支払画面の表示
+Route::get('/payment/form',
+[PaymentController::class, 'getPaymentForm'])->name('getPaymentForm');
+
+//カード情報の表示
+Route::get('/payment', 
+[PaymentController::class,'getCurrentPayment'])->name('getCurrentPayment');
+
+//支払い情報の送信
+Route::post('/payment/store',
+[PaymentController::class,'storePayment'])->name('storePayment');
+
+//登録しているカード情報の削除
+Route::post('/payment/destroy',
+[PaymentController::class, 'deletePayment'])->name('deletePayment');
 
 /////////////////////////////////////////
 //キャスト側のRoute
