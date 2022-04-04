@@ -40,7 +40,16 @@ return [
         'client_id' => env('LINE_CLIENT_ID_cast'),
         'client_secret' => env('LINE_CLIENT_SECRET_cast'),
         'redirect' => env('LINE_REDIRECT_URI_cast'),
-    ]
+    ],
+
+    'stripe' => [
+        'model' => App\User::class,
+        'key' => env('STRIPE_KEY'),
+        'secret' => env('STRIPE_SECRET'),
+        'webhook' => [
+            'secret' => env('STRIPE_WEBHOOK_SECRET'),
+            'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
+        ],
 
 
 ];
