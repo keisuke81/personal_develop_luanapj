@@ -1,5 +1,7 @@
 @component('components.header')
 @endcomponent
+@component('components.payment')
+@endcomponent
 
 <body>
   @component('components.menu')
