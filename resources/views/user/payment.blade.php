@@ -10,7 +10,7 @@
     <form action="{{route('storePayment')}}" class="card-form" id="form_payment" method="POST">
       @csrf
       <div class="form-group">
-        <label for="name">カード番号</label>
+        <label for="cardNumber">カード番号</label>
         <div id="cardNumber"></div>
       </div>
 
