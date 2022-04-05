@@ -20,7 +20,7 @@ const cardNumber = elements.create('cardNumber', {
     style: style,
     classes: classes
 });
-this.cardNumber.mount('#cardNumber');
+cardNumber.mount('#cardNumber');
 
 const cardCvc = elements.create('cardCvc', { style: style, classes: classes });
 cardCvc.mount('#securityCode');
