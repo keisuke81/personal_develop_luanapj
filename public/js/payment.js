@@ -16,11 +16,16 @@ const classes = {
 };
 
 /* フォームでdivタグになっている部分をStripe Elementsを使ってフォームに変換 */
-const cardNumber = elements.create('cardNumber', {style:style,classes:classes});
-cardNumber.mount('#cardNumber');
-const cardCvc = elements.create('cardCvc', {style:style,classes:classes});
+const cardNumber = elements.create('cardNumber', {
+    style: style,
+    classes: classes
+});
+this.cardNumber.mount('#cardNumber');
+
+const cardCvc = elements.create('cardCvc', { style: style, classes: classes });
 cardCvc.mount('#securityCode');
-const cardExpiry = elements.create('cardExpiry', {style:style,classes:classes});
+
+const cardExpiry = elements.create('cardExpiry', { style: style, classes: classes });
 cardExpiry.mount('#expiration');
 
 
