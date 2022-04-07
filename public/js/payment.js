@@ -1,5 +1,5 @@
 /* 基本設定*/
-const stripe = Stripe(stripe_public_key);
+const stripe = Stripe('pk_test_51K41DVBu5VS2H4M7Anp75WfH9kTg9O3T56SgxwoFhJ7LWBhw3vPjjRJaAAsfU595sYk5GvyKflcOVosmZChkHdmO00T6ZZEERr');
 const elements = stripe.elements();
 
 /* Stripe Elementsを使ったFormの各パーツをどんなデザインにしたいかを定義 */
