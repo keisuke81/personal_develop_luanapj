@@ -20,7 +20,10 @@
       <p>プレイ人数{{$reserve->num_of_players_men}}</p>
       <p>ゴルフ場：{{$reserve->golf_course}}</p>
 
-      <form action="" method="post"></form>
+      <form action="/cast/reserve_delete/{{$reserve->id}}" method="post">
+        @csrf
+        <button class="btn_small">予約を削除する</button>
+      </form>
     </div>
     @endforeach
   </div>

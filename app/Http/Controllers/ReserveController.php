@@ -86,7 +86,7 @@ class ReserveController extends Controller
         ]);
     }
 
-    //予約の削除
+    //ユーザー：予約の削除
     public function ReserveDelete($id){
         $user_id = Auth::id();
         Reserve::where('id', $id)->delete();
@@ -108,6 +108,29 @@ class ReserveController extends Controller
             'reserves' => $reserves,
         ]);
 
+    }
+
+    //キャスト：予約削除
+    public function CastReserveDelete($id){
+        $companion_id = Auth::id();
+        Reserve::where('id', $id)->delete();
+
+        $reserves = Reserve::where('companion_id', $companion_id)->get();
+
+        foreach ($reserves as $reserve) {
+            $item = Offer::where('id', $reserve->offer_id)->first();
+            $reserve->start_at = $item->start_at;
+            $reserve->num_of_players_men = $item->num_of_players_men;
+            $reserve->golf_course = $item->golf_course;
+
+            $user = User::where('id', $reserve->user_id)->first();
+            $reserve->user_name = $user->nickname;
+            $reserve->image = $user->img_url;
+        }
+
+        return view('cast.cast_reserve')->with([
+            'reserves' => $reserves,
+        ]);
     }
 }
 

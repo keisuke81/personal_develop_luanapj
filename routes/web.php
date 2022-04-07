@@ -270,3 +270,7 @@ Route::get('/cast_noffollow/{id}', [UserController::class, 'CastnoFollow'])->nam
 //フォローされているページ表示
 Route::get('/cast_followed',
 [FollowController::class,'CastGetFollowed'])->name('CastGetFollowed');
+
+//予約の削除
+Route::post('/cast/reserve_delete/{id}',
+[ReserveController::class, 'CastReserveDelete'])->name('CastReserveDelete');
