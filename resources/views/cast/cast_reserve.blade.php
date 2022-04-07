@@ -6,14 +6,14 @@
   @endcomponent
 
   <div class="wrapper">
-
-    @foreach($reserves as $reserve)
-    @empty($reserves)
+    @if($reserves->isEmpty())
     <p>現在予約成立しているラウンドはありません。</p>
     @else
+
+    @foreach($reserves as $reserve)
     <div class="card">
 
-      <img class="content-img" src={{$item->image}} />
+      <img class="content-img" src={{$reserve->image}} />
       <p>{{$reserve->user_name}}</p>
       <p>{{$reserve->date}}</p>
       <p>スタート時間：{{$reserve->start_at}}</p>
@@ -22,7 +22,7 @@
 
       <form action="" method="post"></form>
     </div>
-    @endempty
     @endforeach
   </div>
+  @endif
 </body>
