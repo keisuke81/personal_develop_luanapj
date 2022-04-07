@@ -34,3 +34,5 @@
   </div>
 
 </body>
+
+<script src="{{asset('js/payment.js')}}"></script>
