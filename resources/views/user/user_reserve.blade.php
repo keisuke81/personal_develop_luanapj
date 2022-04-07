@@ -7,7 +7,7 @@
 
   <div class="wrapper">
 
-    @if(empty($reserves))
+    @empty($reserves)
     <p>現在予約成立のラウンドはありません。</p>
     @else
 
@@ -29,5 +29,5 @@
     </div>
     @endforeach
   </div>
-  @endif
+  @endempty
 </body>
