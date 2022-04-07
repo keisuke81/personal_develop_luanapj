@@ -6,11 +6,11 @@
   @endcomponent
 
   <div class="wrapper">
-    @iempty($reserves)
-    <p>現在予約成立しているラウンドはありません。</p>
-    @else
 
     @foreach($reserves as $reserve)
+    @empty($reserves)
+    <p>現在予約成立しているラウンドはありません。</p>
+    @else
     <div class="card">
 
       <img class="content-img" src={{$item->image}} />
@@ -22,7 +22,7 @@
 
       <form action="" method="post"></form>
     </div>
+    @endempty
     @endforeach
   </div>
-  @endempty
 </body>
