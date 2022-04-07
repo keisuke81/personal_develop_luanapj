@@ -49,16 +49,18 @@ class ReserveController extends Controller
         $reserves = Reserve::where('companion_id',$companion_id)->get();
 
         foreach($reserves as $reserve){
-            $item = Offer::where('id',$reserve->offer_id)->first();
+            $item = Offer::where('id', $reserve->offer_id)->first();
+            $reserve->start_at = $item->start_at;
+            $reserve->num_of_players_men = $item->num_of_players_men;
+            $reserve->golf_course = $item->golf_course;
 
-            $user = User::where('id', $item->user_id)->first();
-            $item->user_name = $user->nickname;
-            $item->image = $user->img_url;
+            $user = User::where('id', $reserve->user_id)->first();
+            $reserve->user_name = $user->nickname;
+            $reserve->image = $user->img_url;
         }
 
         return view('cast.cast_reserve')->with([
             'reserves' => $reserves,
-            'item' => $item
         ]);
     }
 
