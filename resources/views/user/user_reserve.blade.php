@@ -7,12 +7,11 @@
 
   <div class="wrapper">
 
-
-
-    @foreach($reserves as $reserve)
-    @empty($reserves)
+    @if($reserves->isEmpty())
     <p>現在予約成立のラウンドはありません。</p>
     @else
+
+    @foreach($reserves as $reserve)
     <div class="card">
 
       <img class="content-img" src={{$reserve->image}} />
@@ -28,7 +27,7 @@
         </form>
       </div>
     </div>
-    @endempty
     @endforeach
   </div>
+  @endif
 </body>

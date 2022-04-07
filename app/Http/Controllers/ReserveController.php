@@ -80,7 +80,6 @@ class ReserveController extends Controller
             $reserve->companion_name = $companion->nickname;
             $reserve->image = $companion->img_url;
         }
-        dd($reserves);
 
         return view('user.user_reserve')->with([
             'reserves' => $reserves,
