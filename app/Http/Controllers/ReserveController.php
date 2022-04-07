@@ -78,7 +78,6 @@ class ReserveController extends Controller
 
         return view('user.user_reserve')->with([
             'reserves' => $reserves,
-            'item' => $item
         ]);
     }
 }
