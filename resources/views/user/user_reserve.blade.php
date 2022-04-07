@@ -7,10 +7,9 @@
 
   <div class="wrapper">
 
-    @if($reserves ===null){
+    @if($reserves ===null)
     <p>現在予約成立のラウンドはありません。</p>
-    }
-    @else{
+    @else
 
     @foreach($reserves as $reserve)
     <div class="card">
@@ -24,6 +23,7 @@
       <div>
         <form action="/reserve_delete/{{$reserve->id}}" method="post">
           <button class="btn_small">予約を削除する</button>
+          @csrf
         </form>
       </div>
     </div>
