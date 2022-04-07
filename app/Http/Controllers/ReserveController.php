@@ -70,10 +70,13 @@ class ReserveController extends Controller
 
         foreach ($reserves as $reserve) {
             $item = Offer::where('id', $reserve->offer_id)->first();
+            $reserve->start_at = $item->start_at;
+            $reserve->num_of_players_men = $item->num_of_players_men;
+            $reserve->golf_course = $item->golf_course;
 
-            $companion = Companion::where('id', $item->companion_id)->first();
-            $item->companion_name = $companion->nickname;
-            $item->image = $companion->img_url;
+            $companion = Companion::where('id', $reserve->companion_id)->first();
+            $reserve->companion_name = $companion->nickname;
+            $reserve->image = $companion->img_url;
         }
 
         return view('user.user_reserve')->with([
