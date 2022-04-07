@@ -145,6 +145,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/mypage/user_reserve_round',
 [ReserveController::class,'GetUserReserve'])->name('GetUserReserve');
 
+//予約の削除
+Route::post('/reserve_delete/{id}',
+[ReserveController::class, 'ReserveDelete'])->name('ReserveDelete');
+
 //フォローされているページ表示
 Route::get(
     '/followed',

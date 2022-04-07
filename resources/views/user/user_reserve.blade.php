@@ -16,6 +16,11 @@
       <p>スタート時間：{{$item->start_at}}</p>
       <p>プレイ人数{{$item->num_of_players_men}}</p>
       <p>ゴルフ場：{{$item->golf_course}}</p>
+      <div>
+        <form action="/reserve_delete/{{$reserve->id}}" method="post">
+          <button class="btn_small">予約を削除する</button>
+        </form>
+      </div>
     </div>
     @endforeach
   </div>

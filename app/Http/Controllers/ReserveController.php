@@ -80,4 +80,27 @@ class ReserveController extends Controller
             'reserves' => $reserves,
         ]);
     }
+
+    //予約の削除
+    public function ReserveDelete($id){
+        $user_id = Auth::id();
+        Reserve::where('id', $id)->delete();
+
+        $reserves = Reserve::where('user_id', $user_id)->get();
+
+        foreach ($reserves as $reserve) {
+            $item = Offer::where('id', $reserve->offer_id)->first();
+
+            $companion = Companion::where('id', $item->companion_id)->first();
+            $item->companion_name = $companion->nickname;
+            $item->image = $companion->img_url;
+        }
+
+        return view('user.user_reserve')->with([
+            'reserves' => $reserves,
+        ]);
+
+    }
 }
+
+
