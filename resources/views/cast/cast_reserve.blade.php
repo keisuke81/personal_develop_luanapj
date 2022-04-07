@@ -6,7 +6,7 @@
   @endcomponent
 
   <div class="wrapper">
-    @if($reserves ==null)
+    @if(empty($reserves))
     <p>現在予約成立しているラウンドはありません。</p>
     @else
 
@@ -19,6 +19,8 @@
       <p>スタート時間：{{$reserve->start_at}}</p>
       <p>プレイ人数{{$reserve->num_of_players_men}}</p>
       <p>ゴルフ場：{{$reserve->golf_course}}</p>
+
+      <form action="" method="post"></form>
     </div>
     @endforeach
   </div>

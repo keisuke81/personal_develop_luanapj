@@ -7,7 +7,7 @@
 
   <div class="wrapper">
 
-    @if(count($reserves)=0)
+    @if(empty($reserves))
     <p>現在予約成立のラウンドはありません。</p>
     @else
 
