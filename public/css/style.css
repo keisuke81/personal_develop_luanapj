@@ -408,3 +408,12 @@ button.bigger:hover{
   top:80%;
   width:80%;
 }
+
+/*Stripeのデザイン*/
+input#cardNumber,
+input#securityCode,
+input#expiration{
+  font-size: 12px;
+  color: #32325d;
+  border: solid 1px ccc;
+}

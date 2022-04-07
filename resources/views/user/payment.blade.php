@@ -9,17 +9,17 @@
       @csrf
       <div class="form-group">
         <label for="cardNumber">カード番号</label>
-        <div id="cardNumber"></div>
+        <input id="cardNumber">
       </div>
 
       <div class="form-group">
         <label for="name">セキュリティコード</label>
-        <div id="securityCode"></div>
+        <input id="securityCode">
       </div>
 
       <div class="form-group">
         <label for="name">有効期限</label>
-        <div id="expiration"></div>
+        <input id="expiration">
       </div>
 
       <div class="form-group">
@@ -34,5 +34,3 @@
   </div>
 
 </body>
-
-<script src="{{asset('js/payment.js')}}"></script>
