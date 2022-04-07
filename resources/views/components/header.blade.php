@@ -18,5 +18,5 @@
     var stripe_public_key = "{{config('payment.stripe_public_key')}}";
   </script>
 
-  <script src="{{asset('js/payment.js')}}"></script>
+  <script src="pk_test_51K41DVBu5VS2H4M7Anp75WfH9kTg9O3T56SgxwoFhJ7LWBhw3vPjjRJaAAsfU595sYk5GvyKflcOVosmZChkHdmO00T6ZZEERr"></script>
 </head>
