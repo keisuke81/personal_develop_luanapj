@@ -15,8 +15,8 @@
   <script src="https://js.stripe.com/v3/"></script>
 
   <script>
-    var stripe_public_key = "{{config('payment.stripe_public_key')}}";
+    var stripe_public_key = "pk_test_51K41DVBu5VS2H4M7Anp75WfH9kTg9O3T56SgxwoFhJ7LWBhw3vPjjRJaAAsfU595sYk5GvyKflcOVosmZChkHdmO00T6ZZEERr";
   </script>
 
-  <script src="pk_test_51K41DVBu5VS2H4M7Anp75WfH9kTg9O3T56SgxwoFhJ7LWBhw3vPjjRJaAAsfU595sYk5GvyKflcOVosmZChkHdmO00T6ZZEERr"></script>
+  <script src="{{asset('js/payment.js')}}"></script>
 </head>
