@@ -10,8 +10,14 @@
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-  <link href="{{asset('css/reset.css')}}" rel="stylesheet">
+  @if(app('env')=='local')
+  <link rel="stylesheet" href="{{ asset('/css/reset.css') }}">
   <link href="{{asset('css/general.css')}}" rel="stylesheet">
+  @endif
+  @if(app('env')=='production')
+  <link href="{{secure_asset('css/reset.css')}}" rel="stylesheet">
+  <link href="{{secure_asset('css/general.css')}}" rel="stylesheet">
+  @endif
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <script>
