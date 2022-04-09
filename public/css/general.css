@@ -666,10 +666,8 @@ section#main .container-fluid .row .pr .spbox {
   }
 }
 section#main .container-fluid .row .pr .spbox .btnset {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  margin-top: 50px;
 }
 @media (max-width: 992px) {
   section#main .container-fluid .row .pr .spbox .btnset {
