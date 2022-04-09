@@ -2,12 +2,17 @@
 @endcomponent
 
 <body>
+<ons-page>
+  <ons-tabbar swipeable position="auto">
+  @component('components.tabbar')
+  @endcomponent
+  </ons-tabbar>
   @component('components.menu')
   @endcomponent
   <div class="type_a">
     <div class="type_a_child">
-      <div>
-        会員番号：{{$user_id}}
+      <div class="text-center">
+        <p>会員番号：{{$user_id}}</p>
       </div>
       <div>
         <a class="btn" href="{{route('GetUserReserve')}}">今後のラウンド予定</a>
@@ -34,4 +39,8 @@
       </div>
     </div>
   </div>
+
+</ons-page>
+  @component('components.footer')
+  @endcomponent
 </body>

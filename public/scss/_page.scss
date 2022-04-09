@@ -1,33 +1,4 @@
 // _page.scss
-br.pc {
-    @include sp {
-        display: none;
-    }
-
-    @include pc {
-        display: inline;
-    }
-}
-
-br.pc-s {
-    @include pc {
-        display: inline;
-    }
-
-    @include pc-s {
-        display: none;
-    }
-}
-
-br.sp {
-    @include pc {
-        display: none;
-    }
-
-    @include sp {
-        display: inline;
-    }
-}
 
 .att {
     border: solid 2px #289bd8;
@@ -40,6 +11,10 @@ br.sp {
 
 .wp-block-button__link {
     background-color: #fd7279 !important;
+}
+
+.page__background{
+    background-color: #fff;
 }
 
 dl {
@@ -135,12 +110,7 @@ dl {
 }
 
 header {
-    background-image: url('../../images/mainv2nd.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
-    height: 130px;
-    margin-bottom: 60px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
 
     @include sp {
@@ -148,27 +118,15 @@ header {
     }
 
     h1 {
-        color: #04625f;
-        line-height: 130px;
         text-align: center;
-        font-size: 1.8rem;
         font-family: YakuHanJP, "source-han-sans-cjk-ja", sans-serif;
         font-style: normal;
         font-weight: 300;
-
-        @include sp {
-            color: #fff;
-            text-shadow: 0 0 4px #04625f;
-        }
     }
 
     h2 {
         background-color: inherit;
         width: auto;
-    }
-
-    img {
-        border-radius: 175px;
     }
 }
 

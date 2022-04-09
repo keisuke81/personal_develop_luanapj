@@ -90,6 +90,11 @@ nav ul li a span {
   }
 }
 
+.page__content h1 {
+  margin: 0;
+  padding: 10px;
+}
+
 h1 {
   color: #fd7279;
   font-style: normal;
@@ -874,39 +879,6 @@ section .btnset {
           flex-direction: column;
 }
 
-@media (max-width: 768px) {
-  br.pc {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  br.pc {
-    display: inline;
-  }
-}
-
-@media (min-width: 768px) {
-  br.pc-s {
-    display: inline;
-  }
-}
-@media (max-width: 1200px) {
-  br.pc-s {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  br.sp {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  br.sp {
-    display: inline;
-  }
-}
-
 .att {
   border: solid 2px #289bd8;
   padding: 20px;
@@ -918,6 +890,10 @@ section .btnset {
 
 .wp-block-button__link {
   background-color: #fd7279 !important;
+}
+
+.page__background {
+  background-color: #fff;
 }
 
 dl.data {
@@ -1008,12 +984,7 @@ dl.rmv dd {
 }
 
 header {
-  background-image: url("../../images/mainv2nd.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  height: 130px;
-  margin-bottom: 60px;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
@@ -1023,26 +994,14 @@ header {
   }
 }
 header h1 {
-  color: #04625f;
-  line-height: 130px;
   text-align: center;
-  font-size: 1.8rem;
   font-family: YakuHanJP, "source-han-sans-cjk-ja", sans-serif;
   font-style: normal;
   font-weight: 300;
 }
-@media (max-width: 768px) {
-  header h1 {
-    color: #fff;
-    text-shadow: 0 0 4px #04625f;
-  }
-}
 header h2 {
   background-color: inherit;
   width: auto;
-}
-header img {
-  border-radius: 175px;
 }
 
 section#pagetop {
