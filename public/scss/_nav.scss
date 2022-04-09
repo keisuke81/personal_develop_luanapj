@@ -1,0 +1,225 @@
+// _nav.scss
+
+nav {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+
+    &.bg-light {
+        background-image: url(../../images/bg-header.png);
+        background-repeat: no-repeat;
+        border-bottom: 7px solid #fd7279;
+
+        @include sp {
+            background-image: none;
+        }
+    }
+
+    h1 {
+        font-size: 0.8rem;
+        font-weight: normal;
+        margin-left: 60px;
+        margin-top: 15px;
+        color: #272727;
+
+        @include sp {
+            margin: 0;
+        }
+    }
+
+    a {
+        &.navbar-brand {
+            @include sp {
+                margin-right: 0;
+            }
+        }
+    }
+
+    button {
+        margin-top: 15px;
+    }
+
+    ul {
+        li {
+            @include tab {
+                border-bottom: solid 1px #fd7279;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            a {
+                position: relative;
+                display: inline-block;
+                text-decoration: none;
+                text-align: center;
+                margin-right: 10px;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: #fd7279;
+                    color: #fff !important;
+                }
+
+                @include pc-s {
+                    margin-right: 5px;
+                    font-size: .7rem;
+                }
+
+                @include tab {
+                    font-size: 1.1rem;
+                    margin-right: 0;
+                }
+
+                span {
+                    display: block;
+                    font-size: .8rem;
+                    @include pc-s {
+                        font-size: .6rem;
+                    }
+
+                    @include tab {
+                        display: inline;
+                        margin-left: 15px;
+                        font-size: .8rem;
+                    }
+                }
+            }
+
+            a::after {
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 2px;
+            }
+
+            a:hover::after {
+                transform: scale(1, 1);
+            }
+        }
+    }
+
+}
+
+.btmbtn {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px;
+    background-color: #e2ffb9;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+
+.btmbtn a {
+    display: block;
+}
+
+.btmbtn a img {
+    width: 50%;
+    height: auto;
+
+    @include pc {
+        width: 25%;
+        height: auto;
+    }
+
+    -webkit-animation: poyopoyo 2s ease-out infinite;
+    animation: poyopoyo 2s ease-out infinite;
+}
+
+@-webkit-keyframes poyopoyo {
+
+    0%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50%,
+    70% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+
+@keyframes poyopoyo {
+
+    0%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50%,
+    70% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+
+@media (max-width: 576px) {
+    .btmbtn a img {
+        width: 70%;
+    }
+}
+
+.btmbtn-solid {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px;
+    background-color: #e2ffb9;
+    z-index: 1;
+    display: none;
+}
+
+.btmbtn-solid a {
+    display: block;
+}
+
+.btmbtn-solid a img {
+    width: 50%;
+    height: auto;
+    -webkit-animation: poyopoyo 2s ease-out infinite;
+    animation: poyopoyo 2s ease-out infinite;
+}
+
+@keyframes poyopoyo {
+
+    0%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50%,
+    70% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+
+@media (max-width: 576px) {
+    .btmbtn-solid a img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .btmbtn-solid {
+        display: block;
+    }
+}

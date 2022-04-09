@@ -1,0 +1,42 @@
+// _rwd.scss
+
+@include sp-s {
+    header nav {
+        position: absolute;
+        top: -530px;
+        background:rgba(0,0,0,.7);
+        width:100vw;
+        padding:0 10px;
+        -webkit-transition:.5s ease-in-out;
+        -moz-transition:.5s ease-in-out;
+        transition:.5s ease-in-out;
+        text-align:left}
+    header ul {margin:0}
+    header ul li {
+        display:block;
+        margin:0;
+        border-bottom:dotted 1px #fff;
+        line-height:3}
+    header ul li a {
+        display:block;
+        color:#fff;
+    }
+    header ul li::after {content:''}
+    header ul li:last-child {border-bottom:none}
+    #navToggle {display:block}
+    .openNav #navToggle span:nth-child(1) {
+        top: 11px;
+        -webkit-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        transform:rotate(-45deg)}
+    .openNav #navToggle span:nth-child(2),
+    .openNav #navToggle span:nth-child(3) {
+        top: 11px;
+        -webkit-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        transform:rotate(45deg)}
+    .openNav nav {
+        -moz-transform: translateY(610px);
+        -webkit-transform: translateY(610px);
+        transform: translateY(610px)}
+;};

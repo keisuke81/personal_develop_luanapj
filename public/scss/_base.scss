@@ -1,0 +1,51 @@
+// _base.scss
+
+$widthPC:1200px;
+$widthPCs:992px;
+$widthTab:768px;
+$widthSp:576px;
+
+@mixin pc {
+    @media (min-width: $widthTab) {
+        @content;
+    }
+}
+@mixin pc-s {
+    @media (max-width: $widthPC) {
+        @content;
+    }
+}
+@mixin tab {
+    @media (max-width: $widthPCs) {
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: $widthTab) {
+        @content;
+    }
+}
+@mixin sp-s {
+    @media (max-width: $widthSp) {
+        @content;
+    }
+}
+
+$img:'../../images/';
+$main-color:#d2151a;
+
+$total_width:100vw;
+$content_width:1024px;
+$container_margin:2%;
+$gutter_width:2%;
+$total_columns:12;
+$padding:10px;
+
+html{
+  visibility: hidden;
+  font-size: 16px;
+}
+
+html.wf-active{
+  visibility: visible;
+}

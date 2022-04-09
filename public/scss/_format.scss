@@ -1,0 +1,456 @@
+// _format.scss
+
+body {
+    font-family: YakuHanJP, "source-han-sans-cjk-ja", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+nav {
+    ul {
+        li {
+            a {
+                color: #fd7279 !important;
+
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.1rem;
+
+                @include pc-s {
+                    font-size: 0.9rem;
+                }
+
+                @include tab {
+                    font-size: 1.2rem;
+                }
+
+                span {
+                    font-family: YakuHanJP, "source-han-sans-cjk-ja", sans-serif;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 0.9rem;
+
+                    @include pc {
+                        font-size: 0.8rem;
+                    }
+
+                    @include pc-s {
+                        font-size: 0.7rem;
+                    }
+
+                    @include tab {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    color: #fd7279;
+    font-style: normal;
+    font-weight: 700;
+
+    span {
+        font-family: YakuHanJP, "source-han-sans-cjk-ja", sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        margin-top: 8px;
+        border-top: 3px solid #e0cec8;
+        padding: 10px 0;
+        display: block;
+        font-size: 1.2rem;
+    }
+}
+
+h2 {
+    color: #fd7279;
+    line-height: 32px;
+    padding: 10px 0;
+    font-weight: 700;
+
+    &.full {
+        width: 100%;
+    }
+
+    &.full-pink {
+        width: 100%;
+        background-color: #f598a0;
+    }
+
+
+    @include sp {
+        text-align: center;
+    }
+
+    br {
+        display: none;
+
+        @include sp {
+            display: inherit;
+        }
+    }
+}
+
+.pcbox {
+    h2 {
+        br {
+            display: inherit;
+        }
+    }
+}
+
+h3 {
+    font-weight: 700;
+    color: #14327a;
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    line-height: 36px;
+
+    &.card-title {
+        color: #fff;
+    }
+
+    &.org {
+        background-color: #fd7279;
+    }
+
+    &.pnk {
+        background-color: #f598a0;
+    }
+}
+
+p {
+    color: #364960;
+    font-size: 1.2rem;
+
+    @include sp-s {
+        font-size: 1rem;
+    }
+}
+
+ol,
+ul {
+    color: #364960;
+    font-size: 1rem;
+
+    @include sp-s {
+        font-size: 1rem;
+    }
+}
+
+#main {
+    .pr {
+        .pcbox {
+            h1 {
+                color: #fff;
+                font-family: YakuHanJP, "source-han-sans-cjk-ja", sans-serif;
+                font-size: 1.8rem;
+                letter-spacing: 0.2em;
+                margin-bottom: 20px;
+                line-height: 1.8;
+                filter: drop-shadow(3px 3px 3px rgba(1, 1, 0, 0.2));
+            }
+
+            h2 {
+                background-color: inherit !important;
+                font-size: 1.1rem;
+                font-weight: 300;
+                letter-spacing: 0.2em;
+                color: #272727;
+
+                @include tab {
+                    text-align: center;
+                }
+
+                line-height: 30px;
+                width: inherit;
+                margin-bottom: 40px;
+            }
+        }
+
+        .spbox {
+            .h1 {
+                margin-top: 60px;
+                margin-bottom: 5px;
+                line-height: 1.6;
+                text-align: center;
+                filter: drop-shadow(0px 1px 3px #fff);
+            }
+
+            h2 {
+                background-color: inherit !important;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 0.8rem;
+                line-height: 1.8;
+                font-weight: 300;
+                text-align: center;
+                color: #272727;
+            }
+
+        }
+    }
+}
+
+#news {
+    h2 {
+        font-family: YakuHanJP, "source-han-sans-cjk-ja", sans-serif;
+        font-size: 1.4rem;
+        color: #fd7279;
+        text-align: left;
+        background-color: inherit;
+        margin-bottom: 20px;
+
+        @include sp-s {
+            text-align: center;
+        }
+
+        span {
+            border-top: none;
+            font-size: 1rem;
+            padding-left: 15px;
+            display: inline;
+
+            @include sp {
+                display: block;
+                padding: 0;
+            }
+        }
+    }
+
+    dl {
+        dt {
+            font-size: 1.2rem;
+            color: #e26371;
+        }
+
+        dd {
+            font-size: 1rem;
+        }
+    }
+
+    .btn {
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+        }
+
+        @include sp-s {
+            display: block;
+            margin-bottom: 20px;
+            margin-right: 0 !important;
+        }
+    }
+
+    .newslist {
+        @include tab {
+            text-align: center;
+        }
+    }
+}
+
+#cast {
+    h2 {
+        font-family: YakuHanJP, "source-han-sans-cjk-ja", sans-serif;
+        font-size: 1.4rem;
+        text-align: left;
+        background-color: inherit;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #fff;
+
+        @include sp-s {
+            text-align: center;
+        }
+
+        span {
+            border-top: none;
+            font-size: 1rem;
+            padding-left: 15px;
+            display: inline;
+
+            @include sp {
+                display: block;
+                padding: 0;
+            }
+        }
+    }
+
+    .btn {
+        color: #fd7279;
+
+        &:hover {
+            color: #fd7279;
+        }
+    }
+}
+
+// 共通要素
+
+#contact {
+    h1 {
+        font-size: 2.5rem;
+
+        @include pc-s {
+            font-size: 28pt;
+        }
+
+        span {
+            font-size: 12pt;
+        }
+    }
+
+    p {
+        padding-top: 21px;
+        color: #fff;
+    }
+}
+
+dl {
+    dt {
+        font-size: 17pt;
+    }
+
+    dd {
+        font-size: 12pt;
+    }
+
+    &.data {
+        dt {
+            color: #289bd8;
+            font-size: 16pt;
+        }
+
+        dd {
+            font-size: 15pt;
+        }
+    }
+}
+
+// 第2階層以下
+
+header {
+    .panlist {
+        color: #fd7279;
+        font-size: 1rem;
+        line-height: 17px;
+
+        a {
+            text-decoration: none;
+            color: #fd7279;
+        }
+    }
+
+    h2 {
+        text-align: left;
+        color: #463e05;
+        line-height: 2;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+}
+
+#pagetop {
+    h2 {
+        font-size: 1.5rem;
+
+        @include sp-s {
+            font-size: 1.4rem;
+        }
+
+        &.nvy {
+            color: #fd7279;
+        }
+
+        &.lec {
+            text-align: left;
+
+            span {
+                font-size: 1.2rem;
+            }
+        }
+
+        &.news {
+            text-align: left;
+            color: #fd7279;
+
+            a {
+                color: #14327a;
+            }
+        }
+    }
+
+    p {
+        line-height: 1.8;
+    }
+
+    #blog {
+        .entry-meta {
+            a {
+                color: #fd7279;
+            }
+        }
+
+        .entry-content {
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.att {
+    font-size: 14pt;
+}
+
+.sub {
+    ul {
+        font-size: 12pt;
+    }
+}
+
+ol {
+    &.manual {
+        li {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+h3 {
+    &.manual {
+        position: relative;
+        border-top: solid 2px #80c8d1;
+        border-bottom: solid 2px #80c8d1;
+        background: #f4f4f4;
+        line-height: 1.4;
+        padding: 0.4em 0.5em;
+        margin: 2em 0 0.5em;
+        text-align: center;
+
+        &:after {
+            /*タブ*/
+            position: absolute;
+            font-family: "Font Awesome 5 Free", 'Quicksand', 'Avenir', 'Arial', sans-serif;
+            font-weight: 900;
+            content: '\f0a7\ POINT';
+            background: #80c8d1;
+            color: #fff;
+            left: 0px;
+            bottom: 100%;
+            border-radius: 5px 5px 0 0;
+            padding: 5px 7px 3px;
+            font-size: 0.7em;
+            line-height: 1;
+            letter-spacing: 0.05em;
+        }
+    }
+}
