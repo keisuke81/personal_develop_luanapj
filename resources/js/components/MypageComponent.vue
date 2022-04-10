@@ -42,4 +42,5 @@
       mounted () {
         console.log(this.user_id)
     }
+    }  
 </script>
