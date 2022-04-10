@@ -52,7 +52,7 @@ Route::get(
 
 //プロフィールの表示//
 Route::get(
-    '/mypage/profile/{user_id}',
+    '/mypage',
     [UserController::class, 'getProfile']
 )->name('getProfile');
 

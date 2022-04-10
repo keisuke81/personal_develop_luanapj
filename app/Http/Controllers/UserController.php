@@ -25,7 +25,7 @@ class UserController extends Controller
         $user_id = Auth::id();
         $profile = User::where('id', $user_id)->first();
 
-        return view('user.profile')->with([
+        return view('user.mypage')->with([
             'profile' => $profile,
             'user_id' => $user_id
         ]);
