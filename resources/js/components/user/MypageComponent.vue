@@ -42,7 +42,7 @@
 <script>
     export default {
       props:{
-        user_id:{
+        $user_id:{
           type:String,
           required:true,
         }
