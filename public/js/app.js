@@ -5383,7 +5383,6 @@ Vue.component('mypage-component', (__webpack_require__(/*! ./components/MypageCo
 var app = new Vue({
   el: '#app'
 });
-app.$mount('#app');
 
 /***/ }),
 
@@ -28087,9 +28086,7 @@ var render = function () {
       _c("div", { staticClass: "type_a" }, [
         _c("div", { staticClass: "type_a_child" }, [
           _c("div", { staticClass: "text-center" }, [
-            _c("p", { key: _vm.user_id }, [
-              _vm._v("会員番号：" + _vm._s(_vm.user_id)),
-            ]),
+            _c("p", { key: _vm.user_id }, [_vm._v("会員番号：{user_id}")]),
           ]),
           _vm._v(" "),
           _c("div", [
