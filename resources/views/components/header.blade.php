@@ -19,9 +19,9 @@
   <link href="{{secure_asset('css/reset.css')}}" rel="stylesheet">
   <link href="{{secure_asset('css/general.css')}}" rel="stylesheet">
   @endif
-  <link rel="stylesheet" href="{{ asset('/js/app.js') }}">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
   <meta name="csrf-token" content="{{ csrf_token() }}">
+  <script src="{{asset('/public/js/app.js')}}"></script>
   <script src="{{ mix('js/app.js') }}" defer></script>
   <script>
     (function(d) {
