@@ -67,7 +67,13 @@
 
 <script>
     export default {
-        props:["profile"],
-        props:["user_id"]
+        props:{
+          user_id:{
+          },
+          profile:{
+            
+          }
+        }
+     
   }
 </script>
