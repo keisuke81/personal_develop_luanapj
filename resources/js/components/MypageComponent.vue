@@ -35,14 +35,6 @@
 
 <script>
     export default {
-      data(){
-        return{
-          user_id:$user_id
-        }
-      },
-    mounted(){
-      axios.get('/mypage').then(response =>
-      console.log(response))
-    }
+        props:["user_id"]
   }
 </script>

@@ -5337,16 +5337,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      user_id: $user_id
-    };
-  },
-  mounted: function mounted() {
-    axios.get('/mypage').then(function (response) {
-      return console.log(response);
-    });
-  }
+  props: ["user_id"]
 });
 
 /***/ }),
