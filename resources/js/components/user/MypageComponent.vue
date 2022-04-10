@@ -41,8 +41,11 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+      props:{
+        user_id:{
+          type:String,
+          required:true,
         }
+      },
     }
 </script>
