@@ -1,13 +1,13 @@
 @component('components.header')
 @endcomponent
-@component('components.tabbar')
-@endcomponent
 
 <body>
+  @component('components.tabbar')
+  @endcomponent
   @component('components.menu')
   @endcomponent
   <div id="app">
-    <mypage-component>
+    <mypage-component :user_id = "{{$user_id">
     </mypage-component>
   </div>
   @component('components.footer')
