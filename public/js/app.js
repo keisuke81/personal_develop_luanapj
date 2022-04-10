@@ -28072,8 +28072,78 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function () {}
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "ons-page",
+    [
+      _c("ons-tabbar", { attrs: { swipeable: "", position: "auto" } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "type_a" }, [
+        _c("div", { staticClass: "type_a_child" }, [
+          _c("div", { staticClass: "text-center" }, [
+            _c("p", [_vm._v("会員番号：{user_id }")]),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "a",
+              {
+                staticClass: "btn",
+                attrs: { href: "/mypage/user_reserve_round" },
+              },
+              [_vm._v("今後のラウンド予定")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("a", { staticClass: "btn", attrs: { href: "/payment" } }, [
+              _vm._v("クレジットカード情報"),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "a",
+              { staticClass: "btn", attrs: { href: "/mypage/receipt" } },
+              [_vm._v("ラウンド履歴")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "a",
+              {
+                staticClass: "btn",
+                attrs: { href: "/mypage/profile/{ user_id }" },
+              },
+              [_vm._v("登録情報内容を確認する")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c(
+              "a",
+              { staticClass: "btn", attrs: { href: "/mypage/driver_license" } },
+              [_vm._v("運転免許証の提出")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("a", { staticClass: "btn", attrs: { href: "/logout" } }, [
+              _vm._v("ログアウト"),
+            ]),
+          ]),
+        ]),
+      ]),
+    ],
+    1
+  )
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 
