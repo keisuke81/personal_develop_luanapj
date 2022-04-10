@@ -3,7 +3,8 @@
 
 <body>
   <div id="app">
-    <mypage-component></mypage-component>
+    <mypage-component v-bind:user_id='{{$user_id}}'>
+    </mypage-component>
   </div>
   @component('components.footer')
   @endcomponent
