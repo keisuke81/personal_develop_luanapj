@@ -3,7 +3,7 @@
     <div class="type_a">
       <div class="type_a_child">
         <div class="text-center">
-          <p>会員番号：{user_id }</p>
+          <p>会員番号：{{user_id}}</p>
         </div>
         <div>
           <a class="btn" href="/mypage/user_reserve_round">今後のラウンド予定</a>
@@ -18,7 +18,7 @@
         </div>
 
         <div>
-          <a href="/mypage/profile/{ user_id }" class="btn" >登録情報内容を確認する</a>
+          <a href="/mypage/profile" class="btn" >登録情報内容を確認する</a>
         </div>
 
         <div>
@@ -35,9 +35,14 @@
 
 <script>
     export default {
-      props:["user_id"],
-      mounted () {
-        console.log(this.user_id)
+      data(){
+        return{
+          user_id:$user_id
+        }
+      },
+    mounted(){
+      axios.get('/mypage').then(response =>
+      console.log(response))
     }
-  }  
+  }
 </script>

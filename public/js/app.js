@@ -5337,9 +5337,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["user_id"],
+  data: function data() {
+    return {
+      user_id: $user_id
+    };
+  },
   mounted: function mounted() {
-    console.log(this.user_id);
+    axios.get('/mypage').then(function (response) {
+      return console.log(response);
+    });
   }
 });
 
@@ -28252,7 +28258,7 @@ var render = function () {
     _c("div", { staticClass: "type_a" }, [
       _c("div", { staticClass: "type_a_child" }, [
         _c("div", { staticClass: "text-center" }, [
-          _c("p", [_vm._v("会員番号：{user_id }")]),
+          _c("p", [_vm._v("会員番号：" + _vm._s(_vm.user_id))]),
         ]),
         _vm._v(" "),
         _c("div", [
@@ -28279,14 +28285,9 @@ var render = function () {
         ]),
         _vm._v(" "),
         _c("div", [
-          _c(
-            "a",
-            {
-              staticClass: "btn",
-              attrs: { href: "/mypage/profile/{ user_id }" },
-            },
-            [_vm._v("登録情報内容を確認する")]
-          ),
+          _c("a", { staticClass: "btn", attrs: { href: "/mypage/profile" } }, [
+            _vm._v("登録情報内容を確認する"),
+          ]),
         ]),
         _vm._v(" "),
         _c("div", [
