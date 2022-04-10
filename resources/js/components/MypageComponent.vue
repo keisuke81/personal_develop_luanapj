@@ -1,8 +1,5 @@
 <template>
   <ons-page>
-    <ons-tabbar swipeable position="auto">
-
-    </ons-tabbar>
     <div class="type_a">
       <div class="type_a_child">
         <div class="text-center">
