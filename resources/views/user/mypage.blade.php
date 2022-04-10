@@ -2,11 +2,13 @@
 @endcomponent
 
 <body>
-  @component('components.tabbar')
-  @endcomponent
-  @component('components.menu')
-  @endcomponent
   <div id="app">
+    <menu-component>
+    </menu-component>
+
+    <tabbar-component>
+    </tabbar-component>
+    
     <mypage-component :user_id = "{{$user_id}}">
     </mypage-component>
   </div>
