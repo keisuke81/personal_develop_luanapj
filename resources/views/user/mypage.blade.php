@@ -1,9 +1,9 @@
 @component('components.header')
 @endcomponent
+@component('components.tabbar')
+@endcomponent
 
 <body>
-  @component('components.tabbar')
-  @endcomponent
   @component('components.menu')
   @endcomponent
   <div id="app">
