@@ -13,6 +13,7 @@
   "dependencies": {
     "element-ui": "^2.4.5",
     "vue-route": "^1.5.1",
+    "vue-router": "^3.5.3",
     "vuex": "^3.4.0"
   },
   "devDependencies": {

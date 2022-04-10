@@ -21,7 +21,7 @@ window.Vue = require('vue').default;
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-Vue.component('mypage-component', require('./components/MypageComponent.vue').default);
+Vue.component('mypage-component', require('./components/user/MypageComponent.vue').default);
 Vue.component('tabbar-component', require('./components/TabbarComponent.vue').default);
 Vue.component('menu-component', require('./components/MenuComponent.vue').default);
 
