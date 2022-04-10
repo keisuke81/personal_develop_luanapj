@@ -28193,10 +28193,7 @@ var staticRenderFns = [
     return _c("header", [
       _c("h1", [
         _c("img", {
-          attrs: {
-            src: "/public/images/logo-main.png'",
-            alt: "LUANA MATCHING",
-          },
+          attrs: { src: "/public/images/logo-main.png", alt: "LUANA MATCHING" },
         }),
       ]),
       _vm._v(" "),
