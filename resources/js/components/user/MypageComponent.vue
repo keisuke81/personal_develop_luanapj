@@ -41,6 +41,10 @@
 
 <script>
     export default {
-      props:["user_id"]
+      props:["user_id"],
+
+      mounted() {
+            console.log('Component mounted.')
+        },
     }
 </script>
