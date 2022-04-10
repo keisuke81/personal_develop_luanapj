@@ -1,5 +1,5 @@
 <template>
-  <ons-page>
+  <div>
     <ons-tabbar swipeable position="auto">
     @component('components.tabbar')
     @endcomponent
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-  </ons-page>
+  </div>
 </template>
 
 <script>
