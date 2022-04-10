@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>
-      <img src="{{ asset('images/logo-main.png') }}" alt="LUANA MATCHING">
+      <img src="/public/images/logo-main.png'" alt="LUANA MATCHING">
     </h1>
     <nav class="gnav">
       <ul class="menu">
