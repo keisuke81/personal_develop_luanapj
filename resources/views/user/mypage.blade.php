@@ -12,7 +12,7 @@
     <mypage-component :user_id = "{{$user_id}}">
     </mypage-component>
 
-    <profile-component :user_id = "{{$user_id}}" :profile = "{{$profile}}"></profile-component>
+    <profile-component></profile-component>
   </div>
   @component('components.footer')
   @endcomponent
