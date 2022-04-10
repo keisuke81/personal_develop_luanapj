@@ -41,11 +41,6 @@
 
 <script>
     export default {
-      props:{
-        $user_id:{
-          type:String,
-          required:true,
-        }
-      },
+      props:["user_id"]
     }
 </script>

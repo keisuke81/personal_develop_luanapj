@@ -5343,12 +5343,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: {
-    user_id: {
-      type: String,
-      required: true
-    }
-  }
+  props: ["user_id"]
 });
 
 /***/ }),
@@ -5388,6 +5383,7 @@ Vue.component('mypage-component', (__webpack_require__(/*! ./components/user/Myp
 var app = new Vue({
   el: '#app'
 });
+app.$mount('#app');
 
 /***/ }),
 
