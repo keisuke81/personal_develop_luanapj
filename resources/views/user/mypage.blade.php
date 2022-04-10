@@ -7,7 +7,7 @@
   @component('components.menu')
   @endcomponent
   <div id="app">
-    <mypage-component v-bind:user_id="{{$user_id}}">
+    <mypage-component>
     </mypage-component>
   </div>
   @component('components.footer')
