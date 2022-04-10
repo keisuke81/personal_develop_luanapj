@@ -24,7 +24,7 @@
         </div>
 
         <div>
-          <a class="btn" href="/mypage/profile/{{$user_id}}">登録情報内容を確認する</a>
+          <a href="/mypage/profile/{{$user_id}}" class="btn" >登録情報内容を確認する</a>
         </div>
 
         <div>
