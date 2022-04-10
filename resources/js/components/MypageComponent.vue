@@ -9,7 +9,7 @@
     <div class="type_a">
       <div class="type_a_child">
         <div class="text-center">
-          <p :key="user_id">会員番号：{user_id}</p>
+          <p :id="user_id">会員番号：{{user_id}}</p>
         </div>
         <div>
           <a class="btn" href="/mypage/user_reserve_round">今後のラウンド予定</a>
@@ -24,7 +24,7 @@
         </div>
 
         <div>
-          <a :key="user_id" href="/mypage/profile/{user_id}" class="btn" >登録情報内容を確認する</a>
+          <a :id="user_id" href="/mypage/profile/{{user_id}}" class="btn" >登録情報内容を確認する</a>
         </div>
 
         <div>

@@ -21,9 +21,7 @@
   @endif
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <script src="{{asset('js/app.js')}}" defer></script>
-  <!--<script src="{{ mix('js/app.js') }}" defer></script>
--->
+  <script src="{{ mix('js/app.js') }}" defer></script>
   <script>
     (function(d) {
       var config = {
