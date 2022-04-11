@@ -8,7 +8,15 @@ Vue.use(Router)
 export default new Router({
 
   routes: [
-    { path: '/mypage', component: Mypage },
-    { path: '/profile', component: Profile }
+    {
+      path: '/mypage',
+      name:'mypage',
+      component: Mypage
+    },
+    {
+      path: '/profile',
+      name:'profile',
+      component: Profile
+    }
   ]
 })

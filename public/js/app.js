@@ -5462,7 +5462,13 @@ Vue.component('profile-component', (__webpack_require__(/*! ./components/user/Pr
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  components: {
+    Mypage: Mypage,
+    Tabbar: Tabbar,
+    Menu: Menu,
+    Profile: Profile
+  }
 });
 
 /***/ }),
@@ -28506,11 +28512,15 @@ var render = function () {
           ]),
         ]),
         _vm._v(" "),
-        _c("div", [
-          _c("a", { staticClass: "btn", attrs: { href: "/mypage/profile" } }, [
-            _vm._v("登録情報内容を確認する"),
-          ]),
-        ]),
+        _c(
+          "div",
+          [
+            _c("router-link", { attrs: { to: { name: "profile" } } }, [
+              _vm._v("プロフィール"),
+            ]),
+          ],
+          1
+        ),
         _vm._v(" "),
         _c("div", [
           _c(

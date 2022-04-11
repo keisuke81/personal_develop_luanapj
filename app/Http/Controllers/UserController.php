@@ -25,10 +25,7 @@ class UserController extends Controller
         $user_id = Auth::id();
         $profile = User::where('id', $user_id)->first();
 
-        return view('user.mypage')->with([
-            'profile' => $profile,
-            'user_id' => $user_id
-        ]);
+        return $profile;
     }
 
     //登録情報更新ページの表示//

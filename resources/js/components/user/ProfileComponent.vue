@@ -67,7 +67,6 @@
 
 <script>
     export default {
-        props:[
-               "profile"]
+        props:["profile"]
   }
 </script>

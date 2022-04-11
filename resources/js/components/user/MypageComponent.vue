@@ -18,7 +18,7 @@
         </div>
 
         <div>
-          <a href="/mypage/profile" class="btn" >登録情報内容を確認する</a>
+          <router-link v-bind:to="{name:'profile'}">プロフィール</router-link>
         </div>
 
         <div>
