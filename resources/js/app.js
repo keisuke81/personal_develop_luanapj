@@ -6,7 +6,11 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue').default;
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+
+window.Vue = Vue;
+Vue.use(VueRouter);
 
 /**
  * The following block of code may be used to automatically register your
@@ -33,5 +37,6 @@ Vue.component('profile-component', require('./components/user/ProfileComponent.v
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });
