@@ -28509,7 +28509,7 @@ var render = function () {
         _c(
           "div",
           [
-            _c("router-link", { attrs: { to: { name: _vm.profile } } }, [
+            _c("router-link", { attrs: { to: "/profile" } }, [
               _vm._v("プロフィール"),
             ]),
           ],
