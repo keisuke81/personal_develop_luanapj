@@ -28569,7 +28569,7 @@ var render = function () {
       _vm._m(0),
       _vm._v(" "),
       _c("table", { staticClass: "table" }, [
-        _c("div", { staticClass: "hidden" }, [_vm._v(_vm._s(_vm.user_id))]),
+        _c("div", { staticClass: "hidden" }, [_vm._v(_vm._s(_vm.profile.id))]),
         _vm._v(" "),
         _c("tr", [
           _c("th", [_vm._v("お名前")]),

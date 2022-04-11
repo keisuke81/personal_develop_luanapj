@@ -6,7 +6,7 @@
         <img src="" />
       </div>
       <table class="table">
-        <div class="hidden">{{user_id}}</div>
+        <div class="hidden">{{profile.id}}</div>
         <tr>
           <th>お名前</th>
           <td>
