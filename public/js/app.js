@@ -28563,15 +28563,13 @@ var render = function () {
       _vm._m(0),
       _vm._v(" "),
       _c("table", { staticClass: "table" }, [
-        _c("div", { staticClass: "hidden" }, [_vm._v(_vm._s(_vm.profile.id))]),
+        _c("div", { staticClass: "hidden" }, [_vm._v(_vm._s(_vm.profile))]),
         _vm._v(" "),
         _c("tr", [
           _c("th", [_vm._v("お名前")]),
           _vm._v(" "),
           _c("td", [
-            _vm._v(
-              "\n            " + _vm._s(_vm.profile.name) + "\n          "
-            ),
+            _vm._v("\n            " + _vm._s(_vm.profile) + "\n          "),
           ]),
         ]),
         _vm._v(" "),
@@ -28579,9 +28577,7 @@ var render = function () {
           _c("th", [_vm._v("ニックネーム")]),
           _vm._v(" "),
           _c("td", [
-            _vm._v(
-              "\n            " + _vm._s(_vm.profile.nickname) + "\n          "
-            ),
+            _vm._v("\n            " + _vm._s(_vm.profile) + "\n          "),
           ]),
         ]),
         _vm._v(" "),
@@ -28589,9 +28585,7 @@ var render = function () {
           _c("th", [_vm._v("メールアドレス")]),
           _vm._v(" "),
           _c("td", [
-            _vm._v(
-              "\n            " + _vm._s(_vm.profile.email) + "\n          "
-            ),
+            _vm._v("\n            " + _vm._s(_vm.profile) + "\n          "),
           ]),
         ]),
         _vm._v(" "),
@@ -28599,9 +28593,7 @@ var render = function () {
           _c("th", [_vm._v("誕生日")]),
           _vm._v(" "),
           _c("td", [
-            _vm._v(
-              "\n            " + _vm._s(_vm.profile.birthday) + "\n          "
-            ),
+            _vm._v("\n            " + _vm._s(_vm.profile) + "\n          "),
           ]),
         ]),
         _vm._v(" "),
@@ -28609,9 +28601,7 @@ var render = function () {
           _c("th", [_vm._v("ベストスコア")]),
           _vm._v(" "),
           _c("td", [
-            _vm._v(
-              "\n            " + _vm._s(_vm.profile.score) + "\n          "
-            ),
+            _vm._v("\n            " + _vm._s(_vm.profile) + "\n          "),
           ]),
         ]),
         _vm._v(" "),
@@ -28619,11 +28609,7 @@ var render = function () {
           _c("th", [_vm._v("自己紹介")]),
           _vm._v(" "),
           _c("td", [
-            _vm._v(
-              "\n            " +
-                _vm._s(_vm.profile.self_produce) +
-                "\n          "
-            ),
+            _vm._v("\n            " + _vm._s(_vm.profile) + "\n          "),
           ]),
         ]),
         _vm._v(" "),
@@ -28631,9 +28617,7 @@ var render = function () {
           _c("th", [_vm._v("ひとこと")]),
           _vm._v(" "),
           _c("td", [
-            _vm._v(
-              "\n            " + _vm._s(_vm.profile.message) + "\n          "
-            ),
+            _vm._v("\n            " + _vm._s(_vm.profile) + "\n          "),
           ]),
         ]),
       ]),

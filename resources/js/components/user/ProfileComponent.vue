@@ -6,25 +6,25 @@
         <img src="" />
       </div>
       <table class="table">
-        <div class="hidden">{{profile.id}}</div>
+        <div class="hidden">{{profile}}</div>
         <tr>
           <th>お名前</th>
           <td>
-            {{profile.name}}
+            {{profile}}
           </td>
         </tr>
 
         <tr>
           <th>ニックネーム</th>
           <td>
-            {{profile.nickname}}
+            {{profile}}
           </td>
         </tr>
 
         <tr>
           <th>メールアドレス</th>
           <td>
-            {{profile.email}}
+            {{profile}}
           </td>
         </tr>
 
@@ -32,28 +32,28 @@
         <tr>
           <th>誕生日</th>
           <td>
-            {{profile.birthday}}
+            {{profile}}
           </td>
         </tr>
 
         <tr>
           <th>ベストスコア</th>
           <td>
-            {{profile.score}}
+            {{profile}}
           </td>
         </tr>
 
         <tr>
           <th>自己紹介</th>
           <td>
-            {{profile.self_produce}}
+            {{profile}}
           </td>
         </tr>
 
         <tr>
           <th>ひとこと</th>
           <td>
-            {{profile.message}}
+            {{profile}}
           </td>
         </tr>
       </table>
