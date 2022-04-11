@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth; //追記
 use Laravel\Socialite\Facades\Socialite; //追記
 use App\Models\User; //追記
 use Illuminate\Http\Request;//追記
+use App\Http\Controllers\UserController;
 
 
 class LoginController extends Controller
