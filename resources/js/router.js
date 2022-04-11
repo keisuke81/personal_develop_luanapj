@@ -4,7 +4,7 @@ import Router from 'vue-router'
 import Mypage from './components/user/MypageComponent.vue'
 import Profile from './components/user/ProfileComponent.vue'
 
-Vue.use(Router)
+Vue.use(VueRouter);
 
 const routes = [
     {
