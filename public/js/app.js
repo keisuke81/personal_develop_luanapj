@@ -5469,8 +5469,7 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('profile-component', (__we
  */
 
 var app = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
-  el: '#app',
-  router: router
+  el: '#app'
 });
 
 /***/ }),
