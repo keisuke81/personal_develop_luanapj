@@ -5462,13 +5462,7 @@ Vue.component('profile-component', (__webpack_require__(/*! ./components/user/Pr
  */
 
 var app = new Vue({
-  el: '#app',
-  components: {
-    Mypage: Mypage,
-    Tabbar: Tabbar,
-    Menu: Menu,
-    Profile: Profile
-  }
+  el: '#app'
 });
 
 /***/ }),

@@ -33,11 +33,5 @@ Vue.component('profile-component', require('./components/user/ProfileComponent.v
  */
 
 const app = new Vue({
-    el: '#app',
-    components: {
-        Mypage,
-        Tabbar,
-        Menu,
-        Profile
-    }
+    el: '#app'
 });
