@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Router from 'vue-router'
-import Mypage from './components/user/MypageComponent.vue'
+import User from './components/user/UserComponent.vue'
 import Profile from './components/user/ProfileComponent.vue'
 
 Vue.use(VueRouter);
 
 const routes = [
     {
-      path: '/mypage',
-      name:'mypage',
-      component: Mypage
+      path: '/user',
+      name:'user',
+      component: User
     },
     {
       path: '/profile',

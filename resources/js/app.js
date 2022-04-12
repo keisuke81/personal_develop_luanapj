@@ -26,7 +26,7 @@ Vue.use(VueRouter);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-Vue.component('mypage-component', require('./components/user/MypageComponent.vue').default);
+Vue.component('user-component', require('./components/user/UserComponent.vue').default);
 Vue.component('tabbar-component', require('./components/TabbarComponent.vue').default);
 Vue.component('menu-component', require('./components/MenuComponent.vue').default);
 Vue.component('profile-component', require('./components/user/ProfileComponent.vue').default);
