@@ -27,7 +27,6 @@
         </div>
       </section>
     <div>
-    <user-component></user-component>  
   </div>
 @component('components.footer')
 @endcomponent
