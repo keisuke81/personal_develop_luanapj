@@ -43,6 +43,7 @@ Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 //LINEログイン機能　男　終わり
 
 
+/*
 //マイページの表示
 Route::get(
     '/mypage',
@@ -274,3 +275,4 @@ Route::get('/cast_followed',
 //予約の削除
 Route::post('/cast/reserve_delete/{id}',
 [ReserveController::class, 'CastReserveDelete'])->name('CastReserveDelete');
+*/
