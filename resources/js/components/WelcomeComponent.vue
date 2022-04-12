@@ -1,10 +1,5 @@
-@component('components.header')
-@endcomponent
-
-<body>
-  <div id="app">
-    <div> 
-      <section id="main" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000" data-wrap="false" data-pause="false">
+<template>
+        <section id="main" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000" data-wrap="false" data-pause="false">
         <div class="container-fluid">
           <div class="row carousel-inner">
             <div class="pr col-12 carousel-item active">
@@ -26,10 +21,4 @@
           </div>
         </div>
       </section>
-    <div>
-    <user-component></user-component>  
-  </div>
-@component('components.footer')
-@endcomponent
-</body>
-</html>
+</template>
