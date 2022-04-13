@@ -42,6 +42,18 @@ Route::get('/login/line/callback',[LoginController::class,'handleProviderCallbac
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 //LINEログイン機能　男　終わり
 
+//女性　ログイン機能
+Route::get(
+    '/login/line/cast',
+    [CompanionLoginController::class, 'cast_redirectToProvider']
+)->name('companion.linelogin');
+
+//コールバック
+Route::get('/login/line/cast/callback', [CompanionLoginController::class, 'cast_handleProviderCallback'])->name('companion.callback');
+
+Route::get('/user/{any}', function(){
+    return view('app');
+})->where('any','.*')->name('user.app');
 
 /*
 //マイページの表示

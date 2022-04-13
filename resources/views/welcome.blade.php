@@ -17,8 +17,8 @@
           <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
           @endauth
           <div class="btnset">
-          <a class="btn btn-border-shadow btn-border-shadow--radius" href="{{ url('/cast') }}">女性ログイン</a>
-          <a class="btn btn-border-shadow btn-border-shadow--radius" href="{{ url('/user') }}">男性ログイン</a>
+          <a class="btn btn-border-shadow btn-border-shadow--radius" href="{{ route('companion.linelogin') }}">女性ログイン</a>
+          <a class="btn btn-border-shadow btn-border-shadow--radius" href="{{ route('linelogin') }}">男性ログイン</a>
           </div>
 
               </div>
