@@ -52,7 +52,7 @@ Route::get(
 Route::get('/login/line/cast/callback', [CompanionLoginController::class, 'cast_handleProviderCallback'])->name('companion.callback');
 
 Route::get('/user/{any}', function(){
-    return view('app');
+    return view('user.app');
 })->where('any','.*')->name('user.app');
 
 /*
