@@ -15,5 +15,7 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props:["user_id"]
+}
 </script>
