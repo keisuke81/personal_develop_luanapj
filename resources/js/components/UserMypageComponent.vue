@@ -18,7 +18,7 @@
         </div>
 
         <div>
-          <router-link to="/profile">プロフィール</router-link>
+          <router-link to="{name: 'user.profile'}">プロフィール</router-link>
         </div>
 
         <div>
