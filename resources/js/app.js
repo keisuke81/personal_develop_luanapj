@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import MenuComponent from "./components/user/MenuComponent.vue";
+import UserMypageComponent from "./components/user/UserMypageComponent.vue"
 
 require('./bootstrap');
 
