@@ -5401,7 +5401,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]({
   routes: [{
     path: '/user/:userId',
     name: 'user.mypage',
-    component: _components_user_UserMypageComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    component: _components_user_UserMypageComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    props: true
   }, {
     path: 'user/search',
     name: 'user.search',

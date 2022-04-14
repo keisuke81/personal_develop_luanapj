@@ -20,7 +20,8 @@ const router = new VueRouter({
         {
             path: '/user/:userId',
             name: 'user.mypage',
-            component: UserMypageComponent
+            component: UserMypageComponent,
+            props:true,
         },
 
         {
