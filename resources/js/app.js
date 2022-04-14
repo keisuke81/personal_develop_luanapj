@@ -18,7 +18,7 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/user',
+            path: '/user/:userId',
             name: 'user.mypage',
             component: UserMypageComponent
         },

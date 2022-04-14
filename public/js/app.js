@@ -5399,7 +5399,7 @@ vue__WEBPACK_IMPORTED_MODULE_3__["default"].use(vue_router__WEBPACK_IMPORTED_MOD
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_4__["default"]({
   mode: 'history',
   routes: [{
-    path: '/user',
+    path: '/user/:userId',
     name: 'user.mypage',
     component: _components_user_UserMypageComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }, {
