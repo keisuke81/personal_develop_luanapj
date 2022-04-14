@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import MenuComponent from "./components/user/MenuComponent.vue";
-import UserMypageComponent from "./components/user/UserMypageComponent.vue"
+import UserMypageComponent from "./components/user/UserMypageComponent.vue";
+import UserSearchComponent from "./components/user/SearchComponent";
+
 
 require('./bootstrap');
 
