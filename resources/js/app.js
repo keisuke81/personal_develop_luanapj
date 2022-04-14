@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import MenuComponent from "./components/user/MenuComponent.vue";
+import MenuComponent from "./components/MenuComponent.vue";
 import UserMypageComponent from "./components/UserMypageComponent.vue";
-import UserSearchComponent from "./components/user/SearchComponent";
+import UserSearchComponent from "./components/SearchComponent";
+import CastProfileComponent from "./components/CastProfileComponent";
+import OfferCastComponent from "./components/OfferCastComponent"
 
 
 require('./bootstrap');
@@ -32,15 +34,15 @@ const router = new VueRouter({
 
         {
             path: 'user/search/:castId',
-            name: 'user.search.castId',
-            component: UserSearchCastIdComponent,
+            name: 'user.acst.profile',
+            component: CastProfileComponent,
             props:true
         },
 
         {
-            path: '/user/invite/:castId',
-            name: 'user.invite',
-            component: UserInviteComponent,
+            path: '/user/offer/:castId',
+            name: 'user.cast.offer',
+            component: OfferCastComponent,
             props:true
         }
     ]
