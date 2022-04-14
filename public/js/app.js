@@ -5365,7 +5365,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["user_id"]
 });
@@ -28482,9 +28481,7 @@ var render = function () {
   return _c("ons-page", [
     _c("div", { staticClass: "type_a" }, [
       _c("div", { staticClass: "type_a_child" }, [
-        _c("div", { staticClass: "text-center" }, [
-          _c("p", [_vm._v("会員番号：" + _vm._s(_vm.user_id))]),
-        ]),
+        _c("div", { staticClass: "text-center" }),
         _vm._v(" "),
         _c("div", [
           _c(
@@ -28512,7 +28509,7 @@ var render = function () {
         _c(
           "div",
           [
-            _c("router-link", { attrs: { to: "{name: 'user.profile'}" } }, [
+            _c("router-link", { attrs: { to: "/user/profile" } }, [
               _vm._v("プロフィール"),
             ]),
           ],
